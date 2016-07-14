@@ -12,6 +12,14 @@
 		746B08D51D37F2180056103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D31D37F2180056103F /* Main.storyboard */; };
 		746B08D71D37F2180056103F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D61D37F2180056103F /* Assets.xcassets */; };
 		746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D81D37F2180056103F /* LaunchScreen.storyboard */; };
+		746B08E71D37F4B30056103F /* Earth.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E11D37F4B30056103F /* Earth.png */; };
+		746B08E81D37F4B30056103F /* Earth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E21D37F4B30056103F /* Earth@2x.png */; };
+		746B08E91D37F4B30056103F /* Earth@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E31D37F4B30056103F /* Earth@3x.png */; };
+		746B08EA1D37F4B30056103F /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E41D37F4B30056103F /* User.png */; };
+		746B08EB1D37F4B30056103F /* User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E51D37F4B30056103F /* User@2x.png */; };
+		746B08EC1D37F4B30056103F /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E61D37F4B30056103F /* User@3x.png */; };
+		746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */; };
+		746B08F11D37F8410056103F /* ProfilePageViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08F01D37F8410056103F /* ProfilePageViewCotroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		746B08D61D37F2180056103F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746B08D91D37F2180056103F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		746B08DB1D37F2180056103F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746B08E11D37F4B30056103F /* Earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Earth.png; path = Assets.xcassets/Earth.png; sourceTree = "<group>"; };
+		746B08E21D37F4B30056103F /* Earth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Earth@2x.png"; path = "Assets.xcassets/Earth@2x.png"; sourceTree = "<group>"; };
+		746B08E31D37F4B30056103F /* Earth@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Earth@3x.png"; path = "Assets.xcassets/Earth@3x.png"; sourceTree = "<group>"; };
+		746B08E41D37F4B30056103F /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = User.png; path = Assets.xcassets/User.png; sourceTree = "<group>"; };
+		746B08E51D37F4B30056103F /* User@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@2x.png"; path = "Assets.xcassets/User@2x.png"; sourceTree = "<group>"; };
+		746B08E61D37F4B30056103F /* User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@3x.png"; path = "Assets.xcassets/User@3x.png"; sourceTree = "<group>"; };
+		746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCategoriesViewController.swift; sourceTree = "<group>"; };
+		746B08F01D37F8410056103F /* ProfilePageViewCotroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageViewCotroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,38 @@
 		746B08CE1D37F2180056103F /* Plasit */ = {
 			isa = PBXGroup;
 			children = (
+				746B08F21D37F8A40056103F /* ViewControllers */,
 				746B08CF1D37F2180056103F /* AppDelegate.swift */,
 				746B08D11D37F2180056103F /* ViewController.swift */,
 				746B08D31D37F2180056103F /* Main.storyboard */,
 				746B08D61D37F2180056103F /* Assets.xcassets */,
 				746B08D81D37F2180056103F /* LaunchScreen.storyboard */,
 				746B08DB1D37F2180056103F /* Info.plist */,
+				746B08ED1D37F4CF0056103F /* UI icons */,
 			);
 			path = Plasit;
+			sourceTree = "<group>";
+		};
+		746B08ED1D37F4CF0056103F /* UI icons */ = {
+			isa = PBXGroup;
+			children = (
+				746B08E11D37F4B30056103F /* Earth.png */,
+				746B08E21D37F4B30056103F /* Earth@2x.png */,
+				746B08E31D37F4B30056103F /* Earth@3x.png */,
+				746B08E41D37F4B30056103F /* User.png */,
+				746B08E51D37F4B30056103F /* User@2x.png */,
+				746B08E61D37F4B30056103F /* User@3x.png */,
+			);
+			name = "UI icons";
+			sourceTree = "<group>";
+		};
+		746B08F21D37F8A40056103F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
+				746B08F01D37F8410056103F /* ProfilePageViewCotroller.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +163,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746B08EC1D37F4B30056103F /* User@3x.png in Resources */,
+				746B08E81D37F4B30056103F /* Earth@2x.png in Resources */,
+				746B08EA1D37F4B30056103F /* User.png in Resources */,
+				746B08E71D37F4B30056103F /* Earth.png in Resources */,
+				746B08E91D37F4B30056103F /* Earth@3x.png in Resources */,
 				746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */,
 				746B08D71D37F2180056103F /* Assets.xcassets in Resources */,
 				746B08D51D37F2180056103F /* Main.storyboard in Resources */,
+				746B08EB1D37F4B30056103F /* User@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746B08F11D37F8410056103F /* ProfilePageViewCotroller.swift in Sources */,
 				746B08D21D37F2180056103F /* ViewController.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
+				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
