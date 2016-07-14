@@ -19,9 +19,13 @@
 		746B08EB1D37F4B30056103F /* User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E51D37F4B30056103F /* User@2x.png */; };
 		746B08EC1D37F4B30056103F /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E61D37F4B30056103F /* User@3x.png */; };
 		746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */; };
+		AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48596CF4078AF5204F5B211F /* Pods-Plasit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plasit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plasit/Pods-Plasit.release.xcconfig"; sourceTree = "<group>"; };
+		67922F7312DBDB4DB22B9590 /* Pods-Plasit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plasit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plasit/Pods-Plasit.debug.xcconfig"; sourceTree = "<group>"; };
+		72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plasit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B08CC1D37F2180056103F /* Plasit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plasit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B08CF1D37F2180056103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		746B08D11D37F2180056103F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26E686E081FF646F46E8F9DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67922F7312DBDB4DB22B9590 /* Pods-Plasit.debug.xcconfig */,
+				48596CF4078AF5204F5B211F /* Pods-Plasit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		746B08C31D37F2180056103F = {
 			isa = PBXGroup;
 			children = (
 				746B08CE1D37F2180056103F /* Plasit */,
 				746B08CD1D37F2180056103F /* Products */,
+				26E686E081FF646F46E8F9DC /* Pods */,
+				D41E13D272C26749D856E66A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +117,14 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D41E13D272C26749D856E66A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 746B08DE1D37F2180056103F /* Build configuration list for PBXNativeTarget "Plasit" */;
 			buildPhases = (
+				B4DB351EEF4A12ED9F4F1123 /* [CP] Check Pods Manifest.lock */,
 				746B08C81D37F2180056103F /* Sources */,
 				746B08C91D37F2180056103F /* Frameworks */,
 				746B08CA1D37F2180056103F /* Resources */,
+				44F410F95EF3BA3EF38996B1 /* [CP] Embed Pods Frameworks */,
+				45287B7A58FEF9EE8FE20640 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +200,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44F410F95EF3BA3EF38996B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plasit/Pods-Plasit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45287B7A58FEF9EE8FE20640 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plasit/Pods-Plasit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4DB351EEF4A12ED9F4F1123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		746B08C81D37F2180056103F /* Sources */ = {
@@ -294,6 +369,7 @@
 		};
 		746B08DF1D37F2180056103F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67922F7312DBDB4DB22B9590 /* Pods-Plasit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Plasit/Info.plist;
@@ -305,6 +381,7 @@
 		};
 		746B08E01D37F2180056103F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48596CF4078AF5204F5B211F /* Pods-Plasit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Plasit/Info.plist;
