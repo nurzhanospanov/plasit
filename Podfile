@@ -7,6 +7,7 @@ target 'Plasit' do
   use_frameworks!
 
   # Pods for Plasit
-  pod 'Parse'
+  pod 'Parse', '1.13.0'
+  pod 'ParseUI'
 
 end
