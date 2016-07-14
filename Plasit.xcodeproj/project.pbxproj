@@ -19,6 +19,7 @@
 		746B08EB1D37F4B30056103F /* User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E51D37F4B30056103F /* User@2x.png */; };
 		746B08EC1D37F4B30056103F /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E61D37F4B30056103F /* User@3x.png */; };
 		746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */; };
+		747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */; };
 		AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		746B08E51D37F4B30056103F /* User@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@2x.png"; path = "Assets.xcassets/User@2x.png"; sourceTree = "<group>"; };
 		746B08E61D37F4B30056103F /* User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@3x.png"; path = "Assets.xcassets/User@3x.png"; sourceTree = "<group>"; };
 		746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCategoriesViewController.swift; sourceTree = "<group>"; };
+		747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
+				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				746B08D21D37F2180056103F /* ViewController.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
+				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
