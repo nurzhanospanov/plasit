@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		744C90B81D384104009B6922 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 744C90B71D384104009B6922 /* Podfile */; };
 		746B08D01D37F2180056103F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08CF1D37F2180056103F /* AppDelegate.swift */; };
-		746B08D21D37F2180056103F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08D11D37F2180056103F /* ViewController.swift */; };
 		746B08D51D37F2180056103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D31D37F2180056103F /* Main.storyboard */; };
 		746B08D71D37F2180056103F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D61D37F2180056103F /* Assets.xcassets */; };
 		746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D81D37F2180056103F /* LaunchScreen.storyboard */; };
@@ -31,7 +30,6 @@
 		744C90B71D384104009B6922 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		746B08CC1D37F2180056103F /* Plasit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plasit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B08CF1D37F2180056103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		746B08D11D37F2180056103F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		746B08D41D37F2180056103F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		746B08D61D37F2180056103F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746B08D91D37F2180056103F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,9 +87,9 @@
 		746B08CE1D37F2180056103F /* Plasit */ = {
 			isa = PBXGroup;
 			children = (
+				74CB65341D3852A000F5A54A /* Models */,
 				746B08F21D37F8A40056103F /* ViewControllers */,
 				746B08CF1D37F2180056103F /* AppDelegate.swift */,
-				746B08D11D37F2180056103F /* ViewController.swift */,
 				746B08D31D37F2180056103F /* Main.storyboard */,
 				746B08D61D37F2180056103F /* Assets.xcassets */,
 				746B08D81D37F2180056103F /* LaunchScreen.storyboard */,
@@ -121,6 +119,13 @@
 				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		74CB65341D3852A000F5A54A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D41E13D272C26749D856E66A /* Frameworks */ = {
@@ -261,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746B08D21D37F2180056103F /* ViewController.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,

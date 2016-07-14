@@ -26,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://plasit.herokuapp.com/parse"
         }
         Parse.initializeWithConfiguration(configuration)
-
-        
         return true
         
     }
