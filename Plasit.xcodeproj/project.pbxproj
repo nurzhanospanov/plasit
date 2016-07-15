@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740324F81D395DFC00AE0280 /* DisplayCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740324F71D395DFC00AE0280 /* DisplayCategory.swift */; };
 		744C90B81D384104009B6922 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 744C90B71D384104009B6922 /* Podfile */; };
 		746B08D01D37F2180056103F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08CF1D37F2180056103F /* AppDelegate.swift */; };
 		746B08D51D37F2180056103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D31D37F2180056103F /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		48596CF4078AF5204F5B211F /* Pods-Plasit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plasit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plasit/Pods-Plasit.release.xcconfig"; sourceTree = "<group>"; };
 		67922F7312DBDB4DB22B9590 /* Pods-Plasit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plasit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plasit/Pods-Plasit.debug.xcconfig"; sourceTree = "<group>"; };
 		72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plasit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740324F71D395DFC00AE0280 /* DisplayCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCategory.swift; sourceTree = "<group>"; };
 		744C90B71D384104009B6922 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		746B08CC1D37F2180056103F /* Plasit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plasit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B08CF1D37F2180056103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		74CB65341D3852A000F5A54A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				740324F71D395DFC00AE0280 /* DisplayCategory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
+				740324F81D395DFC00AE0280 /* DisplayCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
