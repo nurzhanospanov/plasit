@@ -12,8 +12,9 @@ import Parse
 class DisplayCategory: PFObject, PFSubclassing {
     
     
-    @NSManaged var image: PFFile?
+    @NSManaged var imageCategory: PFFile?
     @NSManaged var title: String?
+    var imageSmth: UIImage?
     
     static func parseClassName() -> String {
         return "Category"

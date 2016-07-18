@@ -19,30 +19,35 @@ class ListOfCategoriesViewController: UIViewController {
     
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
-        let queryCategories = PFQuery(className: "Category")
-        queryCategories.findObjectsInBackgroundWithBlock { (categories, error) in
-            if error == nil {
-                
-                if let returnedCategories = categories {
-                    
-                    
-                    for category in returnedCategories {
-                        
-                        
-                        
-//                          let image = category["image"] as! PFFile
-//                       image.getDataInBackgroundWithBlock()
-                    
-                    }
-                }
-            }
-        }
-}
-    
-    
+        let query = PFQuery(className: "Category") //PFQuery.orQueryWithSubqueries ([titleQuery, imageQuery])
+        
+        query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
 
+            self.categories = result as? [DisplayCategory] ?? []
+            print("received \(self.categories.count) categories from parse DB, now fetch individual images")
+
+            for category in self.categories {
+                print("fetch image for category: \(category.title)")
+                category.imageCategory?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    let image = UIImage(data: imageData!, scale: 1.0)
+                    category.imageSmth = image
+                    
+                    print("received image for category: \(category.title)")
+                    self.tableView.reloadData()
+
+                }
+
+                
+            }
+            
+            print("reload table view data")
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -58,11 +63,13 @@ extension ListOfCategoriesViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+        print("create cell for row: \(indexPath.row)")
+
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoryTableViewCell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell")!
-        
-        cell.textLabel!.text = "title"
+        cell.categoryImageView.image = categories[indexPath.row].imageSmth
         
         return cell
     }
+
 }
