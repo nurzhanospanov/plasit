@@ -75,7 +75,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezd-qp-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HuB-fn-CDZ">
                     <connections>
-                        <segue destination="5lW-Mh-k6Z" kind="presentation" id="g5Q-i4-wx1"/>
+                        <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="" id="g5Q-i4-wx1"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -137,6 +137,13 @@
                                     <outlet property="dataSource" destination="5lW-Mh-k6Z" id="GfC-VD-1p5"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQj-V5-uAP">
+                                <rect key="frame" x="45" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="z2J-Y4-d1Z" kind="unwind" unwindAction="unwindToListOfCategoriesViewController:" id="Kde-LY-sVs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -145,6 +152,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z2J-Y4-d1Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2209" y="-367"/>
         </scene>

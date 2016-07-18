@@ -14,6 +14,10 @@ import Parse
 class ListOfCategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func unwindToListOfCategoriesViewController(segue: UIStoryboardSegue) {
+    
+    
+    }
     
     var categories: [DisplayCategory] = []
     
