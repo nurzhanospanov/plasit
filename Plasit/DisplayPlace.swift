@@ -1,26 +1,24 @@
 //
-//  Category.swift
+//  DisplayPlace.swift
 //  Plasit
 //
-//  Created by nurzhan on 7/15/16.
+//  Created by nurzhan on 7/18/16.
 //  Copyright © 2016 Nurzhan. All rights reserved.
 //
 
 import Foundation
 import Parse
 
-class DisplayCategory: PFObject, PFSubclassing {
+class DisplayPlace: PFObject, PFSubclassing {
     
-    
-    @NSManaged var imageCategoryFile: PFFile?
-    @NSManaged var titleCategory: String?
-    var imageCategory: UIImage?
-    
+    @NSManaged var imagePlaceFile: PFFile?
+    var imagePlace: UIImage?
+
     static func parseClassName() -> String {
-        return "Category"
+        return "Place"
     }
     
-  
+    
     override init () {
         super.init()
     }
@@ -32,5 +30,5 @@ class DisplayCategory: PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
-}
 
+}

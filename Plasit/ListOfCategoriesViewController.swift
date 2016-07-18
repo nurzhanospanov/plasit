@@ -22,7 +22,7 @@ class ListOfCategoriesViewController: UIViewController {
     
         super.viewDidLoad()
         
-        let query = PFQuery(className: "Category") //PFQuery.orQueryWithSubqueries ([titleQuery, imageQuery])
+        let query = PFQuery(className: "Category") 
         
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
 
@@ -30,21 +30,16 @@ class ListOfCategoriesViewController: UIViewController {
             print("received \(self.categories.count) categories from parse DB, now fetch individual images")
 
             for category in self.categories {
-                print("fetch image for category: \(category.title)")
-                category.imageCategory?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                print("fetch image for category: \(category.titleCategory)")
+               
+                category.imageCategoryFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     let image = UIImage(data: imageData!, scale: 1.0)
-                    category.imageSmth = image
+                    category.imageCategory = image
                     
-                    print("received image for category: \(category.title)")
+                    print("received image for category: \(category.titleCategory)")
                     self.tableView.reloadData()
-
                 }
-
-                
             }
-            
-            print("reload table view data")
-            
         }
     }
     
@@ -67,7 +62,7 @@ extension ListOfCategoriesViewController: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoryTableViewCell
         
-        cell.categoryImageView.image = categories[indexPath.row].imageSmth
+        cell.categoryImageView.image = categories[indexPath.row].imageCategory
         
         return cell
     }

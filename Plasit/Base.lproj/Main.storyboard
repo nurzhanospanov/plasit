@@ -46,15 +46,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-g8-dmy">
-                                                    <rect key="frame" x="180" y="51" width="240" height="128"/>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-g8-dmy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="HuB-fn-CDZ" appends="YES" id="cYO-TS-Khq"/>
+                                                    </connections>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-rg-qLz">
-                                                    <rect key="frame" x="201" y="77" width="198" height="75"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -75,6 +73,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezd-qp-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HuB-fn-CDZ">
+                    <connections>
+                        <segue destination="5lW-Mh-k6Z" kind="presentation" id="g5Q-i4-wx1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1447" y="-367"/>
         </scene>
@@ -95,6 +98,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxb-X4-kcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="627" y="-36"/>
+        </scene>
+        <!--List Of Places View Controller-->
+        <scene sceneID="Bq3-C3-bT4">
+            <objects>
+                <viewController id="5lW-Mh-k6Z" customClass="ListOfPlacesViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aot-7c-JiC"/>
+                        <viewControllerLayoutGuide type="bottom" id="vaV-l3-NRc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wkJ-gl-paA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sif-qv-Hh7">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="230" id="ZZc-qN-r3d" userLabel="PlaceCell" customClass="PlaceTableViewCell" customModule="Plasit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZc-qN-r3d" id="h8u-ns-Y0G">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkr-9d-nV0" userLabel="Place Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
+                                                    <gestureRecognizers/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5lW-Mh-k6Z" id="GfC-VD-1p5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="sif-qv-Hh7" id="ryq-yg-t5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="-367"/>
         </scene>
     </scenes>
     <resources>
