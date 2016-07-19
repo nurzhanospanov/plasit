@@ -49,19 +49,18 @@
                                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-g8-dmy">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
                                                     <gestureRecognizers/>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="HuB-fn-CDZ" appends="YES" id="cYO-TS-Khq"/>
-                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImageView" destination="o1m-g8-dmy" id="hgO-v7-E2Z"/>
+                                            <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="displayPlace" id="uul-kl-JVl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="ovx-It-W2I" id="oOu-9a-HgI"/>
+                                    <outlet property="delegate" destination="ovx-It-W2I" id="ZcC-US-eij"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -73,11 +72,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezd-qp-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="HuB-fn-CDZ">
-                    <connections>
-                        <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="" id="g5Q-i4-wx1"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1447" y="-367"/>
         </scene>
@@ -141,7 +135,7 @@
                                 <rect key="frame" x="45" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="z2J-Y4-d1Z" kind="unwind" unwindAction="unwindToListOfCategoriesViewController:" id="Kde-LY-sVs"/>
+                                    <segue destination="z2J-Y4-d1Z" kind="unwind" identifier="Back" unwindAction="unwindToListOfCategoriesViewController:" id="Kde-LY-sVs"/>
                                 </connections>
                             </button>
                         </subviews>

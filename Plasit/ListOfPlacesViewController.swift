@@ -15,13 +15,23 @@ class ListOfPlacesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var places: [DisplayPlace] = []
+    var belongsToCategory: DisplayCategory?
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         
         let query = PFQuery(className: "Place")
+        
+        query.whereKey("belongsToCategory", equalTo: belongsToCategory!)
+        
+        //        query.includeKey("belongsToCategory")
         
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
@@ -29,17 +39,21 @@ class ListOfPlacesViewController: UIViewController {
             // print("received \(self.places.count) categories from parse DB, now fetch individual images")
             
             for place in self.places {
-               // print("fetch image for category: \(category.titleCategory)")
+                // print("fetch image for category: \(category.titleCategory)")
                 
                 place.imagePlaceFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     let image = UIImage(data: imageData!, scale: 1.0)
+                    
                     place.imagePlace = image
                     
-                //    print("received image for category: \(category.titleCategory)")
+                    
+                    
+                    //    print("received image for category: \(category.titleCategory)")
                     self.tableView.reloadData()
                 }
             }
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +62,7 @@ class ListOfPlacesViewController: UIViewController {
     }
 }
 
-extension ListOfPlacesViewController: UITableViewDataSource {
+extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -63,7 +77,15 @@ extension ListOfPlacesViewController: UITableViewDataSource {
         
         cell.placeImageView.image = places[indexPath.row].imagePlace
         
+        
         return cell
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("user tapped cell at index path: \(indexPath)")
+    }
+    
 }
+
+
