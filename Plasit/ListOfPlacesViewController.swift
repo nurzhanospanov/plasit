@@ -13,7 +13,10 @@ import Parse
 class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBAction func unwindToListOfPlacesViewController(segue: UIStoryboardSegue) {
+        
+    }
+
     var places: [DisplayPlace] = []
     var belongsToCategory: DisplayCategory?
     
@@ -86,6 +89,29 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         print("user tapped cell at index path: \(indexPath)")
     }
     
-}
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepareForSegue: \(segue.identifier)")
+        if let identifier = segue.identifier {
+            if identifier == "displayCurrentPlace" {
+                // print("Table view cell tapped")
+                
+//                if let indexPath =  tableView.indexPathForSelectedRow {
+//                    let displayPlaces = places[indexPath.row]
+//                    let displayCurrentPlaceViewController = segue.destinationViewController as! PlaceViewController
+//                    displayCurrentPlaceViewController.belongsToCategory = displayPlaces
+                
+//                }
+//                else {
+//                    print("there is no segue")
+//                    
+                }
+                
+            }
+            
+        }
+    }
+
+    
+//}
 
 

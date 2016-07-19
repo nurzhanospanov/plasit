@@ -20,7 +20,8 @@ class ListOfCategoriesViewController: UIViewController {
     }
     
     var categories: [DisplayCategory] = []
-//    var selectedIndexPath: NSIndexPath?
+
+    //    var selectedIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
         
@@ -76,7 +77,7 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
         if let identifier = segue.identifier {
-            if identifier == "displayPlace" {
+            if identifier == "displayListOfPlaces" {
                 // print("Table view cell tapped")
                 
                 if let indexPath =  tableView.indexPathForSelectedRow {

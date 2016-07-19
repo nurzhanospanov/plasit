@@ -54,7 +54,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImageView" destination="o1m-g8-dmy" id="hgO-v7-E2Z"/>
-                                            <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="displayPlace" id="uul-kl-JVl"/>
+                                            <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="displayListOfPlaces" id="uul-kl-JVl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -124,6 +124,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
+                                            <segue destination="2VR-Hs-9SY" kind="presentation" identifier="displayCurrentPlace" id="Zzl-lN-XlG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -149,6 +150,40 @@
                 <exit id="z2J-Y4-d1Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2209" y="-367"/>
+        </scene>
+        <!--Place View Controller-->
+        <scene sceneID="lOQ-L4-Fet">
+            <objects>
+                <viewController id="2VR-Hs-9SY" customClass="PlaceViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TbG-NF-shO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ad9-KW-ddn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CKq-nP-edh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-YT-q6F" userLabel="Current Place Image View">
+                                <rect key="frame" x="20" y="58" width="560" height="206"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-1k-91j">
+                                <rect key="frame" x="26" y="12" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="q54-WM-1bL" kind="unwind" unwindAction="unwindToListOfPlacesViewController:" id="T3K-gr-GDb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentPlaceViewController" destination="CKq-nP-edh" id="gJU-Zo-QjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-YR-sd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="q54-WM-1bL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2918" y="-367"/>
         </scene>
     </scenes>
     <resources>

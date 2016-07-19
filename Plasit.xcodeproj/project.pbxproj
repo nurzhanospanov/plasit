@@ -22,6 +22,7 @@
 		746B08EC1D37F4B30056103F /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E61D37F4B30056103F /* User@3x.png */; };
 		746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */; };
 		747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */; };
+		74D6E6CA1D3ECBDC000B958D /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlaceViewController.swift */; };
 		74F84B311D3D6B860096216F /* screenshot.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 74F84B301D3D6B860096216F /* screenshot.PNG */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -50,6 +51,7 @@
 		746B08E61D37F4B30056103F /* User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@3x.png"; path = "Assets.xcassets/User@3x.png"; sourceTree = "<group>"; };
 		746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCategoriesViewController.swift; sourceTree = "<group>"; };
 		747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		74D6E6C91D3ECBDC000B958D /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		74F84B301D3D6B860096216F /* screenshot.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot.PNG; path = "../../../../Desktop/Panoramic-master/screenshot.PNG"; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
+				74D6E6C91D3ECBDC000B958D /* PlaceViewController.swift */,
 				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
 			);
 			name = ViewControllers;
@@ -296,6 +299,7 @@
 				74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */,
 				740324FB1D399FAF00AE0280 /* CategoryTableViewCell.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
+				74D6E6CA1D3ECBDC000B958D /* PlaceViewController.swift in Sources */,
 				74F84B371D3D85890096216F /* PlaceTableViewCell.swift in Sources */,
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
