@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ovx-It-W2I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3GD-WN-P0s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--User Navigation Controller-->
+        <scene sceneID="gFu-94-SaR">
+            <objects>
+                <navigationController title="User Navigation Controller" id="NGS-vf-po0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="User.png" id="mzD-vs-yQC" userLabel="User Bar Item"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OY3-hv-yUY" userLabel="User Navigation Bar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ned-eT-Chj" kind="relationship" relationship="rootViewController" id="3eH-7W-z0Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIW-aY-dBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447" y="328"/>
+        </scene>
         <!--Profile Page View Controller-->
         <scene sceneID="yID-on-96d">
             <objects>
@@ -18,10 +35,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="User.png" selectedImage="User.png" id="ssQ-nl-CYf" userLabel="User"/>
+                    <navigationItem key="navigationItem" id="qnE-Pc-9zd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaF-Go-0VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="294"/>
+            <point key="canvasLocation" x="2191" y="328"/>
+        </scene>
+        <!--Earth Navigation Controller-->
+        <scene sceneID="vgN-hD-Ynt">
+            <objects>
+                <navigationController title="Earth Navigation Controller" id="Xxi-YB-QU1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Earth.png" id="9WY-yT-5U7" userLabel="Earth Bar Item"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SR6-Rz-iDC" userLabel="Earth Navigation Bar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ovx-It-W2I" kind="relationship" relationship="rootViewController" id="BNw-PF-XFQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkL-Xg-rQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447" y="-367"/>
         </scene>
         <!--List Of Categories View Controller-->
         <scene sceneID="10m-NM-aog">
@@ -40,7 +75,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="230" id="Vw9-5U-kbW" userLabel="CategoryCell" customClass="CategoriesTableViewCell" customModule="Plasit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="230"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vw9-5U-kbW" id="654-MU-Dch">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
@@ -54,7 +89,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImageView" destination="o1m-g8-dmy" id="hgO-v7-E2Z"/>
-                                            <segue destination="5lW-Mh-k6Z" kind="presentation" identifier="displayListOfPlaces" id="uul-kl-JVl"/>
+                                            <segue destination="5lW-Mh-k6Z" kind="show" identifier="displayListOfPlaces" id="uul-kl-JVl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,13 +102,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Earth.png" selectedImage="Earth.png" id="3I5-JQ-Mg9" userLabel="Earth"/>
+                    <navigationItem key="navigationItem" id="S0g-ij-Shc"/>
                     <connections>
                         <outlet property="tableView" destination="ipQ-Y5-77s" id="swh-YY-wgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezd-qp-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-367"/>
+            <point key="canvasLocation" x="2191" y="-367"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xp0-nN-Y5m">
@@ -85,8 +121,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ovx-It-W2I" kind="relationship" relationship="viewControllers" id="EuY-D1-F7j"/>
-                        <segue destination="Ned-eT-Chj" kind="relationship" relationship="viewControllers" id="U3B-GR-mr6"/>
+                        <segue destination="Xxi-YB-QU1" kind="relationship" relationship="viewControllers" id="daY-8g-VFV"/>
+                        <segue destination="NGS-vf-po0" kind="relationship" relationship="viewControllers" id="KIq-La-6GQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxb-X4-kcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +146,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="230" id="ZZc-qN-r3d" userLabel="PlaceCell" customClass="PlacesTableViewCell" customModule="Plasit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="230"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZc-qN-r3d" id="h8u-ns-Y0G">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="229.5"/>
@@ -124,7 +160,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
-                                            <segue destination="2VR-Hs-9SY" kind="presentation" identifier="displayCurrentPlace" id="Zzl-lN-XlG"/>
+                                            <segue destination="2VR-Hs-9SY" kind="show" identifier="displayCurrentPlace" id="Zzl-lN-XlG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -132,24 +168,17 @@
                                     <outlet property="dataSource" destination="5lW-Mh-k6Z" id="GfC-VD-1p5"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQj-V5-uAP">
-                                <rect key="frame" x="45" y="15" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="z2J-Y4-d1Z" kind="unwind" identifier="Back" unwindAction="unwindToListOfCategoriesViewController:" id="Kde-LY-sVs"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="sif-qv-Hh7" id="ryq-yg-t5t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="z2J-Y4-d1Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="-367"/>
+            <point key="canvasLocation" x="2983" y="-367"/>
         </scene>
         <!--Place Post View Controller-->
         <scene sceneID="lOQ-L4-Fet">
@@ -166,13 +195,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-YT-q6F" userLabel="Place Post Image View">
                                 <rect key="frame" x="20" y="58" width="560" height="206"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-1k-91j">
-                                <rect key="frame" x="26" y="12" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="q54-WM-1bL" kind="unwind" unwindAction="unwindToListOfPlacesViewController:" id="T3K-gr-GDb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -181,9 +203,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-YR-sd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="q54-WM-1bL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2918" y="-367"/>
+            <point key="canvasLocation" x="3710" y="-367"/>
         </scene>
     </scenes>
     <resources>

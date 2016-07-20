@@ -12,7 +12,11 @@ import Parse
 class DisplayPlace: PFObject, PFSubclassing {
     
     @NSManaged var imagePlaceFile: PFFile?
+    @NSManaged var placeTitle: String
+    @NSManaged var descriptionPlace: String
+    
     var imagePlace: UIImage?
+    
 
     static func parseClassName() -> String {
         return "Place"
