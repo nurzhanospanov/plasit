@@ -167,7 +167,6 @@
                                         <connections>
                                             <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
                                             <outlet property="titleLabel" destination="EFZ-Fk-hbM" id="yny-wl-v8z"/>
-                                            <segue destination="2VR-Hs-9SY" kind="show" identifier="displayCurrentPlace" id="Zzl-lN-XlG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -181,35 +180,36 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="sif-qv-Hh7" id="ryq-yg-t5t"/>
+                        <segue destination="2HY-YA-Z5s" kind="show" identifier="displayPlacePost" id="KSo-Mj-7nF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2983" y="-367"/>
+            <point key="canvasLocation" x="2942" y="-367"/>
         </scene>
         <!--Place Post View Controller-->
-        <scene sceneID="lOQ-L4-Fet">
+        <scene sceneID="uPa-yi-cxN">
             <objects>
-                <viewController id="2VR-Hs-9SY" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2HY-YA-Z5s" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TbG-NF-shO"/>
-                        <viewControllerLayoutGuide type="bottom" id="ad9-KW-ddn"/>
+                        <viewControllerLayoutGuide type="top" id="dBP-ht-YHU"/>
+                        <viewControllerLayoutGuide type="bottom" id="LwF-Ka-it3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CKq-nP-edh">
+                    <view key="view" contentMode="scaleToFill" id="lmd-iY-mMX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-YT-q6F" userLabel="Place Post Image View">
-                                <rect key="frame" x="20" y="72" width="560" height="206"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-Lv-ddZ">
+                                <rect key="frame" x="96" y="40" width="455" height="224"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kly-cp-Bmj" userLabel="Place Title">
-                                <rect key="frame" x="20" y="289" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-pP-aTb">
+                                <rect key="frame" x="46" y="306" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-dv-AyJ" userLabel="Place Description">
-                                <rect key="frame" x="20" y="334" width="549" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x74-tR-fLH">
+                                <rect key="frame" x="38" y="366" width="423" height="164"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -219,12 +219,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="PlacePostViewController" destination="CKq-nP-edh" id="cUZ-dK-2ZB"/>
+                        <outlet property="descriptionTextView" destination="x74-tR-fLH" id="hmq-HT-6zw"/>
+                        <outlet property="placeImageView" destination="Bgm-Lv-ddZ" id="gfl-ap-402"/>
+                        <outlet property="placePostView" destination="lmd-iY-mMX" id="2aS-iG-jF2"/>
+                        <outlet property="titleLabel" destination="YIL-pP-aTb" id="baR-IR-A0b"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-YR-sd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULB-fg-ke2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3710" y="-367"/>
+            <point key="canvasLocation" x="3697" y="-367"/>
         </scene>
     </scenes>
     <resources>

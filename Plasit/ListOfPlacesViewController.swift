@@ -13,6 +13,9 @@ import Parse
 class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+
+
 
 
     var places: [DisplayPlace] = []
@@ -92,6 +95,8 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         print("prepareForSegue: \(segue.identifier)")
         if let identifier = segue.identifier {
             if identifier == "displayCurrentPlace" {
+                                
+                
                 // print("Table view cell tapped")
                 
 //                if let indexPath =  tableView.indexPathForSelectedRow {
