@@ -14,10 +14,10 @@ class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-
-
-
-
+    
+    
+    
+    
     var places: [DisplayPlace] = []
     var belongsToCategory: DisplayCategory?
     
@@ -25,6 +25,7 @@ class ListOfPlacesViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -75,7 +76,7 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-       // print("create cell for row: \(indexPath.row)")
+        // print("create cell for row: \(indexPath.row)")
         
         let cell = tableView.dequeueReusableCellWithIdentifier("PlaceCell") as! PlacesTableViewCell
         
@@ -94,28 +95,16 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
         if let identifier = segue.identifier {
-            if identifier == "displayCurrentPlace" {
-                                
+            if identifier == "displayPlacePost" {
                 
-                // print("Table view cell tapped")
-                
-//                if let indexPath =  tableView.indexPathForSelectedRow {
-//                    let displayPlaces = places[indexPath.row]
-//                    let displayCurrentPlaceViewController = segue.destinationViewController as! PlaceViewController
-//                    displayCurrentPlaceViewController.belongsToCategory = displayPlaces
-                
-//                }
-//                else {
-//                    print("there is no segue")
-//                    
-                }
-                
+                let placePostViewController = segue.destinationViewController as! PlacePostViewController
+                placePostViewController.placeImage = places[0].imagePlace
             }
             
         }
+        
     }
+}
 
-    
-//}
 
 

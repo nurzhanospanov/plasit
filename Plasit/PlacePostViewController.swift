@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-import Parse
 
 
 class PlacePostViewController: UIViewController {
 
+    var placeImage: UIImage!
     
     @IBOutlet var placePostView: UIView!
     
@@ -26,6 +26,7 @@ class PlacePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeImageView.image = placeImage
     }
 }
 

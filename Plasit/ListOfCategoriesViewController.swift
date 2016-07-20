@@ -86,9 +86,7 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
                     print("there is no indexpath")
                     
                 }
-                
             }
-            
         }
     }
 }
