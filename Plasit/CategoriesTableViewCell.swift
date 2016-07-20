@@ -1,6 +1,6 @@
 
 //
-//  CategoryTableViewCell.swift
+//  CategoriesTableViewCell.swift
 //  Plasit
 //
 //  Created by nurzhan on 7/15/16.

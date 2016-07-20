@@ -12,8 +12,8 @@ import UIKit
 class PlacePostViewController: UIViewController {
 
     
-    @IBOutlet var PlacePostViewController: UIView!
 
+    @IBOutlet var PlacePostViewController: UIView!
     
 }
 

@@ -1,5 +1,5 @@
 //
-//  PlaceTableViewCell.swift
+//  PlacesTableViewCell.swift
 //  Plasit
 //
 //  Created by nurzhan on 7/18/16.

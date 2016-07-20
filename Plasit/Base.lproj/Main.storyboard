@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="230" id="Vw9-5U-kbW" userLabel="CategoryCell" customClass="CategoryTableViewCell" customModule="Plasit" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="230" id="Vw9-5U-kbW" userLabel="CategoryCell" customClass="CategoriesTableViewCell" customModule="Plasit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vw9-5U-kbW" id="654-MU-Dch">
@@ -109,7 +109,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="230" id="ZZc-qN-r3d" userLabel="PlaceCell" customClass="PlaceTableViewCell" customModule="Plasit" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="230" id="ZZc-qN-r3d" userLabel="PlaceCell" customClass="PlacesTableViewCell" customModule="Plasit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZc-qN-r3d" id="h8u-ns-Y0G">
@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="2209" y="-367"/>
         </scene>
-        <!--Place View Controller-->
+        <!--Place Post View Controller-->
         <scene sceneID="lOQ-L4-Fet">
             <objects>
-                <viewController id="2VR-Hs-9SY" customClass="PlaceViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2VR-Hs-9SY" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TbG-NF-shO"/>
                         <viewControllerLayoutGuide type="bottom" id="ad9-KW-ddn"/>
@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-YT-q6F" userLabel="Current Place Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-YT-q6F" userLabel="Place Post Image View">
                                 <rect key="frame" x="20" y="58" width="560" height="206"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-1k-91j">
@@ -177,7 +177,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="currentPlaceViewController" destination="CKq-nP-edh" id="gJU-Zo-QjS"/>
+                        <outlet property="PlacePostViewController" destination="CKq-nP-edh" id="cUZ-dK-2ZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-YR-sd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
