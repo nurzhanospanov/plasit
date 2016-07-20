@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class PlaceViewController: UIViewController {
+class PlacePostViewController: UIViewController {
 
     
-    @IBOutlet var currentPlaceViewController: UIView!
+    @IBOutlet var PlacePostViewController: UIView!
 
     
 }

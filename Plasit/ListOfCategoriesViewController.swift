@@ -66,7 +66,7 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
         
         print("create cell for row: \(indexPath.row)")
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoryTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoriesTableViewCell
         cell.categoryImageView.image = categories[indexPath.row].imageCategory
         
         return cell

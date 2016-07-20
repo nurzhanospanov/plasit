@@ -76,7 +76,7 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         
        // print("create cell for row: \(indexPath.row)")
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlaceCell") as! PlaceTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlaceCell") as! PlacesTableViewCell
         
         cell.placeImageView.image = places[indexPath.row].imagePlace
         

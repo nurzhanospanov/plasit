@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
+class CategoriesTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var categoryImageView: UIImageView!

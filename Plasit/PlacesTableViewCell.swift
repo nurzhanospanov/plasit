@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlaceTableViewCell: UITableViewCell {
+class PlacesTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var placeImageView: UIImageView!
