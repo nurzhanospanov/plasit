@@ -14,13 +14,9 @@ import Parse
 class ListOfCategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func unwindToListOfCategoriesViewController(segue: UIStoryboardSegue) {
-        
-        
-    }
     
     var categories: [DisplayCategory] = []
-
+    
     //    var selectedIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
@@ -72,7 +68,7 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
         return cell
     }
     
-
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")

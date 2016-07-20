@@ -17,7 +17,7 @@ class DisplayPlace: PFObject, PFSubclassing {
     
     var imagePlace: UIImage?
     
-
+    
     static func parseClassName() -> String {
         return "Place"
     }

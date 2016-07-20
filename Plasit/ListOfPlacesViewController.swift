@@ -13,9 +13,7 @@ import Parse
 class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func unwindToListOfPlacesViewController(segue: UIStoryboardSegue) {
-        
-    }
+
 
     var places: [DisplayPlace] = []
     var belongsToCategory: DisplayCategory?
@@ -79,6 +77,7 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("PlaceCell") as! PlacesTableViewCell
         
         cell.placeImageView.image = places[indexPath.row].imagePlace
+        cell.titleLabel.text = places[indexPath.row].placeTitle
         
         
         return cell

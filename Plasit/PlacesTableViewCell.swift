@@ -15,4 +15,5 @@ class PlacesTableViewCell: UITableViewCell {
     @IBOutlet weak var placeImageView: UIImageView!
     
     
+    @IBOutlet weak var titleLabel: UILabel!
 }

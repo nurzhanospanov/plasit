@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import Parse
+
 
 class PlacePostViewController: UIViewController {
 
-    
-
     @IBOutlet var PlacePostViewController: UIView!
+    
+    
     
 }
 
