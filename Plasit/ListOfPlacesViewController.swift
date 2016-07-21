@@ -76,7 +76,6 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         cell.placeImageView.image = places[indexPath.row].imagePlace
         cell.titleLabel.text = places[indexPath.row].placeTitle
         
-        
         return cell
     }
     
@@ -91,13 +90,10 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
             if identifier == "displayPlacePost" {
                 
                 let placePostViewController = segue.destinationViewController as! PlacePostViewController
-
-                placePostViewController.displayPlace = places[0]
                 
+                placePostViewController.displayPlace = places[0]
             }
-            
         }
-        
     }
 }
 

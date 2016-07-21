@@ -10,30 +10,31 @@ import Foundation
 import UIKit
 
 
-class PlacePostViewController: UIViewController {
-
+class PlacePostViewController: UITableViewController {
+    
     var displayPlace: DisplayPlace? {
-       
+        
         didSet {
             
             // make sure IBOutles get instantiated before we access and initialize them bby calling the getter for self.view
             let _ = self.view
-
+            
             // update UI (initialize IBOutlets)
+            
             updateUI()
         }
     }
     
-    @IBOutlet var placePostView: UIView!
+    @IBOutlet var placePostTableView: UITableView!
     @IBOutlet weak var placeImageView: UIImageView!
-    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
-
+        
     }
     
     func updateUI() {

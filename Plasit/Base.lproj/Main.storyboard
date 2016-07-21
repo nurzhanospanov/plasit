@@ -167,7 +167,6 @@
                                         <connections>
                                             <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
                                             <outlet property="titleLabel" destination="EFZ-Fk-hbM" id="yny-wl-v8z"/>
-                                            <segue destination="2HY-YA-Z5s" kind="show" identifier="displayPlacePost" id="zXR-Ac-16a"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -181,6 +180,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="sif-qv-Hh7" id="ryq-yg-t5t"/>
+                        <segue destination="0Hy-c1-DE0" kind="show" identifier="displayPlacePost" id="dvS-74-a4D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,45 +188,60 @@
             <point key="canvasLocation" x="2942" y="-367"/>
         </scene>
         <!--Place Post View Controller-->
-        <scene sceneID="uPa-yi-cxN">
+        <scene sceneID="Z3d-JA-kUt">
             <objects>
-                <viewController id="2HY-YA-Z5s" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dBP-ht-YHU"/>
-                        <viewControllerLayoutGuide type="bottom" id="LwF-Ka-it3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lmd-iY-mMX">
+                <tableViewController id="0Hy-c1-DE0" userLabel="Place Post View Controller" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="arC-m5-Z3f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-Lv-ddZ">
-                                <rect key="frame" x="51" y="74" width="455" height="224"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-pP-aTb">
-                                <rect key="frame" x="46" y="306" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x74-tR-fLH">
-                                <rect key="frame" x="67" y="360" width="423" height="164"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <sections>
+                            <tableViewSection id="Kji-CV-tUc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="465" id="151-gc-TXU">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="465"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="151-gc-TXU" id="bZB-up-jte">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="464.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SI5-K8-Uha" userLabel="Place Image View">
+                                                    <rect key="frame" x="50" y="14" width="513" height="195"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-BQ-bLf" userLabel="Title Label">
+                                                    <rect key="frame" x="50" y="228" width="179" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-UT-NRz" userLabel="Description Text View">
+                                                    <rect key="frame" x="50" y="281" width="513" height="128"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0Hy-c1-DE0" id="Fub-a9-Utp"/>
+                            <outlet property="delegate" destination="0Hy-c1-DE0" id="sq0-BE-2of"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <outlet property="descriptionTextView" destination="x74-tR-fLH" id="hmq-HT-6zw"/>
-                        <outlet property="placeImageView" destination="Bgm-Lv-ddZ" id="gfl-ap-402"/>
-                        <outlet property="placePostView" destination="lmd-iY-mMX" id="2aS-iG-jF2"/>
-                        <outlet property="titleLabel" destination="YIL-pP-aTb" id="baR-IR-A0b"/>
+                        <outlet property="descriptionTextView" destination="8gI-UT-NRz" id="gFb-LZ-Nfr"/>
+                        <outlet property="placeImageView" destination="SI5-K8-Uha" id="bIQ-fz-Hee"/>
+                        <outlet property="placePostTableView" destination="arC-m5-Z3f" id="ew3-hi-2XY"/>
+                        <outlet property="titleLabel" destination="X4V-BQ-bLf" id="Wpy-bI-wBT"/>
+                        <outlet property="view" destination="arC-m5-Z3f" id="m70-XK-S8n"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ULB-fg-ke2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697" y="-367"/>
+            <point key="canvasLocation" x="3711" y="-367"/>
         </scene>
     </scenes>
     <resources>
