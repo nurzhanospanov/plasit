@@ -167,6 +167,7 @@
                                         <connections>
                                             <outlet property="placeImageView" destination="Nkr-9d-nV0" id="usn-tc-9cX"/>
                                             <outlet property="titleLabel" destination="EFZ-Fk-hbM" id="yny-wl-v8z"/>
+                                            <segue destination="0Hy-c1-DE0" kind="show" identifier="displayPlacePost" id="qSe-z7-a0G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -180,16 +181,16 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="sif-qv-Hh7" id="ryq-yg-t5t"/>
-                        <segue destination="0Hy-c1-DE0" kind="show" identifier="displayPlacePost" id="dvS-74-a4D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942" y="-367"/>
+            <point key="canvasLocation" x="3008" y="-367"/>
         </scene>
         <!--Place Post View Controller-->
         <scene sceneID="Z3d-JA-kUt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="0Hy-c1-DE0" userLabel="Place Post View Controller" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="arC-m5-Z3f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -226,10 +227,6 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="0Hy-c1-DE0" id="Fub-a9-Utp"/>
-                            <outlet property="delegate" destination="0Hy-c1-DE0" id="sq0-BE-2of"/>
-                        </connections>
                     </tableView>
                     <connections>
                         <outlet property="descriptionTextView" destination="8gI-UT-NRz" id="gFb-LZ-Nfr"/>
@@ -239,9 +236,8 @@
                         <outlet property="view" destination="arC-m5-Z3f" id="m70-XK-S8n"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3711" y="-367"/>
+            <point key="canvasLocation" x="3809" y="-367"/>
         </scene>
     </scenes>
     <resources>
