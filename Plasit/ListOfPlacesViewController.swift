@@ -14,10 +14,6 @@ class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
-    
-    
     var places: [DisplayPlace] = []
     var belongsToCategory: DisplayCategory?
     
@@ -48,10 +44,7 @@ class ListOfPlacesViewController: UIViewController {
                 
                 place.imagePlaceFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     let image = UIImage(data: imageData!, scale: 1.0)
-                    
                     place.imagePlace = image
-                    
-                    
                     
                     //    print("received image for category: \(category.titleCategory)")
                     self.tableView.reloadData()
@@ -98,7 +91,9 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
             if identifier == "displayPlacePost" {
                 
                 let placePostViewController = segue.destinationViewController as! PlacePostViewController
-                placePostViewController.placeImage = places[0].imagePlace
+
+                placePostViewController.displayPlace = places[0]
+                
             }
             
         }

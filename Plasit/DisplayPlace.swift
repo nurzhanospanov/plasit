@@ -13,7 +13,7 @@ class DisplayPlace: PFObject, PFSubclassing {
     
     @NSManaged var imagePlaceFile: PFFile?
     @NSManaged var placeTitle: String
-    @NSManaged var descriptionPlace: String
+    @NSManaged var placeDescription: String
     
     var imagePlace: UIImage?
     
