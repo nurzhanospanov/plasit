@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3GD-WN-P0s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--User Navigation Controller-->
@@ -15,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fDa-xP-v1X" kind="relationship" relationship="rootViewController" id="T7f-Jh-BNq"/>
+                        <segue destination="aIh-5e-035" kind="relationship" relationship="rootViewController" id="rTL-G5-uOG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIW-aY-dBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmj-s3-hx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="328"/>
+            <point key="canvasLocation" x="2898" y="328"/>
         </scene>
         <!--Earth Navigation Controller-->
         <scene sceneID="vgN-hD-Ynt">
@@ -111,54 +110,65 @@
             <point key="canvasLocation" x="2183" y="-367"/>
         </scene>
         <!--Profile Page View Controller-->
-        <scene sceneID="u4G-MU-CXX">
+        <scene sceneID="PGn-WI-7eo">
             <objects>
-                <tableViewController id="fDa-xP-v1X" customClass="ProfilePageViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="458" sectionHeaderHeight="28" sectionFooterHeight="28" id="nSQ-kB-2oY">
+                <tableViewController id="aIh-5e-035" customClass="ProfilePageViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="417-vj-blw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="458" id="yOo-iC-I9w" userLabel="Profile Page View Cell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="458"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yOo-iC-I9w" id="iRE-y8-pHY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="457.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-pp-Lgg">
-                                            <rect key="frame" x="20" y="29" width="158" height="30"/>
-                                            <color key="backgroundColor" red="0.98431372549999996" green="0.52156862749999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="FgT-Eh-4ec"/>
-                                                <constraint firstAttribute="width" constant="158" id="tqa-Fd-qRp"/>
-                                            </constraints>
-                                            <state key="normal" title="Login Page">
-                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="ngg-en-mhU" kind="show" id="eYx-Et-ZY6"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Lpd-pp-Lgg" firstAttribute="leading" secondItem="iRE-y8-pHY" secondAttribute="leadingMargin" constant="66" id="BmS-gF-0yv"/>
-                                        <constraint firstItem="Lpd-pp-Lgg" firstAttribute="top" secondItem="iRE-y8-pHY" secondAttribute="topMargin" constant="69" id="m4O-ES-n4x"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="Mct-b1-UrF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="524" id="UZt-ll-oNr">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="524"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZt-ll-oNr" id="aoc-cS-anE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="523.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-fD-hMN">
+                                                    <rect key="frame" x="38" y="281" width="161" height="30"/>
+                                                    <state key="normal" title="Login with Facebook"/>
+                                                    <connections>
+                                                        <segue destination="ngg-en-mhU" kind="show" id="XBL-Y7-b8r"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbk-oR-6bt" userLabel="First Name Label">
+                                                    <rect key="frame" x="62" y="158" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dQ-sx-m4h" userLabel="Last Name Label">
+                                                    <rect key="frame" x="191" y="157" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
+                                                    <rect key="frame" x="62" y="13" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
-                            <outlet property="dataSource" destination="fDa-xP-v1X" id="2Lb-Ep-00q"/>
-                            <outlet property="delegate" destination="fDa-xP-v1X" id="7pb-RA-7hM"/>
+                            <outlet property="dataSource" destination="aIh-5e-035" id="EG1-Pj-ZRb"/>
+                            <outlet property="delegate" destination="aIh-5e-035" id="bdS-84-CdL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xmn-Nc-fLd"/>
+                    <navigationItem key="navigationItem" id="2Ug-j1-oqE"/>
                     <connections>
-                        <outlet property="profilePageTableView" destination="nSQ-kB-2oY" id="xq2-o4-ghO"/>
+                        <outlet property="firstNameLabel" destination="qbk-oR-6bt" id="iW5-hM-Yn3"/>
+                        <outlet property="lastNameLabel" destination="9dQ-sx-m4h" id="sVj-cx-Crj"/>
+                        <outlet property="profilePageTableView" destination="417-vj-blw" id="DvD-t1-JhJ"/>
+                        <outlet property="profilePictureImageView" destination="AKt-2w-yCA" id="R2a-nF-IFb"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7R3-y8-nYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgz-lY-KbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2183" y="328"/>
         </scene>
