@@ -75,7 +75,7 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         
         cell.placeImageView.image = places[indexPath.row].imagePlace
         cell.titleLabel.text = places[indexPath.row].placeTitle
-        
+    
         return cell
     }
     

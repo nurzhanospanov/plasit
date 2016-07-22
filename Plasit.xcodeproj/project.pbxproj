@@ -22,6 +22,9 @@
 		746B08EC1D37F4B30056103F /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746B08E61D37F4B30056103F /* User@3x.png */; };
 		746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */; };
 		747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */; };
+		74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */; };
+		74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */; };
+		74A9845B1D427CBF0051CBE2 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -50,6 +53,10 @@
 		746B08E61D37F4B30056103F /* User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User@3x.png"; path = "Assets.xcassets/User@3x.png"; sourceTree = "<group>"; };
 		746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCategoriesViewController.swift; sourceTree = "<group>"; };
 		747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		74A984561D419B1D0051CBE2 /* Plasit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plasit-Bridging-Header.h"; sourceTree = "<group>"; };
+		74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -62,6 +69,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */,
+				74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */,
+				74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +126,7 @@
 				746B08D81D37F2180056103F /* LaunchScreen.storyboard */,
 				746B08DB1D37F2180056103F /* Info.plist */,
 				746B08ED1D37F4CF0056103F /* UI icons */,
+				74A984561D419B1D0051CBE2 /* Plasit-Bridging-Header.h */,
 			);
 			path = Plasit;
 			sourceTree = "<group>";
@@ -141,6 +151,7 @@
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
 				74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */,
 				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
+				74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +168,8 @@
 		D41E13D272C26749D856E66A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */,
+				74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */,
 				72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */,
 			);
 			name = Frameworks;
@@ -300,6 +313,7 @@
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
 				74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */,
+				74A9845B1D427CBF0051CBE2 /* LoginPageViewController.swift in Sources */,
 				740324F81D395DFC00AE0280 /* DisplayCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,11 +430,18 @@
 			baseConfigurationReference = 67922F7312DBDB4DB22B9590 /* Pods-Plasit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Plasit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -429,11 +450,17 @@
 			baseConfigurationReference = 48596CF4078AF5204F5B211F /* Pods-Plasit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = Plasit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 			};
 			name = Release;
 		};

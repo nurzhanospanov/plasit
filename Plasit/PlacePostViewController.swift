@@ -35,6 +35,9 @@ class PlacePostViewController: UITableViewController {
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
         
+    //    self.performSegueWithIdentifier("test", sender: self) // how to send to independent view controller
+        
+        
     }
     
     func updateUI() {

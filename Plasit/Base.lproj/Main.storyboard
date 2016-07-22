@@ -32,6 +32,15 @@
                     <view key="view" contentMode="scaleToFill" id="p7C-Xk-p1f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-Le-uKN">
+                                <rect key="frame" x="241" y="273" width="118" height="30"/>
+                                <state key="normal" title="Go to Login Page"/>
+                                <connections>
+                                    <segue destination="ngg-en-mhU" kind="show" id="uOA-7Z-f6Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="User.png" selectedImage="User.png" id="ssQ-nl-CYf" userLabel="User"/>
@@ -40,6 +49,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaF-Go-0VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2191" y="328"/>
+        </scene>
+        <!--Login Page View Controller-->
+        <scene sceneID="nnf-HA-FFl">
+            <objects>
+                <viewController id="ngg-en-mhU" customClass="LoginPageViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Jr-HD-5B9"/>
+                        <viewControllerLayoutGuide type="bottom" id="DNM-Eu-vpp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lhb-Ui-0oz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmj-s3-hx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904" y="328"/>
         </scene>
         <!--Earth Navigation Controller-->
         <scene sceneID="vgN-hD-Ynt">
@@ -109,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezd-qp-5Yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191" y="-367"/>
+            <point key="canvasLocation" x="2183" y="-367"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xp0-nN-Y5m">
@@ -185,12 +212,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhq-NY-XBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3008" y="-367"/>
+            <point key="canvasLocation" x="2898" y="-367"/>
         </scene>
         <!--Place Post View Controller-->
         <scene sceneID="Z3d-JA-kUt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="0Hy-c1-DE0" userLabel="Place Post View Controller" customClass="PlacePostViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="arC-m5-Z3f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -212,7 +238,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-BQ-bLf" userLabel="Title Label">
                                                     <rect key="frame" x="50" y="228" width="179" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-UT-NRz" userLabel="Description Text View">
@@ -236,8 +262,9 @@
                         <outlet property="view" destination="arC-m5-Z3f" id="m70-XK-S8n"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="-367"/>
+            <point key="canvasLocation" x="3629" y="-367"/>
         </scene>
     </scenes>
     <resources>
