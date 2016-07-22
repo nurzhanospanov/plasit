@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3GD-WN-P0s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--User Navigation Controller-->
@@ -118,21 +119,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="458" id="yOo-iC-I9w" userLabel="Profile Page View Cell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="458" id="yOo-iC-I9w" userLabel="Profile Page View Cell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="458"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yOo-iC-I9w" id="iRE-y8-pHY">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="457.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-pp-Lgg">
-                                            <rect key="frame" x="91" y="168" width="76" height="30"/>
-                                            <state key="normal" title="Login Page"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-pp-Lgg">
+                                            <rect key="frame" x="20" y="29" width="158" height="30"/>
+                                            <color key="backgroundColor" red="0.98431372549999996" green="0.52156862749999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="FgT-Eh-4ec"/>
+                                                <constraint firstAttribute="width" constant="158" id="tqa-Fd-qRp"/>
+                                            </constraints>
+                                            <state key="normal" title="Login Page">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <segue destination="ngg-en-mhU" kind="show" id="eYx-Et-ZY6"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Lpd-pp-Lgg" firstAttribute="leading" secondItem="iRE-y8-pHY" secondAttribute="leadingMargin" constant="66" id="BmS-gF-0yv"/>
+                                        <constraint firstItem="Lpd-pp-Lgg" firstAttribute="top" secondItem="iRE-y8-pHY" secondAttribute="topMargin" constant="69" id="m4O-ES-n4x"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
