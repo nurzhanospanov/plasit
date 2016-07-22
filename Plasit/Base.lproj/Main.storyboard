@@ -14,41 +14,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Ned-eT-Chj" kind="relationship" relationship="rootViewController" id="3eH-7W-z0Q"/>
+                        <segue destination="fDa-xP-v1X" kind="relationship" relationship="rootViewController" id="T7f-Jh-BNq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIW-aY-dBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1447" y="328"/>
-        </scene>
-        <!--Profile Page View Controller-->
-        <scene sceneID="yID-on-96d">
-            <objects>
-                <viewController id="Ned-eT-Chj" customClass="ProfilePageViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Y0-5L-5KC"/>
-                        <viewControllerLayoutGuide type="bottom" id="eLn-js-k6j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p7C-Xk-p1f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-Le-uKN">
-                                <rect key="frame" x="241" y="273" width="118" height="30"/>
-                                <state key="normal" title="Go to Login Page"/>
-                                <connections>
-                                    <segue destination="ngg-en-mhU" kind="show" id="uOA-7Z-f6Q"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="User.png" selectedImage="User.png" id="ssQ-nl-CYf" userLabel="User"/>
-                    <navigationItem key="navigationItem" id="qnE-Pc-9zd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YaF-Go-0VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2191" y="328"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="nnf-HA-FFl">
@@ -138,6 +109,47 @@
             </objects>
             <point key="canvasLocation" x="2183" y="-367"/>
         </scene>
+        <!--Profile Page View Controller-->
+        <scene sceneID="u4G-MU-CXX">
+            <objects>
+                <tableViewController id="fDa-xP-v1X" customClass="ProfilePageViewController" customModule="Plasit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="458" sectionHeaderHeight="28" sectionFooterHeight="28" id="nSQ-kB-2oY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="458" id="yOo-iC-I9w" userLabel="Profile Page View Cell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="458"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yOo-iC-I9w" id="iRE-y8-pHY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="457.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-pp-Lgg">
+                                            <rect key="frame" x="91" y="168" width="76" height="30"/>
+                                            <state key="normal" title="Login Page"/>
+                                            <connections>
+                                                <segue destination="ngg-en-mhU" kind="show" id="eYx-Et-ZY6"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fDa-xP-v1X" id="2Lb-Ep-00q"/>
+                            <outlet property="delegate" destination="fDa-xP-v1X" id="7pb-RA-7hM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Xmn-Nc-fLd"/>
+                    <connections>
+                        <outlet property="profilePageTableView" destination="nSQ-kB-2oY" id="xq2-o4-ghO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7R3-y8-nYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="328"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xp0-nN-Y5m">
             <objects>
@@ -225,7 +237,7 @@
                         <sections>
                             <tableViewSection id="Kji-CV-tUc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="465" id="151-gc-TXU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="465" id="151-gc-TXU" userLabel="Place Post View Cell">
                                         <rect key="frame" x="0.0" y="64" width="600" height="465"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="151-gc-TXU" id="bZB-up-jte">
@@ -235,13 +247,13 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SI5-K8-Uha" userLabel="Place Image View">
                                                     <rect key="frame" x="50" y="14" width="513" height="195"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-BQ-bLf" userLabel="Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-BQ-bLf" userLabel="Title Label">
                                                     <rect key="frame" x="50" y="228" width="179" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-UT-NRz" userLabel="Description Text View">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-UT-NRz" userLabel="Description Text View">
                                                     <rect key="frame" x="50" y="281" width="513" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

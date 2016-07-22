@@ -17,9 +17,10 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
         let button = FBSDKLoginButton()
         button.readPermissions = ["email"]
         return button
-    
+        
     }()
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +30,10 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             fetchProfile()
-        
+            
         }
     }
+    
     
     func fetchProfile() {
         print("fetch profile")
@@ -40,26 +42,59 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
             
             if error != nil {
-            print(error)
+                print(error)
                 return
             }
             
-            if let firstName = result.valueForKey("first_name") as? String {
+            var firstNameData = ""
+            var lastNameData = ""
+            var emailData = ""
+            var pictureData = ""
+            
+            
+            if let firstName = result.valueForKey("first_name") as?  String {
                 print(firstName)
+                firstNameData = firstName
+                
             }
-
-
-
+            
             if let lastName = result.valueForKey("last_name") as? String {
                 print(lastName)
+                lastNameData = lastName
             }
             
             if let email = result.valueForKey("email") as? String {
                 print(email)
+                emailData = email
             }
             
-            if let picture = result.valueForKey("picture")as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
+            if let picture = result.valueForKey("picture")as? NSDictionary,
+                data = picture["data"] as? NSDictionary,
+                url = data["url"] as? String {
                 print(url)
+                pictureData = url
+            }
+            
+            
+            let user = PFUser()
+            let username = "\(firstNameData)_\(lastNameData)"
+            
+            user["firstName"] = firstNameData
+            user["lastName"] = lastNameData
+            user["email"] = emailData
+            user["picture"] = pictureData
+            user["username"] = username
+            user["password"] = emailData
+            
+            user.signUpInBackgroundWithBlock() {(success, error) -> Void in
+                if success {
+                    
+                    print("successfully saved ")
+                }
+                    
+                else {
+                    print(error)
+                }
             }
         }
     }
@@ -77,6 +112,7 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
         return true
     }
-
 }
+
+
 

@@ -22,7 +22,6 @@ class DisplayPlace: PFObject, PFSubclassing {
         return "Place"
     }
     
-    
     override init () {
         super.init()
     }
@@ -34,5 +33,4 @@ class DisplayPlace: PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
-
 }

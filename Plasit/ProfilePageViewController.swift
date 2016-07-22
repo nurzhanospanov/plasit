@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class ProfilePageViewController: UIViewController {
+class ProfilePageViewController: UITableViewController {
 
+    @IBOutlet var profilePageTableView: UITableView!
 
 }

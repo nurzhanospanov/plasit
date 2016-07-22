@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
+
 class ListOfPlacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
