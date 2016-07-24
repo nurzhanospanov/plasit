@@ -35,6 +35,7 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     
+    
     func fetchProfile() {
         print("fetch profile")
         
@@ -89,7 +90,7 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
             user.signUpInBackgroundWithBlock() {(success, error) -> Void in
                 if success {
                     
-                    print("successfully saved ")
+                    print("successfully saved")
                 }
                     
                 else {

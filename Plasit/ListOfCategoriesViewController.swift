@@ -28,17 +28,17 @@ class ListOfCategoriesViewController: UIViewController {
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
             self.categories = result as? [DisplayCategory] ?? []
-            print("received \(self.categories.count) categories from parse DB, now fetch individual images")
+//            print("received \(self.categories.count) categories from parse DB, now fetch individual images")
             
             for category in self.categories {
-                print("fetch image for category: \(category.titleCategory)")
+//                print("fetch image for category: \(category.titleCategory)")
                 
                 category.imageCategoryFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     
                     let image = UIImage(data: imageData!, scale: 1.0)
                     category.imageCategory = image
                     
-                    print("received image for category: \(category.titleCategory)")
+//                    print("received image for category: \(category.titleCategory)")
                     self.tableView.reloadData()
                 }
             }
