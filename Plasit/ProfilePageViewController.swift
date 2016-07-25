@@ -21,28 +21,44 @@ class ProfilePageViewController: UITableViewController {
     
     @IBOutlet weak var profilePictureImageView: UIImageView!
     
-    //var imageSmth: UIImage?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+ 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ProfilePageViewController - viewWillAppear")
         
-        let userFirstName = PFUser.currentUser()!["firstName"] as? String
-        firstNameLabel.text = userFirstName
-        
-        let userLastName = PFUser.currentUser()!["lastName"] as? String
-        lastNameLabel.text = userLastName
-        
-        let userPicture = PFUser.currentUser()!["picture"] as? String
-        print(userPicture)
-        
-        let url = NSURL(string: userPicture!) // force unwrapping!!
-        
-        let data = NSData(contentsOfURL: url!) // force unwrapping!
-        
-        let image = UIImage(data: data!) // force unwrapping!
-        
-        profilePictureImageView.image = image
-        
+        updateUI()
+
     }
+    
+    func updateUI () {
+        
+        if let userFirstName = PFUser.currentUser()?["firstName"] as? String {
+            firstNameLabel.text = userFirstName
+        } else {
+            self.firstNameLabel.text = ""
+        }
+        
+        if let userLastName = PFUser.currentUser()?["lastName"] as? String{
+            lastNameLabel.text = userLastName
+        } else {
+            self.lastNameLabel.text = ""
+        }
+        
+        if let userPicture = PFUser.currentUser()?["picture"] as? String,
+            url = NSURL(string: userPicture),
+            data = NSData(contentsOfURL: url),
+            image = UIImage(data: data)
+        {
+            profilePictureImageView?.image = image
+            
+        }
+        else {
+            self.profilePictureImageView.image = nil
+        }
+    }
+    
+    
 }
 

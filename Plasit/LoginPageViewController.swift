@@ -34,8 +34,6 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    
-    
     func fetchProfile() {
         print("fetch profile")
         
@@ -80,6 +78,7 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
             let user = PFUser()
             let username = "\(firstNameData)_\(lastNameData)"
             
+            
             user["firstName"] = firstNameData
             user["lastName"] = lastNameData
             user["email"] = emailData
@@ -87,14 +86,25 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
             user["username"] = username
             user["password"] = emailData
             
-            user.signUpInBackgroundWithBlock() {(success, error) -> Void in
-                if success {
-                    
-                    print("successfully saved")
-                }
-                    
-                else {
-                    print(error)
+            
+            let currentUser = PFUser.currentUser()?.username
+            
+            if  currentUser == nil {
+                user.signUpInBackgroundWithBlock() {(success, error) -> Void in
+                    if success {
+                        print("successfully saved")
+                    } else {
+                        // execute this if user already exists in Parse
+                        
+                        do
+                        {
+                            try PFUser.logInWithUsername(username, password: emailData)
+                        }
+                        catch
+                        {
+                            print(error)
+                        }
+                    }
                 }
             }
         }
@@ -108,12 +118,36 @@ class LoginPageViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("successfully logged out")
+        PFUser.logOut()
     }
     
     func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
         return true
     }
+    
 }
 
 
+//            var currentUser = PFUser.currentUser()!.username
+//
+//            if  currentUser == nil {
+//                user.signUpInBackgroundWithBlock() {(success, error) -> Void in
+//                    if success {
+//
+//                        print("successfully saved")
+//                    } else {
+//                        // exectute this if user already exists in Parse
+//                        PFUser.logInWithUsername(username, password: emailData)
+//                }
+//            }
+//
+//        }
 
+//func checkUserCredentials() throws -> Bool {
+//    try PFUser.logInWithUsername(username, password: emailData)
+//
+//    if (PFUser.currentUser() != nil) {
+//        return true
+//    }
+//    return false
+//}
