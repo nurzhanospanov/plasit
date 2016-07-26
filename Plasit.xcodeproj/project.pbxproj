@@ -24,7 +24,9 @@
 		747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */; };
 		74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */; };
 		74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */; };
-		74A9845B1D427CBF0051CBE2 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */; };
+		74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */; };
+		74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */; };
+		74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -56,7 +58,9 @@
 		74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		74A984561D419B1D0051CBE2 /* Plasit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plasit-Bridging-Header.h"; sourceTree = "<group>"; };
-		74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaView.swift; sourceTree = "<group>"; };
+		74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaIndicator.swift; sourceTree = "<group>"; };
+		74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			children = (
 				740324FA1D399FAF00AE0280 /* CategoriesTableViewCell.swift */,
 				74F84B361D3D85890096216F /* PlacesTableViewCell.swift */,
+				74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */,
+				74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -150,8 +156,8 @@
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
 				74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */,
+				74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */,
 				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
-				74A9845A1D427CBF0051CBE2 /* LoginPageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -308,12 +314,14 @@
 				74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */,
 				740324FB1D399FAF00AE0280 /* CategoriesTableViewCell.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
+				74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */,
 				74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */,
 				74F84B371D3D85890096216F /* PlacesTableViewCell.swift in Sources */,
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
+				74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */,
 				74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */,
-				74A9845B1D427CBF0051CBE2 /* LoginPageViewController.swift in Sources */,
+				74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */,
 				740324F81D395DFC00AE0280 /* DisplayCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +439,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -440,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -451,6 +462,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -460,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 			};
 			name = Release;

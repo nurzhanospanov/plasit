@@ -12,6 +12,7 @@ import UIKit
 
 class PlacePostViewController: UITableViewController {
     
+
     var displayPlace: DisplayPlace? {
         
         didSet {
@@ -34,20 +35,28 @@ class PlacePostViewController: UITableViewController {
         super.viewDidLoad()
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
-        
-    //    self.performSegueWithIdentifier("test", sender: self) // how to send to independent view controller
-        
-        
     }
-    
+
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
         self.placeImageView.image = displayPlace?.imagePlace
         self.descriptionTextView.text = displayPlace?.placeDescription
         self.titleLabel.text = displayPlace?.placeTitle
     }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepareForSegue: \(segue.identifier)")
+        if let identifier = segue.identifier {
+            if identifier == "displayPanoramaView" {
+                
+                let panoramaViewController = segue.destinationViewController as! PanoramaViewController
+                panoramaViewController.panorama = placeImageView.image
+            }
+        }
+    }
 }
-
 
 
 

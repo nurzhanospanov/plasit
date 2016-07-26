@@ -107,7 +107,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                     if success {
                         print("successfully saved")
                     } else {
-                        // execute this if user already exists in Parse
                         
                         do
                         {
@@ -117,10 +116,11 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         {
                             print(error)
                         }
-                        //dispatch_async(dispatch_get_main_queue(), {
-                          //  self.updateUI()
-                        //})
+//                        dispatch_async(dispatch_get_main_queue(), {
+//                            self.updateUI()
+//                        })
                         self.updateUI()
+                        print("profile should not be blank")
                     }
                 }
             }
@@ -137,9 +137,11 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("successfully logged out")
         PFUser.logOut()
+       
         self.firstNameLabel.text = ""
         self.lastNameLabel.text = ""
-        self.profilePictureImageView?.image = nil
+        self.profilePictureImageView?.image = UIImage(named: "user.png")
+        
 
     }
     
@@ -148,23 +150,23 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     }
 
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        print("ProfilePageViewController - viewWillAppear")
-        
-       // updateUI()
-
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.firstNameLabel.text = ""
+//        self.lastNameLabel.text = ""
+//        self.profilePictureImageView?.image = nil
+//        print("profile should be blank")
+//    }
     
     func updateUI () {
         
-        if let userFirstName = PFUser.currentUser()?["firstName"] as? String {
+        if let userFirstName = PFUser.currentUser()?["firstName"] as? String    {
             firstNameLabel.text = userFirstName
         } else {
             self.firstNameLabel.text = ""
         }
         
-        if let userLastName = PFUser.currentUser()?["lastName"] as? String{
+        if let userLastName = PFUser.currentUser()?["lastName"] as? String  {
             lastNameLabel.text = userLastName
         } else {
             self.lastNameLabel.text = ""
