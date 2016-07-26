@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class ProfilePageViewController: UITableViewController {
+class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate {
 
     
     @IBOutlet var profilePageTableView: UITableView!
@@ -21,14 +21,138 @@ class ProfilePageViewController: UITableViewController {
     
     @IBOutlet weak var profilePictureImageView: UIImageView!
     
+    let loginButton: FBSDKLoginButton = {
+        let button = FBSDKLoginButton()
+        button.readPermissions = ["email"]
+        return button
+        
+    }()
     
- 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.firstNameLabel.text = ""
+        self.lastNameLabel.text = ""
+        self.profilePictureImageView?.image
+        
+        view.addSubview(loginButton)
+        loginButton.center = view.center
+        loginButton.delegate = self
+        
+        
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            fetchProfile()
+
+        }
+    }
+    
+    func fetchProfile() {
+        print("func fetch profile was called")
+        
+        let parameters = ["fields": "email, first_name, last_name, picture.type(large)"]
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            var firstNameData = ""
+            var lastNameData = ""
+            var emailData = ""
+            var pictureData = ""
+            
+            
+            if let firstName = result.valueForKey("first_name") as?  String {
+                print(firstName)
+                firstNameData = firstName
+                
+            }
+            
+            if let lastName = result.valueForKey("last_name") as? String {
+                print(lastName)
+                lastNameData = lastName
+            }
+            
+            if let email = result.valueForKey("email") as? String {
+                print(email)
+                emailData = email
+            }
+            
+            if let picture = result.valueForKey("picture")as? NSDictionary,
+                data = picture["data"] as? NSDictionary,
+                url = data["url"] as? String {
+                print(url)
+                pictureData = url
+            }
+            
+            
+            let user = PFUser()
+            let username = "\(firstNameData)_\(lastNameData)"
+            
+            
+            user["firstName"] = firstNameData
+            user["lastName"] = lastNameData
+            user["email"] = emailData
+            user["picture"] = pictureData
+            user["username"] = username
+            user["password"] = emailData
+            
+            
+            let currentUser = PFUser.currentUser()?.username
+            
+            if  currentUser == nil {
+                user.signUpInBackgroundWithBlock() {(success, error) -> Void in
+                    if success {
+                        print("successfully saved")
+                    } else {
+                        // execute this if user already exists in Parse
+                        
+                        do
+                        {
+                            try PFUser.logInWithUsername(username, password: emailData)
+                        }
+                        catch
+                        {
+                            print(error)
+                        }
+                        //dispatch_async(dispatch_get_main_queue(), {
+                          //  self.updateUI()
+                        //})
+                        self.updateUI()
+                    }
+                }
+            }
+        }
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        
+        print("complete login")
+        fetchProfile()
+        
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("successfully logged out")
+        PFUser.logOut()
+        self.firstNameLabel.text = ""
+        self.lastNameLabel.text = ""
+        self.profilePictureImageView?.image = nil
+
+    }
+    
+    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
+        return true
+    }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print("ProfilePageViewController - viewWillAppear")
         
-        updateUI()
+       // updateUI()
 
     }
     
@@ -58,7 +182,5 @@ class ProfilePageViewController: UITableViewController {
             self.profilePictureImageView.image = nil
         }
     }
-    
-    
 }
 

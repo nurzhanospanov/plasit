@@ -142,13 +142,6 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
                                                     <rect key="frame" x="62" y="13" width="240" height="128"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqS-A2-aze">
-                                                    <rect key="frame" x="158" y="247" width="138" height="30"/>
-                                                    <state key="normal" title="Login with facebook"/>
-                                                    <connections>
-                                                        <segue destination="ngg-en-mhU" kind="show" id="LyL-7h-PqK"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
