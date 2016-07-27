@@ -12,7 +12,7 @@ import UIKit
 
 class PlacePostViewController: UITableViewController {
     
-
+    
     var displayPlace: DisplayPlace? {
         
         didSet {
@@ -39,24 +39,31 @@ class PlacePostViewController: UITableViewController {
     {
         if beenHereButton.imageView!.image == UIImage(named: "locationButton")
         {
+            
             beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
+            animationForBeenHereButton()
         }
         else
         {
+            
             beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
+            animationForBeenHereButton()
         }
     }
     
     @IBAction func wantToGoButtonPressed(sender: AnyObject) {
-       
+        
         if wantToGoButton.imageView!.image == UIImage(named: "airplaneButton")
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
+            animationForWantToGoButton()
         }
         else
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
+            animationForWantToGoButton()
         }
+        
         
     }
     
@@ -67,20 +74,46 @@ class PlacePostViewController: UITableViewController {
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
     }
-
+    
+    
+    
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
         self.placeImageView.image = displayPlace?.imagePlace
         self.descriptionTextView.text = displayPlace?.placeDescription
         self.titleLabel.text = displayPlace?.placeTitle
     }
-
-
-    func buttonClicked(sender:UIButton)
-        {
-            sender.selected = !sender.selected;
+    
+    
+    func animationForBeenHereButton() {
+        beenHereButton.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        
+        
+        UIView.animateWithDuration(0.5,
+                                   delay: 0,
+                                   usingSpringWithDamping: 0.5,
+                                   initialSpringVelocity: 6.0,
+                                   options: UIViewAnimationOptions.AllowUserInteraction,
+                                   animations: {
+                                    self.beenHereButton.transform = CGAffineTransformIdentity
+            }, completion: nil)
     }
-
+    
+    
+    func animationForWantToGoButton() {
+        wantToGoButton.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        
+        
+        UIView.animateWithDuration(0.5,
+                                   delay: 0,
+                                   usingSpringWithDamping: 0.5,
+                                   initialSpringVelocity: 6.0,
+                                   options: UIViewAnimationOptions.AllowUserInteraction,
+                                   animations: {
+                                    self.wantToGoButton.transform = CGAffineTransformIdentity
+            }, completion: nil)
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
