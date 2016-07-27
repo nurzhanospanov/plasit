@@ -28,6 +28,16 @@
 		74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */; };
 		74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */; };
 		74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984641D481DC20051CBE2 /* Arrow Left.png */; };
+		74A9846F1D493AD00051CBE2 /* locationButtonPressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984661D493AD00051CBE2 /* locationButtonPressed@3x.png */; };
+		74A984701D493AD00051CBE2 /* locationButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984671D493AD00051CBE2 /* locationButtonPressed@2x.png */; };
+		74A984711D493AD00051CBE2 /* locationButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984681D493AD00051CBE2 /* locationButtonPressed.png */; };
+		74A984721D493AD00051CBE2 /* airplaneButtonPressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984691D493AD00051CBE2 /* airplaneButtonPressed@3x.png */; };
+		74A984731D493AD00051CBE2 /* airplaneButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846A1D493AD00051CBE2 /* airplaneButtonPressed@2x.png */; };
+		74A984741D493AD00051CBE2 /* airplaneButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846B1D493AD00051CBE2 /* airplaneButtonPressed.png */; };
+		74A984751D493AD00051CBE2 /* airplaneButon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846C1D493AD00051CBE2 /* airplaneButon@3x.png */; };
+		74A984761D493AD00051CBE2 /* airplaneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846D1D493AD00051CBE2 /* airplaneButton@2x.png */; };
+		74A984771D493AD00051CBE2 /* airplaneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846E1D493AD00051CBE2 /* airplaneButton.png */; };
+		74A984791D4951860051CBE2 /* locationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984781D4951860051CBE2 /* locationButton.png */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -63,6 +73,16 @@
 		74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaIndicator.swift; sourceTree = "<group>"; };
 		74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
 		74A984641D481DC20051CBE2 /* Arrow Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow Left.png"; path = "Assets.xcassets/Arrow Left.png"; sourceTree = "<group>"; };
+		74A984661D493AD00051CBE2 /* locationButtonPressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locationButtonPressed@3x.png"; path = "Assets.xcassets/locationButtonPressed@3x.png"; sourceTree = "<group>"; };
+		74A984671D493AD00051CBE2 /* locationButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locationButtonPressed@2x.png"; path = "Assets.xcassets/locationButtonPressed@2x.png"; sourceTree = "<group>"; };
+		74A984681D493AD00051CBE2 /* locationButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locationButtonPressed.png; path = Assets.xcassets/locationButtonPressed.png; sourceTree = "<group>"; };
+		74A984691D493AD00051CBE2 /* airplaneButtonPressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplaneButtonPressed@3x.png"; path = "Assets.xcassets/airplaneButtonPressed@3x.png"; sourceTree = "<group>"; };
+		74A9846A1D493AD00051CBE2 /* airplaneButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplaneButtonPressed@2x.png"; path = "Assets.xcassets/airplaneButtonPressed@2x.png"; sourceTree = "<group>"; };
+		74A9846B1D493AD00051CBE2 /* airplaneButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplaneButtonPressed.png; path = Assets.xcassets/airplaneButtonPressed.png; sourceTree = "<group>"; };
+		74A9846C1D493AD00051CBE2 /* airplaneButon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplaneButon@3x.png"; path = "Assets.xcassets/airplaneButon@3x.png"; sourceTree = "<group>"; };
+		74A9846D1D493AD00051CBE2 /* airplaneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplaneButton@2x.png"; path = "Assets.xcassets/airplaneButton@2x.png"; sourceTree = "<group>"; };
+		74A9846E1D493AD00051CBE2 /* airplaneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplaneButton.png; path = Assets.xcassets/airplaneButton.png; sourceTree = "<group>"; };
+		74A984781D4951860051CBE2 /* locationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locationButton.png; path = Assets.xcassets/locationButton.png; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -142,6 +162,16 @@
 		746B08ED1D37F4CF0056103F /* UI icons */ = {
 			isa = PBXGroup;
 			children = (
+				74A984781D4951860051CBE2 /* locationButton.png */,
+				74A984661D493AD00051CBE2 /* locationButtonPressed@3x.png */,
+				74A984671D493AD00051CBE2 /* locationButtonPressed@2x.png */,
+				74A984681D493AD00051CBE2 /* locationButtonPressed.png */,
+				74A984691D493AD00051CBE2 /* airplaneButtonPressed@3x.png */,
+				74A9846A1D493AD00051CBE2 /* airplaneButtonPressed@2x.png */,
+				74A9846B1D493AD00051CBE2 /* airplaneButtonPressed.png */,
+				74A9846C1D493AD00051CBE2 /* airplaneButon@3x.png */,
+				74A9846D1D493AD00051CBE2 /* airplaneButton@2x.png */,
+				74A9846E1D493AD00051CBE2 /* airplaneButton.png */,
 				74A984641D481DC20051CBE2 /* Arrow Left.png */,
 				746B08E11D37F4B30056103F /* Earth.png */,
 				746B08E21D37F4B30056103F /* Earth@2x.png */,
@@ -250,11 +280,21 @@
 				746B08EC1D37F4B30056103F /* User@3x.png in Resources */,
 				746B08E81D37F4B30056103F /* Earth@2x.png in Resources */,
 				746B08EA1D37F4B30056103F /* User.png in Resources */,
+				74A984721D493AD00051CBE2 /* airplaneButtonPressed@3x.png in Resources */,
 				746B08E71D37F4B30056103F /* Earth.png in Resources */,
 				746B08E91D37F4B30056103F /* Earth@3x.png in Resources */,
+				74A984791D4951860051CBE2 /* locationButton.png in Resources */,
+				74A984731D493AD00051CBE2 /* airplaneButtonPressed@2x.png in Resources */,
+				74A984751D493AD00051CBE2 /* airplaneButon@3x.png in Resources */,
 				746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */,
+				74A984741D493AD00051CBE2 /* airplaneButtonPressed.png in Resources */,
+				74A984711D493AD00051CBE2 /* locationButtonPressed.png in Resources */,
 				746B08D71D37F2180056103F /* Assets.xcassets in Resources */,
 				746B08D51D37F2180056103F /* Main.storyboard in Resources */,
+				74A9846F1D493AD00051CBE2 /* locationButtonPressed@3x.png in Resources */,
+				74A984761D493AD00051CBE2 /* airplaneButton@2x.png in Resources */,
+				74A984701D493AD00051CBE2 /* locationButtonPressed@2x.png in Resources */,
+				74A984771D493AD00051CBE2 /* airplaneButton.png in Resources */,
 				74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */,
 				746B08EB1D37F4B30056103F /* User@2x.png in Resources */,
 			);
