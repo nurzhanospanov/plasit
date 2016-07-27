@@ -278,7 +278,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBD-xm-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="rLv-zX-e4a">
                     <connections>
-                        <segue destination="WZt-Zr-zUv" kind="show" identifier="displayPanoramaView" id="dQx-sO-Hed"/>
+                        <segue destination="WZt-Zr-zUv" kind="presentation" identifier="displayPanoramaView" id="dQx-sO-Hed"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -295,15 +295,31 @@
                     <view key="view" contentMode="scaleToFill" id="m4O-L9-bpb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="878-uM-NUE">
+                                <rect key="frame" x="94" y="68" width="111" height="22"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" image="Arrow Left.png"/>
+                                <connections>
+                                    <action selector="backButton:" destination="WZt-Zr-zUv" eventType="touchUpInside" id="19a-Zj-xAI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="878-uM-NUE" id="dnm-KG-fM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZm-nt-dui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4335" y="-367"/>
+            <point key="canvasLocation" x="4321" y="-367"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Left.png" width="31" height="22"/>
         <image name="Earth.png" width="30" height="30"/>
         <image name="User.png" width="30" height="30"/>
     </resources>

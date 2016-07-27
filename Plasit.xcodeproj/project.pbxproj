@@ -27,6 +27,7 @@
 		74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */; };
 		74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */; };
 		74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */; };
+		74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984641D481DC20051CBE2 /* Arrow Left.png */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -61,6 +62,7 @@
 		74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaView.swift; sourceTree = "<group>"; };
 		74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaIndicator.swift; sourceTree = "<group>"; };
 		74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
+		74A984641D481DC20051CBE2 /* Arrow Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow Left.png"; path = "Assets.xcassets/Arrow Left.png"; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		746B08ED1D37F4CF0056103F /* UI icons */ = {
 			isa = PBXGroup;
 			children = (
+				74A984641D481DC20051CBE2 /* Arrow Left.png */,
 				746B08E11D37F4B30056103F /* Earth.png */,
 				746B08E21D37F4B30056103F /* Earth@2x.png */,
 				746B08E31D37F4B30056103F /* Earth@3x.png */,
@@ -252,6 +255,7 @@
 				746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */,
 				746B08D71D37F2180056103F /* Assets.xcassets in Resources */,
 				746B08D51D37F2180056103F /* Main.storyboard in Resources */,
+				74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */,
 				746B08EB1D37F4B30056103F /* User@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

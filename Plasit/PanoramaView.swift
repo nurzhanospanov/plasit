@@ -71,6 +71,14 @@ class PanoramaView: UIView {
         
     }
     
+    func removeObservers() {
+        scrollView.stopObservers()
+    }
+    
+    func addObservers() {
+        scrollView.setupObservers()
+    }
+    
     // MARK: - Setters
     /*
      set image for the imageview to display it to the reciever.

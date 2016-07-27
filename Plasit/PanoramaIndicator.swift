@@ -17,7 +17,7 @@ let ScrollIndicatorDefaultWidth:CGFloat = 20.0
 var viewScrollIndicatorKey: Void?
 var backgroundViewScrollIndicatorKey: Void?
 
-extension UIScrollView{
+extension UIScrollView {
     
     //MARK: Getters/Setters
     func setViewForPanoramaIndicator(viewScrollIndicator:UIView){
@@ -107,6 +107,7 @@ extension UIScrollView{
     }
     
     //MARK: KVO
+
     func setupObservers(){
         
         self.addObserver(self, forKeyPath:"contentSize", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Old] , context: nil)

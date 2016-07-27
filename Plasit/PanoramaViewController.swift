@@ -10,13 +10,29 @@ import Foundation
 
 class PanoramaViewController: UIViewController {
     var panorama: UIImage?
+    var motionView: PanoramaView!
     
+    
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let motionView:PanoramaView = PanoramaView(frame: self.view.bounds)
+        motionView = PanoramaView(frame: self.view.bounds)
         motionView.setImage(panorama!)
         self.view.addSubview(motionView)
+        self.view.bringSubviewToFront(backButton)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        motionView.removeObservers()
+    }
+    
+    
+    func backButton(sender: AnyObject) {
+        print("back button pressed")
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
