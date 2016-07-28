@@ -32,7 +32,6 @@ class PlacePostViewController: UITableViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     
     @IBOutlet weak var beenHereButton: UIButton!
-    
     @IBOutlet weak var wantToGoButton: UIButton!
     
     @IBAction func beenHereButtonPressed(sender: AnyObject)
@@ -41,12 +40,15 @@ class PlacePostViewController: UITableViewController {
         {
             
             beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
+            print("Button Pressed")
             animationForBeenHereButton()
+            print("Animation is here")
         }
         else
         {
             
             beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
+            print("Button released")
             animationForBeenHereButton()
         }
     }
@@ -73,9 +75,8 @@ class PlacePostViewController: UITableViewController {
         super.viewDidLoad()
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
+        // beenHereButton.addTarget(self, action: #selector(beenHereButtonPressed(_:)), forControlEvents: .TouchUpInside)
     }
-    
-    
     
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
