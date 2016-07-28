@@ -51,6 +51,7 @@ class PlacePostViewController: UITableViewController {
             beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
             beenHereButtonPressed = false
             animationForBeenHereButton()
+            deleteBeenHerePlace()
         }
         
     }
@@ -62,12 +63,14 @@ class PlacePostViewController: UITableViewController {
             wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
             wantToGoButtonPressed = true
             animationForWantToGoButton()
+            addWantToGoPlace()
         }
         else
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
             wantToGoButtonPressed = false
             animationForWantToGoButton()
+            deleteWantToGoPlace()
         }
         
         
@@ -119,7 +122,7 @@ class PlacePostViewController: UITableViewController {
     }
     
     
-    func addBeenHerePlace() {
+   func addBeenHerePlace() {
         
         let addedBeenHere = PFObject(className: "BeenHere")
         if let currentUser = PFUser.currentUser(),
@@ -135,9 +138,66 @@ class PlacePostViewController: UITableViewController {
             print("Hey where is User?")
             // make an alert here
         }
-        
-
     }
+    
+    
+    func deleteBeenHerePlace() {
+    
+        let query = PFQuery(className: "BeenHere")
+        query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            
+            if let objects = objects {
+                
+                for object in objects {
+                    
+                   object.deleteEventually()
+                    
+                }
+                
+            }
+        })
+    }
+    
+    func addWantToGoPlace() {
+        
+        let addedWantToGo = PFObject(className: "WantToGo")
+        if let currentUser = PFUser.currentUser(),
+            currentPlace = displayPlace
+            where FBSDKAccessToken.currentAccessToken() != nil {
+            
+            addedWantToGo.setObject(currentUser, forKey: "fromUser")
+            addedWantToGo.setObject(currentPlace, forKey: "toPlace")
+            addedWantToGo.saveInBackground()
+            
+            
+        } else {
+            print("Hey where is User?")
+            // make an alert here
+        }
+    }
+    
+    
+    func deleteWantToGoPlace() {
+        
+        let query = PFQuery(className: "WantToGo")
+        query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            
+            if let objects = objects {
+                
+                for object in objects {
+                    
+                    object.deleteEventually()
+                    
+                }
+                
+            }
+        })
+    }
+    
+    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
