@@ -189,8 +189,8 @@
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
 				74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */,
-				74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */,
 				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
+				74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

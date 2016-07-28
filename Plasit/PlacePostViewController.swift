@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
+import Parse
 
 
 class PlacePostViewController: UITableViewController {
     
+    var beenHereButtonPressed = false
+    var wantToGoButtonPressed = false
     
     var displayPlace: DisplayPlace? {
         
@@ -36,33 +39,34 @@ class PlacePostViewController: UITableViewController {
     
     @IBAction func beenHereButtonPressed(sender: AnyObject)
     {
-        if beenHereButton.imageView!.image == UIImage(named: "locationButton")
+        if !beenHereButtonPressed
         {
-            
             beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
-            print("Button Pressed")
+            beenHereButtonPressed = true
             animationForBeenHereButton()
-            print("Animation is here")
+            addBeenHerePlace()
         }
         else
         {
-            
             beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
-            print("Button released")
+            beenHereButtonPressed = false
             animationForBeenHereButton()
         }
+        
     }
     
     @IBAction func wantToGoButtonPressed(sender: AnyObject) {
         
-        if wantToGoButton.imageView!.image == UIImage(named: "airplaneButton")
+        if !wantToGoButtonPressed
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
+            wantToGoButtonPressed = true
             animationForWantToGoButton()
         }
         else
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
+            wantToGoButtonPressed = false
             animationForWantToGoButton()
         }
         
@@ -75,7 +79,6 @@ class PlacePostViewController: UITableViewController {
         super.viewDidLoad()
         print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
-        // beenHereButton.addTarget(self, action: #selector(beenHereButtonPressed(_:)), forControlEvents: .TouchUpInside)
     }
     
     func updateUI() {
@@ -115,6 +118,26 @@ class PlacePostViewController: UITableViewController {
             }, completion: nil)
     }
     
+    
+    func addBeenHerePlace() {
+        
+        let addedBeenHere = PFObject(className: "BeenHere")
+        if let currentUser = PFUser.currentUser(),
+            currentPlace = displayPlace
+            where FBSDKAccessToken.currentAccessToken() != nil {
+            
+            addedBeenHere.setObject(currentUser, forKey: "fromUser")
+            addedBeenHere.setObject(currentPlace, forKey: "toPlace")
+            addedBeenHere.saveInBackground()
+            
+        
+        } else {
+            print("Hey where is User?")
+            // make an alert here
+        }
+        
+
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
