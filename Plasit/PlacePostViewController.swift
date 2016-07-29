@@ -43,6 +43,7 @@ class PlacePostViewController: UITableViewController {
         {
             beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
             beenHereButtonPressed = true
+            print("called from function")
             animationForBeenHereButton()
             addBeenHerePlace()
         }
@@ -50,6 +51,7 @@ class PlacePostViewController: UITableViewController {
         {
             beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
             beenHereButtonPressed = false
+            print("called from function")
             animationForBeenHereButton()
             deleteBeenHerePlace()
         }
@@ -62,6 +64,7 @@ class PlacePostViewController: UITableViewController {
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
             wantToGoButtonPressed = true
+            print("called from function wantToGo")
             animationForWantToGoButton()
             addWantToGoPlace()
         }
@@ -69,6 +72,7 @@ class PlacePostViewController: UITableViewController {
         {
             wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
             wantToGoButtonPressed = false
+            print("called from function wantToGo")
             animationForWantToGoButton()
             deleteWantToGoPlace()
         }
@@ -80,9 +84,52 @@ class PlacePostViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
         self.descriptionTextView.textColor = UIColor.blackColor()
+        
+        let userQueryBeenHere = PFQuery(className: "BeenHere")
+        
+        if let user = PFUser.currentUser(),
+            place = displayPlace {
+            userQueryBeenHere.whereKey("fromUser", equalTo: user)
+        
+            userQueryBeenHere.whereKey("toPlace", equalTo: place)
+            userQueryBeenHere.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+            if results?.count > 0  {
+                self.beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
+                    self.beenHereButtonPressed = true
+                    print("pressed button called from viewDidLoad")
+            
+            } else {
+                self.beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
+                self.beenHereButtonPressed = false
+                print("release button called from viewDidLoad")
+                }
+            }
+        }
+        
+        let userQueryWantToGo = PFQuery(className: "WantToGo")
+        
+        if let user = PFUser.currentUser(),
+            place = displayPlace {
+            userQueryWantToGo.whereKey("fromUser", equalTo: user)
+            
+            userQueryWantToGo.whereKey("toPlace", equalTo: place)
+            userQueryWantToGo.findObjectsInBackgroundWithBlock { (results, error) -> Void in
+                if results?.count > 0  {
+                    self.wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
+                    self.wantToGoButtonPressed = true
+                    print("pressed button called from viewDidLoad")
+                    
+                } else {
+                    self.wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
+                    self.wantToGoButtonPressed = false
+                    print("release button called from viewDidLoad")
+                }
+            }
+        }
+
     }
+    
     
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
@@ -144,7 +191,9 @@ class PlacePostViewController: UITableViewController {
     func deleteBeenHerePlace() {
     
         let query = PFQuery(className: "BeenHere")
-        query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        
+        if let queryUser = PFUser.currentUser() {
+            query.whereKey("fromUser", equalTo: queryUser)
         query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let objects = objects {
@@ -153,10 +202,11 @@ class PlacePostViewController: UITableViewController {
                     
                    object.deleteEventually()
                     
-                }
+                    }
                 
-            }
-        })
+                }
+            })
+        }
     }
     
     func addWantToGoPlace() {
@@ -181,23 +231,23 @@ class PlacePostViewController: UITableViewController {
     func deleteWantToGoPlace() {
         
         let query = PFQuery(className: "WantToGo")
-        query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
-        query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+        
+        if let queryUser = PFUser.currentUser() {
+            query.whereKey("fromUser", equalTo: queryUser)
+            
+            query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let objects = objects {
                 
                 for object in objects {
                     
-                    object.deleteEventually()
+                    object.deleteInBackground()
                     
+                    }
                 }
-                
-            }
-        })
+            })
+        }
     }
-    
-    
-
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("prepareForSegue: \(segue.identifier)")
