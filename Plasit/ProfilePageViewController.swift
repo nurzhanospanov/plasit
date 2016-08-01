@@ -13,6 +13,11 @@ import Parse
 class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate {
 
     
+    @IBAction func userBeenHereButton(sender: AnyObject) {
+    }
+    
+    @IBOutlet weak var userWantToGoButton: UIButton!
+    
     @IBOutlet var profilePageTableView: UITableView!
     
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -150,13 +155,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     }
 
     
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.firstNameLabel.text = ""
-//        self.lastNameLabel.text = ""
-//        self.profilePictureImageView?.image = nil
-//        print("profile should be blank")
-//    }
     
     func updateUI () {
         
