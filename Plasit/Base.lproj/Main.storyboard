@@ -294,8 +294,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="beenHereImageView" destination="9ke-zO-95U" id="qJ1-iS-FZS"/>
-                                            <outlet property="beenHereTitle" destination="zhs-Jc-cGF" id="5Y9-6u-ARD"/>
+                                            <outlet property="beenHereImageView" destination="9ke-zO-95U" id="bLT-5Q-Kqe"/>
+                                            <outlet property="beenHereTitle" destination="zhs-Jc-cGF" id="uiV-1Z-c6W"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -331,7 +331,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="191" id="vLx-v9-hi7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserWantToGoCell" rowHeight="191" id="vLx-v9-hi7" customClass="UserWantToGoTableViewCell" customModule="Plasit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLx-v9-hi7" id="FJv-Dr-6hM">
@@ -349,12 +349,23 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="wantToGoImageView" destination="2G3-tn-nMf" id="v2U-Im-kmG"/>
+                                            <outlet property="wantToGoTitle" destination="0O0-Bk-jKj" id="hi1-Be-h0i"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OSd-ZN-KmH" id="rvj-bs-cF1"/>
+                                    <outlet property="delegate" destination="OSd-ZN-KmH" id="Z45-xt-ODZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="8jl-d4-V52" id="2TX-lj-eq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ax2-CB-5cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

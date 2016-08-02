@@ -18,7 +18,7 @@ class UserBeenHereViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
+//        self.tableView.delegate = self
         
         if let _ = PFUser.currentUser() {
             let query = PFQuery(className: "BeenHere")
@@ -58,7 +58,7 @@ class UserBeenHereViewController: UIViewController {
     }
 }
 
-extension UserBeenHereViewController: UITableViewDataSource, UITableViewDelegate {
+extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

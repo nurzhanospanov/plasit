@@ -12,7 +12,6 @@ import UIKit
 class UserBeenHereTableViewCell: UITableViewCell {
     
     @IBOutlet weak var beenHereImageView: UIImageView!
-    
+
     @IBOutlet weak var beenHereTitle: UILabel!
-    
 }

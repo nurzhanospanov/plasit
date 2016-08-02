@@ -27,6 +27,7 @@
 		749437251D4C108B0050D52F /* UserBeenHereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749437241D4C108B0050D52F /* UserBeenHereViewController.swift */; };
 		749437271D4C109F0050D52F /* UserWantToGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749437261D4C109F0050D52F /* UserWantToGoViewController.swift */; };
 		7494372D1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494372C1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift */; };
+		749437311D50102A0050D52F /* UserWantToGoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749437301D50102A0050D52F /* UserWantToGoTableViewCell.swift */; };
 		74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */; };
 		74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */; };
 		74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */; };
@@ -76,6 +77,7 @@
 		749437241D4C108B0050D52F /* UserBeenHereViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBeenHereViewController.swift; sourceTree = "<group>"; };
 		749437261D4C109F0050D52F /* UserWantToGoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWantToGoViewController.swift; sourceTree = "<group>"; };
 		7494372C1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBeenHereTableViewCell.swift; sourceTree = "<group>"; };
+		749437301D50102A0050D52F /* UserWantToGoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWantToGoTableViewCell.swift; sourceTree = "<group>"; };
 		74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		74A984561D419B1D0051CBE2 /* Plasit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plasit-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */,
 				74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */,
 				7494372C1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift */,
+				749437301D50102A0050D52F /* UserWantToGoTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */,
 				7494372D1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift in Sources */,
 				740324F81D395DFC00AE0280 /* DisplayCategory.swift in Sources */,
+				749437311D50102A0050D52F /* UserWantToGoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
