@@ -17,6 +17,7 @@ class ListOfPlacesViewController: UIViewController {
     
     var places: [DisplayPlace] = []
     var belongsToCategory: DisplayCategory?
+
     
     
     override func viewDidLoad() {

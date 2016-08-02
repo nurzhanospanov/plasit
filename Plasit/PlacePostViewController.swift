@@ -15,12 +15,13 @@ class PlacePostViewController: UITableViewController {
     
     var beenHereButtonPressed = false
     var wantToGoButtonPressed = false
+
     
     var displayPlace: DisplayPlace? {
         
         didSet {
             
-            // make sure IBOutles get instantiated before we access and initialize them bby calling the getter for self.view
+            // make sure IBOutles get instantiated before we access and initialize them by calling the getter for self.view
             let _ = self.view
             
             // update UI (initialize IBOutlets)
