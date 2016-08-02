@@ -12,7 +12,9 @@ import Parse
 
 class UserBeenHereViewController: UIViewController {
     
-    var places: [DisplayPlace] = []
+    var placesOfArray: [DisplayPlace] = []
+    var selectedRow: Int?
+
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,7 +41,7 @@ class UserBeenHereViewController: UIViewController {
                     let place = beenHere["toPlace"] as? DisplayPlace
                     let title = place?.placeTitle
                     print(title)
-                    self.places.append(place!)
+                    self.placesOfArray.append(place!)
                     
                     
                     place?.imagePlaceFile!.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
@@ -62,16 +64,7 @@ class UserBeenHereViewController: UIViewController {
     
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        print("prepareForSegue: \(segue.identifier)")
-//        if let identifier = segue.identifier {
-//            if identifier == "displayPanoramaView" {
-//                
-//                let placePostViewController = segue.destinationViewController as! PlacePostViewController
-//                placePostViewController.panorama = beenHereImageView.image
-//            }
-//        }
-//    }
+
 
 }
 
@@ -81,7 +74,7 @@ extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return places.count
+        return placesOfArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -89,22 +82,47 @@ extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCellWithIdentifier("UserBeenHereCell") as! UserBeenHereTableViewCell
         
-        cell.beenHereImageView.image = places[indexPath.row].imagePlace
-        cell.beenHereTitle.text = places[indexPath.row].placeTitle
+        cell.beenHereImageView.image = placesOfArray[indexPath.row].imagePlace
+        cell.beenHereTitle.text = placesOfArray[indexPath.row].placeTitle
         
-        tableView.allowsSelection = false
+            tableView.allowsSelection = false
         cell.beenHereImageView.userInteractionEnabled = true
         
         let tappedOnImage = UITapGestureRecognizer(target: self, action: #selector(UserBeenHereViewController.tappedOnImage(_:)))
         cell.beenHereImageView.tag = indexPath.row
         cell.beenHereImageView.addGestureRecognizer(tappedOnImage)
         
+        
+      //  cell.tapRecognizer1.addTarget(self, action: "img_Click:")
+      //  cell.img.gestureRecognizers = []
+      //  cell.img.gestureRecognizers!.append(cell.tapRecognizer1)
+        
         return cell
+        
     }
     
-    func tappedOnImage(sender: UIGestureRecognizer) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath.row)
+    }
+    
+    func tappedOnImage(sender: UITapGestureRecognizer) {
         print("tapped cell ")
-        self.performSegueWithIdentifier("displayPlacePost", sender: nil)
         
+        let view = sender.view; //cast pointer to the derived class if needed
+        selectedRow = view?.tag
+        self.performSegueWithIdentifier("displayPlacePost", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+       
+        
+        
+       // let row = tableView.indexPathForSelectedRow?.row
+       // let row = tableView.indexPathForCell(cell!)?.row
+        let displayPlace = placesOfArray[selectedRow!]
+        
+        let placePostViewController = segue.destinationViewController as? PlacePostViewController
+        placePostViewController?.displayPlace = displayPlace
     }
 }
