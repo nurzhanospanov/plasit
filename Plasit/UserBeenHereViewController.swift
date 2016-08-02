@@ -16,6 +16,10 @@ class UserBeenHereViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+
+    @IBOutlet var tapGestureRecognizerButton: UITapGestureRecognizer!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tableView.delegate = self
@@ -55,8 +59,23 @@ class UserBeenHereViewController: UIViewController {
             print("")
         }
         
+    
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        print("prepareForSegue: \(segue.identifier)")
+//        if let identifier = segue.identifier {
+//            if identifier == "displayPanoramaView" {
+//                
+//                let placePostViewController = segue.destinationViewController as! PlacePostViewController
+//                placePostViewController.panorama = beenHereImageView.image
+//            }
+//        }
+//    }
+
 }
+
+
 
 extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -72,6 +91,20 @@ extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource
         
         cell.beenHereImageView.image = places[indexPath.row].imagePlace
         cell.beenHereTitle.text = places[indexPath.row].placeTitle
+        
+        tableView.allowsSelection = false
+        cell.beenHereImageView.userInteractionEnabled = true
+        
+        let tappedOnImage = UITapGestureRecognizer(target: self, action: #selector(UserBeenHereViewController.tappedOnImage(_:)))
+        cell.beenHereImageView.tag = indexPath.row
+        cell.beenHereImageView.addGestureRecognizer(tappedOnImage)
+        
         return cell
+    }
+    
+    func tappedOnImage(sender: UIGestureRecognizer) {
+        print("tapped cell ")
+        self.performSegueWithIdentifier("displayPlacePost", sender: nil)
+        
     }
 }

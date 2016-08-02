@@ -284,6 +284,10 @@
                                             <subviews>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-zO-95U" userLabel="Been Here Image View">
                                                     <rect key="frame" x="17" y="-8" width="575" height="179.5"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="CxC-aT-WSP" appends="YES" id="vSW-4b-Mcg"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhs-Jc-cGF" userLabel="Been Here Title">
                                                     <rect key="frame" x="220" y="71" width="199" height="21"/>
@@ -309,9 +313,16 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="8pN-j5-9xZ" id="RMc-9J-tbt"/>
+                        <outlet property="tapGestureRecognizerButton" destination="CxC-aT-WSP" id="ZiY-fc-1A3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPB-s3-ha2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CxC-aT-WSP">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="WrV-HB-ex5" id="KrS-ew-81d"/>
+                        <segue destination="0Hy-c1-DE0" kind="show" identifier="displayPlacePost" id="2Py-jt-T1U"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3028" y="358"/>
         </scene>
@@ -383,7 +394,7 @@
                             <tableViewSection id="Kji-CV-tUc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="465" id="151-gc-TXU" userLabel="Place Post View Cell">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="465"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="465"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="151-gc-TXU" id="bZB-up-jte">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="464.5"/>
@@ -492,4 +503,7 @@
         <image name="userBeenHereImage.jpg" width="665" height="443"/>
         <image name="userWantToGoImage.jpg" width="700" height="394"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Py-jt-T1U"/>
+    </inferredMetricsTieBreakers>
 </document>
