@@ -12,7 +12,7 @@ import Parse
 
 class UserWantToGoViewController: UIViewController {
     
-    var places: [DisplayPlace] = []
+    var arrayOfPlaces: [DisplayPlace] = []
   
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,7 +35,7 @@ class UserWantToGoViewController: UIViewController {
                     let place = wantToGo["toPlace"] as? DisplayPlace
                     let title = place?.placeTitle
                     print(title)
-                    self.places.append(place!)
+                    self.arrayOfPlaces.append(place!)
                     
                     
                     place?.imagePlaceFile!.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
@@ -62,17 +62,32 @@ extension UserWantToGoViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return places.count
+        return arrayOfPlaces.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("UserWantToGoCell") as! UserWantToGoTableViewCell
         
-        cell.wantToGoImageView.image = places[indexPath.row].imagePlace
-        cell.wantToGoTitle.text = places[indexPath.row].placeTitle
+        cell.wantToGoImageView.image = arrayOfPlaces[indexPath.row].imagePlace
+        cell.wantToGoTitle.text = arrayOfPlaces[indexPath.row].placeTitle
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        print("prepareForSegue: \(segue.identifier)")
+        if let identifier = segue.identifier {
+            if identifier == "displayPlacePost" {
+                
+                let indexPath = tableView.indexPathForSelectedRow!
+                let place = arrayOfPlaces[indexPath.row]
+                
+                let placePostViewController = segue.destinationViewController as! PlacePostViewController
+                
+                placePostViewController.displayPlace = place
+            }
+        }
     }
 }
 

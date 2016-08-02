@@ -12,9 +12,10 @@ import Parse
 
 class UserBeenHereViewController: UIViewController {
     
-    var placesOfArray: [DisplayPlace] = []
-  //  var selectedRow: Int?
+    var arrayOfPlaces: [DisplayPlace] = []
 
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -37,7 +38,7 @@ class UserBeenHereViewController: UIViewController {
                     let place = beenHere["toPlace"] as? DisplayPlace
                     let title = place?.placeTitle
                     print(title)
-                    self.placesOfArray.append(place!)
+                    self.arrayOfPlaces.append(place!)
                     
                     
                     place?.imagePlaceFile!.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
@@ -60,30 +61,28 @@ class UserBeenHereViewController: UIViewController {
 }
 
 
-
 extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return placesOfArray.count
+        return arrayOfPlaces.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCellWithIdentifier("UserBeenHereCell") as! UserBeenHereTableViewCell
-        cell.beenHereImageView.image = placesOfArray[indexPath.row].imagePlace
-        cell.beenHereTitle.text = placesOfArray[indexPath.row].placeTitle
+        cell.beenHereImageView.image = arrayOfPlaces[indexPath.row].imagePlace
+        cell.beenHereTitle.text = arrayOfPlaces[indexPath.row].placeTitle
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        print("prepareForSegue: \(segue.identifier)")
         if let identifier = segue.identifier {
             if identifier == "displayPlacePost" {
                 
                 let indexPath = tableView.indexPathForSelectedRow!
-                let place = placesOfArray[indexPath.row]
+                let place = arrayOfPlaces[indexPath.row]
                 
                 let placePostViewController = segue.destinationViewController as! PlacePostViewController
                 
