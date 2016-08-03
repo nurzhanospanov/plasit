@@ -35,14 +35,20 @@ class ListOfPlacesViewController: UIViewController {
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
             self.places = result as? [DisplayPlace] ?? []
+            // index is for proper counting of beenHere pointers
+            var index = 0
             
             for place in self.places {
+                // identifying which place we are dealing with for button release feature
+                place.placeId = result![index].objectId
                 
                 place.imagePlaceFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     let image = UIImage(data: imageData!, scale: 1.0)
                     place.imagePlace = image
                     self.tableView.reloadData()
                 }
+               // counting pins to places
+                index = index + 1
             }
         }
     }

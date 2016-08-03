@@ -20,12 +20,18 @@ class UserBeenHereViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        arrayOfPlaces = []
+        self.tableView.reloadData()
+        self.beenHereMetrics()
+
         if let _ = PFUser.currentUser() {
             let query = PFQuery(className: "BeenHere")
             query.includeKey("toPlace")
@@ -50,33 +56,26 @@ class UserBeenHereViewController: UIViewController {
                             place?.imagePlace = image
                             self.tableView.reloadData()
                             self.beenHereMetrics()
-
+                            
                         }
                     })
 
-                    }
+                }
             }
         } else {
             // handle case where no user is logged in
             print("")
         }
+        
     }
     
-    
-
-
     func beenHereMetrics() {
         let beenMetrics = self.arrayOfPlaces.count
         if beenMetrics > 0 {
             self.beenToMetricsLabel.text = ("\(beenMetrics) places")
-            } else {
+        } else {
             self.beenToMetricsLabel.text = "No Places yet"
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        self.tableView.reloadData()
     }
 
 }

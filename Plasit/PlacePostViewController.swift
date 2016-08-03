@@ -11,7 +11,7 @@ import UIKit
 import Parse
 
 
-class PlacePostViewController: UITableViewController {
+class PlacePostViewController: UITableViewController, UINavigationControllerDelegate {
     
     var beenHereButtonPressed = false
     var wantToGoButtonPressed = false
@@ -54,7 +54,9 @@ class PlacePostViewController: UITableViewController {
             beenHereButtonPressed = false
             print("called from function")
             animationForBeenHereButton()
-            deleteBeenHerePlace()
+            if let placeId = displayPlace?.placeId {
+               deleteBeenHerePlace(placeId)
+            }
         }
         
     }
@@ -128,10 +130,9 @@ class PlacePostViewController: UITableViewController {
                 }
             }
         }
-       
-
     }
     
+ 
     
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
@@ -190,20 +191,26 @@ class PlacePostViewController: UITableViewController {
     }
     
     
-    func deleteBeenHerePlace() {
-    
+    func deleteBeenHerePlace(placeId: String) {
+
         let query = PFQuery(className: "BeenHere")
         
         if let queryUser = PFUser.currentUser() {
             query.whereKey("fromUser", equalTo: queryUser)
-        query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let objects = objects {
                 
                 for object in objects {
                     
-                   object.deleteEventually()
+                    let placeInfo = object.objectForKey("toPlace") as? PFObject
+                    let place = placeInfo?.objectId
                     
+                    if place == placeId {
+                            //object.removeObjectForKey("fromUser")
+                            //object.saveInBackground()
+                            object.deleteInBackground()
+                        }
                     }
                 
                 }

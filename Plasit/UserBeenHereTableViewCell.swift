@@ -15,6 +15,11 @@ class UserBeenHereTableViewCell: UITableViewCell {
     
     @IBOutlet weak var beenHereTitle: UILabel!
     
+//    override func prepareForReuse() {
+//        beenHereImageView.image = UIImage()
+//        beenHereTitle.text = ""
+//    }
+
     
 }
 

@@ -14,6 +14,8 @@ class DisplayPlace: PFObject, PFSubclassing {
     @NSManaged var imagePlaceFile: PFFile?
     @NSManaged var placeTitle: String
     @NSManaged var placeDescription: String
+    // as objectId created by parse is not reachable we duplicate it with placeId variable
+    @NSManaged var placeId: String?
     
     var imagePlace: UIImage?
     
