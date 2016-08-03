@@ -110,6 +110,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
                 print("release button called from viewDidLoad")
                 }
             }
+            
         }
         
         let userQueryWantToGo = PFQuery(className: "WantToGo")
@@ -185,12 +186,32 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             addedBeenHere.setObject(currentPlace, forKey: "toPlace")
             addedBeenHere.saveInBackground()
             
-        
+            
         } else {
-            print("Hey where is User?")
-            // make an alert here
-        }
+            let alert = UIAlertController(title: "Quick reminder :)", message: "If you want to store pinned places, please login first", preferredStyle: .Alert)
+    
+                alert.addAction(UIAlertAction(title: "Got it, thanks!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+            }
+    
     }
+
+//        } else {
+//            print("Hey where is User?")
+//            // make an alert here
+//        }
+//    }
+//    
+//    
+//} else {
+//    let alert = UIAlertController(title: "Test", message: "Do something", preferredStyle: .Alert)
+//    let action = UIAlertAction(title: "Ok", style: .Default) {
+//        
+//        UIAlertAction in
+//        NSLog("presseed")
+//    }
+//    alert.addAction(action)
     
     
     func deleteBeenHerePlace(placeId: String) {
@@ -233,8 +254,10 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             
             
         } else {
-            print("Hey where is User?")
-            // make an alert here
+            let alert = UIAlertController(title: "Quick reminder :)", message: "If you want to store pinned places, please login first", preferredStyle: .Alert)
+            
+            alert.addAction(UIAlertAction(title: "Got it, thanks!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     

@@ -63,8 +63,11 @@ class UserBeenHereViewController: UIViewController {
                 }
             }
         } else {
-            // handle case where no user is logged in
-            print("")
+            let alert = UIAlertController(title: "No places to display", message: "As you are not logged in, there are no places to display", preferredStyle: .Alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
         }
         
     }

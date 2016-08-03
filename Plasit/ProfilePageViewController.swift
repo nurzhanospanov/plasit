@@ -144,18 +144,23 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
-        print("complete login")
         fetchProfile()
         
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("successfully logged out")
         PFUser.logOut()
         
         self.firstNameLabel.text = ""
         self.lastNameLabel.text = ""
         self.profilePictureImageView?.image = UIImage(named: "user.png")
+        
+        let alert = UIAlertController(title: "Success!", message: "You are logget out", preferredStyle: .Alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+
+        
         
         
     }
