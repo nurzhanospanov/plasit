@@ -179,6 +179,8 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             prefs.setObject(firstNameLabel.text, forKey: ProfilePageViewController.firstNameNSUserDefaults)
         } else {
             self.firstNameLabel.text = ""
+//            let removedPrefs = NSUserDefaults.standardUserDefaults()
+//            removedPrefs.setObject(nil, forKey: ProfilePageViewController.firstNameNSUserDefaults)
         }
         
         if let userLastName = PFUser.currentUser()?["lastName"] as? String  {
@@ -187,6 +189,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             prefs.setObject(lastNameLabel.text, forKey: ProfilePageViewController.lastNameNSUserDefaults)
         } else {
             self.lastNameLabel.text = ""
+            
         }
         
         if let userPicture = PFUser.currentUser()?["picture"] as? String,
@@ -209,6 +212,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         let prefs = NSUserDefaults.standardUserDefaults()
         
+        if let _ = PFUser.currentUser() {
         if let firstNameData = prefs.stringForKey(ProfilePageViewController.firstNameNSUserDefaults) {
             firstNameLabel.text = firstNameData
         }
@@ -221,8 +225,14 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             
             let storedImage = UIImage.init(data: imageData)
             profilePictureImageView.image = storedImage
+            }
         }
+        else {
+            firstNameLabel.text = ""
+            lastNameLabel.text = ""
+            profilePictureImageView.image = UIImage(named: "user.png")
         
+        }
     }
 }
 
