@@ -14,9 +14,12 @@ class UserBeenHereViewController: UIViewController {
     
     var arrayOfPlaces: [DisplayPlace] = []
 
+    @IBOutlet weak var youveBeenToLabel: UILabel!
     
-    
+    @IBOutlet weak var beenToMetricsLabel: UILabel!
+
     @IBOutlet weak var tableView: UITableView!
+    
     
     
     
@@ -46,19 +49,39 @@ class UserBeenHereViewController: UIViewController {
                             let image = UIImage(data: imageData!)
                             place?.imagePlace = image
                             self.tableView.reloadData()
-                            
+                            self.beenHereMetrics()
+
                         }
                     })
-                    
-                }
+
+                    }
             }
-        }
-        else {
+        } else {
             // handle case where no user is logged in
             print("")
         }
     }
+    
+    
+
+
+    func beenHereMetrics() {
+        let beenMetrics = self.arrayOfPlaces.count
+        if beenMetrics > 0 {
+            self.beenToMetricsLabel.text = ("\(beenMetrics) places")
+            } else {
+            self.beenToMetricsLabel.text = "No Places yet"
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.tableView.reloadData()
+    }
+
 }
+
+
 
 
 extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource {

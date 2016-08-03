@@ -11,7 +11,7 @@ import UIKit
 import Parse
 
 class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate {
-
+    
     
     @IBAction func userBeenHereButton(sender: AnyObject) {
     }
@@ -25,6 +25,12 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     @IBOutlet weak var lastNameLabel: UILabel!
     
     @IBOutlet weak var profilePictureImageView: UIImageView!
+    
+    static let firstNameNSUserDefaults = "FIRST_NAME"
+    static let lastNameNSUserDefaults = "LAST_NAME"
+    static let profilePictureNSUserDefaults = "PROFILE_PICTURE"
+    
+    
     
     let loginButton: FBSDKLoginButton = {
         let button = FBSDKLoginButton()
@@ -48,8 +54,9 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             fetchProfile()
-
+            
         }
+        nsUserDefaults()
     }
     
     func fetchProfile() {
@@ -105,6 +112,8 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             user["password"] = emailData
             
             
+            
+            
             let currentUser = PFUser.currentUser()?.username
             
             if  currentUser == nil {
@@ -121,11 +130,12 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         {
                             print(error)
                         }
-//                        dispatch_async(dispatch_get_main_queue(), {
-//                            self.updateUI()
-//                        })
+                        //                        dispatch_async(dispatch_get_main_queue(), {
+                        //                            self.updateUI()
+                        //                        })
                         self.updateUI()
                         print("profile should not be blank")
+                        
                     }
                 }
             }
@@ -142,30 +152,34 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("successfully logged out")
         PFUser.logOut()
-       
+        
         self.firstNameLabel.text = ""
         self.lastNameLabel.text = ""
         self.profilePictureImageView?.image = UIImage(named: "user.png")
         
-
+        
     }
     
     func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
         return true
     }
-
+    
     
     
     func updateUI () {
         
         if let userFirstName = PFUser.currentUser()?["firstName"] as? String    {
             firstNameLabel.text = userFirstName
+            let prefs = NSUserDefaults.standardUserDefaults()
+            prefs.setObject(firstNameLabel.text, forKey: ProfilePageViewController.firstNameNSUserDefaults)
         } else {
             self.firstNameLabel.text = ""
         }
         
         if let userLastName = PFUser.currentUser()?["lastName"] as? String  {
             lastNameLabel.text = userLastName
+            let prefs = NSUserDefaults.standardUserDefaults()
+            prefs.setObject(lastNameLabel.text, forKey: ProfilePageViewController.lastNameNSUserDefaults)
         } else {
             self.lastNameLabel.text = ""
         }
@@ -176,11 +190,34 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             image = UIImage(data: data)
         {
             profilePictureImageView?.image = image
+            let prefs = NSUserDefaults.standardUserDefaults()
+            let imageData = UIImageJPEGRepresentation(image, 100)
+            prefs.setObject(imageData, forKey: ProfilePageViewController.profilePictureNSUserDefaults)
             
         }
         else {
             self.profilePictureImageView.image = nil
         }
+    }
+    
+    func nsUserDefaults(){
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        
+        if let firstNameData = prefs.stringForKey(ProfilePageViewController.firstNameNSUserDefaults) {
+            firstNameLabel.text = firstNameData
+        }
+        
+        if let lastNameData = prefs.stringForKey(ProfilePageViewController.lastNameNSUserDefaults) {
+            lastNameLabel.text = lastNameData
+        }
+        
+        if let imageData = prefs.objectForKey(ProfilePageViewController.profilePictureNSUserDefaults) as? NSData {
+            
+            let storedImage = UIImage.init(data: imageData)
+            profilePictureImageView.image = storedImage
+        }
+        
     }
 }
 

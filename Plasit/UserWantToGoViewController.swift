@@ -16,6 +16,10 @@ class UserWantToGoViewController: UIViewController {
   
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var youWantToGoLabel: UILabel!
+    
+    @IBOutlet weak var wantToGoMetricsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.tableView.delegate = self
@@ -46,7 +50,8 @@ class UserWantToGoViewController: UIViewController {
                             
                         }
                     })
-                    
+                    let wantToGoMetrics = self.arrayOfPlaces.count
+                    self.wantToGoMetricsLabel.text = ("\(wantToGoMetrics) places")
                 }
             }
         }

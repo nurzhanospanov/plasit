@@ -128,6 +128,7 @@ class PlacePostViewController: UITableViewController {
                 }
             }
         }
+       
 
     }
     
