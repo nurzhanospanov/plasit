@@ -77,7 +77,9 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             wantToGoButtonPressed = false
             print("called from function wantToGo")
             animationForWantToGoButton()
-            deleteWantToGoPlace()
+            if let placeId = displayPlace?.placeId{
+                deleteWantToGoPlace(placeId)
+            }
         }
         
         
@@ -237,7 +239,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     }
     
     
-    func deleteWantToGoPlace() {
+    func deleteWantToGoPlace(placeId: String) {
         
         let query = PFQuery(className: "WantToGo")
         
@@ -249,8 +251,14 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             if let objects = objects {
                 
                 for object in objects {
+                    let placeInfo = object.objectForKey("toPlace") as? PFObject
+                    let place = placeInfo?.objectId
                     
-                    object.deleteInBackground()
+                    if place == placeId {
+                        //object.removeObjectForKey("fromUser")
+                        //object.saveInBackground()
+                        object.deleteInBackground()
+                    }
                     
                     }
                 }

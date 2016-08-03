@@ -13,7 +13,7 @@ import Parse
 class UserWantToGoViewController: UIViewController {
     
     var arrayOfPlaces: [DisplayPlace] = []
-  
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var youWantToGoLabel: UILabel!
@@ -22,7 +22,13 @@ class UserWantToGoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // self.tableView.delegate = self
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        arrayOfPlaces = []
+        self.tableView.reloadData()
+        self.wantToGoMetrics()
         
         if let _ = PFUser.currentUser() {
             let query = PFQuery(className: "WantToGo")
@@ -34,9 +40,9 @@ class UserWantToGoViewController: UIViewController {
                     return
                 }
                 
-                for wantToGo in objects! {
+                for beenHere in objects! {
                     
-                    let place = wantToGo["toPlace"] as? DisplayPlace
+                    let place = beenHere["toPlace"] as? DisplayPlace
                     let title = place?.placeTitle
                     print(title)
                     self.arrayOfPlaces.append(place!)
@@ -47,21 +53,33 @@ class UserWantToGoViewController: UIViewController {
                             let image = UIImage(data: imageData!)
                             place?.imagePlace = image
                             self.tableView.reloadData()
+                            self.wantToGoMetrics()
                             
                         }
                     })
-                    let wantToGoMetrics = self.arrayOfPlaces.count
-                    self.wantToGoMetricsLabel.text = ("\(wantToGoMetrics) places")
+                    
                 }
             }
-        }
-        else {
+        } else {
             // handle case where no user is logged in
             print("")
         }
         
     }
+    func wantToGoMetrics() {
+        let wantToGoMetrics = self.arrayOfPlaces.count
+        if wantToGoMetrics > 0 {
+            self.wantToGoMetricsLabel.text = ("\(wantToGoMetrics) places")
+        } else {
+            self.wantToGoMetricsLabel.text = "No Places yet"
+        }
+    }
+    
 }
+
+
+
+
 
 extension UserWantToGoViewController: UITableViewDelegate, UITableViewDataSource {
     
