@@ -42,7 +42,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     {
         if !beenHereButtonPressed
         {
-            beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
+            beenHereButton.setImage(UIImage(named: "beenHerePressed"), forState: .Normal)
             beenHereButtonPressed = true
             print("called from function")
             animationForBeenHereButton()
@@ -50,7 +50,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         }
         else
         {
-            beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
+            beenHereButton.setImage(UIImage(named: "beenHere"), forState: .Normal)
             beenHereButtonPressed = false
             print("called from function")
             animationForBeenHereButton()
@@ -65,7 +65,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         
         if !wantToGoButtonPressed
         {
-            wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
+            wantToGoButton.setImage(UIImage(named: "wantToGoPressed"), forState: .Normal)
             wantToGoButtonPressed = true
             print("called from function wantToGo")
             animationForWantToGoButton()
@@ -73,7 +73,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         }
         else
         {
-            wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
+            wantToGoButton.setImage(UIImage(named: "wantToGo"), forState: .Normal)
             wantToGoButtonPressed = false
             print("called from function wantToGo")
             animationForWantToGoButton()
@@ -91,7 +91,10 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         super.viewDidLoad()
         //setting text and font color for navbar
         self.title = displayPlace?.placeTitle
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
+        //setting blue font for nav bar title
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+
         
         
         self.descriptionTextView.textColor = UIColor.blackColor()
@@ -107,12 +110,12 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             userQueryBeenHere.whereKey("toPlace", equalTo: place)
             userQueryBeenHere.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if results?.count > 0  {
-                self.beenHereButton.setImage(UIImage(named: "locationButtonPressed"), forState: .Normal)
+                self.beenHereButton.setImage(UIImage(named: "beenHerePressed"), forState: .Normal)
                     self.beenHereButtonPressed = true
                     print("pressed button called from viewDidLoad")
             
             } else {
-                self.beenHereButton.setImage(UIImage(named: "locationButton"), forState: .Normal)
+                self.beenHereButton.setImage(UIImage(named: "beenHere"), forState: .Normal)
                 self.beenHereButtonPressed = false
                 print("release button called from viewDidLoad")
                 }
@@ -129,12 +132,12 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             userQueryWantToGo.whereKey("toPlace", equalTo: place)
             userQueryWantToGo.findObjectsInBackgroundWithBlock { (results, error) -> Void in
                 if results?.count > 0  {
-                    self.wantToGoButton.setImage(UIImage(named: "airplaneButtonPressed"), forState: .Normal)
+                    self.wantToGoButton.setImage(UIImage(named: "wantToGoPressed"), forState: .Normal)
                     self.wantToGoButtonPressed = true
                     print("pressed button called from viewDidLoad")
                     
                 } else {
-                    self.wantToGoButton.setImage(UIImage(named: "airplaneButton"), forState: .Normal)
+                    self.wantToGoButton.setImage(UIImage(named: "wantToGo"), forState: .Normal)
                     self.wantToGoButtonPressed = false
                     print("release button called from viewDidLoad")
                 }
@@ -204,21 +207,6 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     
     }
 
-//        } else {
-//            print("Hey where is User?")
-//            // make an alert here
-//        }
-//    }
-//    
-//    
-//} else {
-//    let alert = UIAlertController(title: "Test", message: "Do something", preferredStyle: .Alert)
-//    let action = UIAlertAction(title: "Ok", style: .Default) {
-//        
-//        UIAlertAction in
-//        NSLog("presseed")
-//    }
-//    alert.addAction(action)
     
     
     func deleteBeenHerePlace(placeId: String) {

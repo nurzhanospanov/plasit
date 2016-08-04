@@ -29,9 +29,10 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //setting text and font color for navbar
+        //setting text for navbar
         self.title = "Places"
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        //setting blue font for nav bar title
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
         
         let query = PFQuery(className: "Place")
         query.whereKey("belongsToCategory", equalTo: belongsToCategory!)
@@ -90,6 +91,9 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        
+        //setting blue font for nav bar title
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
         
         if let identifier = segue.identifier {
             if identifier == "displayPlacePost" {

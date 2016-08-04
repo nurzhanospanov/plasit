@@ -29,6 +29,13 @@ class UserWantToGoViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        
+        //setting blue font for nav bar title
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+        
+        //setting blue font for nav bar title
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
+        
         arrayOfPlaces = []
         self.tableView.reloadData()
         self.wantToGoMetrics()

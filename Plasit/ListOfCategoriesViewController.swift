@@ -25,7 +25,8 @@ class ListOfCategoriesViewController: UIViewController {
         
         //setting text and font color for navbar
         self.title = "Explore"
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        // navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+    
         
         let query = PFQuery(className: "Category")
         
@@ -49,8 +50,10 @@ class ListOfCategoriesViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        //setting blue font for nav bar title
+         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
     }
 }
 
@@ -80,6 +83,8 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        //setting blue font for nav bar title
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
         
         //making segue 
         

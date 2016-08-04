@@ -121,7 +121,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userPlaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
                                                     <rect key="frame" x="62" y="13" width="70" height="70"/>
                                                 </imageView>
                                             </subviews>
@@ -440,16 +440,16 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-gV-fcB">
-                                                    <rect key="frame" x="66" y="137" width="74" height="72"/>
+                                                    <rect key="frame" x="66" y="137" width="50" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" image="Checked-100.png"/>
+                                                    <state key="normal" image="beenHere.png"/>
                                                     <connections>
                                                         <action selector="beenHereButtonPressed:" destination="0Hy-c1-DE0" eventType="touchUpInside" id="ckB-Jg-1Ni"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yog-CQ-VPZ">
-                                                    <rect key="frame" x="225" y="137" width="69" height="72"/>
-                                                    <state key="normal" image="Define Location-100.png"/>
+                                                    <rect key="frame" x="225" y="137" width="50" height="50"/>
+                                                    <state key="normal" image="wantToGo.png"/>
                                                     <connections>
                                                         <action selector="wantToGoButtonPressed:" destination="0Hy-c1-DE0" eventType="touchUpInside" id="1Me-aL-bYu"/>
                                                     </connections>
@@ -516,12 +516,13 @@
     </scenes>
     <resources>
         <image name="Arrow Left.png" width="31" height="22"/>
-        <image name="Checked-100.png" width="100" height="100"/>
-        <image name="Define Location-100.png" width="100" height="100"/>
         <image name="Earth.png" width="30" height="30"/>
         <image name="User.png" width="30" height="30"/>
+        <image name="beenHere.png" width="100" height="100"/>
         <image name="userBeenHereImage.jpg" width="665" height="443"/>
+        <image name="userPlaceholder.png" width="100" height="100"/>
         <image name="userWantToGoImage.jpg" width="700" height="394"/>
+        <image name="wantToGo.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="89b-1K-BV8"/>

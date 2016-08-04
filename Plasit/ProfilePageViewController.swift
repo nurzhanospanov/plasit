@@ -43,9 +43,8 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setting text and font color for navbar
+        //setting text for navbar
         self.title = "Profile"
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
         
         //remove text from back button in next view controller
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
@@ -58,7 +57,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         profilePictureImageView.layer.borderWidth = 1
         profilePictureImageView.layer.masksToBounds = false
-        profilePictureImageView.layer.borderColor = UIColor.grayColor().CGColor
+        profilePictureImageView.layer.borderColor = UIColor.whiteColor().CGColor
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
         profilePictureImageView.clipsToBounds = true
 
@@ -72,8 +71,16 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             
         }
         nsUserDefaults()
+        
+        
     }
-    
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        //setting blue font for nav bar title
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+    }
 
 
     
@@ -171,7 +178,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         self.firstNameLabel.text = ""
         self.lastNameLabel.text = ""
-        self.profilePictureImageView?.image = UIImage(named: "user.png")
+        self.profilePictureImageView?.image = UIImage(named: "userPlaceholder.png")
         
         let alert = UIAlertController(title: "Success!", message: "You are logget out", preferredStyle: .Alert)
         
@@ -248,7 +255,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         else {
             firstNameLabel.text = ""
             lastNameLabel.text = ""
-            profilePictureImageView.image = UIImage(named: "user.png")
+            profilePictureImageView.image = UIImage(named: "userPlaceholder.png")
         
         }
     }
