@@ -54,6 +54,14 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         self.lastNameLabel.text = ""
         self.profilePictureImageView?.image
         
+        // rounding profile picture fetched from FB
+        
+        profilePictureImageView.layer.borderWidth = 1
+        profilePictureImageView.layer.masksToBounds = false
+        profilePictureImageView.layer.borderColor = UIColor.grayColor().CGColor
+        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
+        profilePictureImageView.clipsToBounds = true
+
         view.addSubview(loginButton)
         loginButton.center = view.center
         loginButton.delegate = self

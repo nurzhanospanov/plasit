@@ -122,7 +122,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
-                                                    <rect key="frame" x="62" y="13" width="240" height="128"/>
+                                                    <rect key="frame" x="62" y="13" width="70" height="70"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -524,6 +524,6 @@
         <image name="userWantToGoImage.jpg" width="700" height="394"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tne-Rf-UEd"/>
+        <segue reference="89b-1K-BV8"/>
     </inferredMetricsTieBreakers>
 </document>
