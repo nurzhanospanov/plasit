@@ -43,6 +43,13 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //setting text and font color for navbar
+        self.title = "Profile"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
+        //remove text from back button in next view controller
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
         self.firstNameLabel.text = ""
         self.lastNameLabel.text = ""
         self.profilePictureImageView?.image
@@ -58,6 +65,9 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         }
         nsUserDefaults()
     }
+    
+
+
     
     func fetchProfile() {
         print("func fetch profile was called")

@@ -44,6 +44,12 @@
 		74A984761D493AD00051CBE2 /* airplaneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846D1D493AD00051CBE2 /* airplaneButton@2x.png */; };
 		74A984771D493AD00051CBE2 /* airplaneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A9846E1D493AD00051CBE2 /* airplaneButton.png */; };
 		74A984791D4951860051CBE2 /* locationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984781D4951860051CBE2 /* locationButton.png */; };
+		74D084631D52BA3C00D44BE8 /* Checked-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084621D52BA3C00D44BE8 /* Checked-100.png */; };
+		74D084651D52BA8B00D44BE8 /* Checked Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084641D52BA8B00D44BE8 /* Checked Filled-100.png */; };
+		74D0846A1D52BC3100D44BE8 /* Airport Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084681D52BC3100D44BE8 /* Airport Filled-100.png */; };
+		74D0846B1D52BC3100D44BE8 /* Airport-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084691D52BC3100D44BE8 /* Airport-100.png */; };
+		74D0846E1D52FE3000D44BE8 /* Define Location Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D0846C1D52FE3000D44BE8 /* Define Location Filled-100.png */; };
+		74D0846F1D52FE3000D44BE8 /* Define Location-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D0846D1D52FE3000D44BE8 /* Define Location-100.png */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
@@ -95,6 +101,12 @@
 		74A9846D1D493AD00051CBE2 /* airplaneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplaneButton@2x.png"; path = "Assets.xcassets/airplaneButton@2x.png"; sourceTree = "<group>"; };
 		74A9846E1D493AD00051CBE2 /* airplaneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplaneButton.png; path = Assets.xcassets/airplaneButton.png; sourceTree = "<group>"; };
 		74A984781D4951860051CBE2 /* locationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locationButton.png; path = Assets.xcassets/locationButton.png; sourceTree = "<group>"; };
+		74D084621D52BA3C00D44BE8 /* Checked-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-100.png"; sourceTree = "<group>"; };
+		74D084641D52BA8B00D44BE8 /* Checked Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked Filled-100.png"; sourceTree = "<group>"; };
+		74D084681D52BC3100D44BE8 /* Airport Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport Filled-100.png"; sourceTree = "<group>"; };
+		74D084691D52BC3100D44BE8 /* Airport-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airport-100.png"; sourceTree = "<group>"; };
+		74D0846C1D52FE3000D44BE8 /* Define Location Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Define Location Filled-100.png"; sourceTree = "<group>"; };
+		74D0846D1D52FE3000D44BE8 /* Define Location-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Define Location-100.png"; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
@@ -176,6 +188,12 @@
 		746B08ED1D37F4CF0056103F /* UI icons */ = {
 			isa = PBXGroup;
 			children = (
+				74D0846C1D52FE3000D44BE8 /* Define Location Filled-100.png */,
+				74D0846D1D52FE3000D44BE8 /* Define Location-100.png */,
+				74D084681D52BC3100D44BE8 /* Airport Filled-100.png */,
+				74D084691D52BC3100D44BE8 /* Airport-100.png */,
+				74D084641D52BA8B00D44BE8 /* Checked Filled-100.png */,
+				74D084621D52BA3C00D44BE8 /* Checked-100.png */,
 				7494371E1D4C0F9B0050D52F /* userWantToGoImage.jpg */,
 				7494371F1D4C0F9B0050D52F /* userBeenHereImage.jpg */,
 				74A984781D4951860051CBE2 /* locationButton.png */,
@@ -205,8 +223,8 @@
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
 				74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */,
-				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
 				74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */,
+				747DE8AA1D38393300DAB531 /* ProfilePageViewController.swift */,
 				749437241D4C108B0050D52F /* UserBeenHereViewController.swift */,
 				749437261D4C109F0050D52F /* UserWantToGoViewController.swift */,
 			);
@@ -294,18 +312,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D0846A1D52BC3100D44BE8 /* Airport Filled-100.png in Resources */,
 				744C90B81D384104009B6922 /* Podfile in Resources */,
 				746B08EC1D37F4B30056103F /* User@3x.png in Resources */,
 				746B08E81D37F4B30056103F /* Earth@2x.png in Resources */,
 				746B08EA1D37F4B30056103F /* User.png in Resources */,
 				74A984721D493AD00051CBE2 /* airplaneButtonPressed@3x.png in Resources */,
 				746B08E71D37F4B30056103F /* Earth.png in Resources */,
+				74D0846E1D52FE3000D44BE8 /* Define Location Filled-100.png in Resources */,
 				746B08E91D37F4B30056103F /* Earth@3x.png in Resources */,
 				74A984791D4951860051CBE2 /* locationButton.png in Resources */,
+				74D084651D52BA8B00D44BE8 /* Checked Filled-100.png in Resources */,
 				74A984731D493AD00051CBE2 /* airplaneButtonPressed@2x.png in Resources */,
 				74A984751D493AD00051CBE2 /* airplaneButon@3x.png in Resources */,
 				746B08DA1D37F2180056103F /* LaunchScreen.storyboard in Resources */,
 				74A984741D493AD00051CBE2 /* airplaneButtonPressed.png in Resources */,
+				74D0846F1D52FE3000D44BE8 /* Define Location-100.png in Resources */,
 				74A984711D493AD00051CBE2 /* locationButtonPressed.png in Resources */,
 				746B08D71D37F2180056103F /* Assets.xcassets in Resources */,
 				746B08D51D37F2180056103F /* Main.storyboard in Resources */,
@@ -317,6 +339,8 @@
 				749437201D4C0F9B0050D52F /* userWantToGoImage.jpg in Resources */,
 				74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */,
 				746B08EB1D37F4B30056103F /* User@2x.png in Resources */,
+				74D0846B1D52BC3100D44BE8 /* Airport-100.png in Resources */,
+				74D084631D52BA3C00D44BE8 /* Checked-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

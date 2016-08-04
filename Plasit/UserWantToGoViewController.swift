@@ -23,6 +23,9 @@ class UserWantToGoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Want To Go"
+         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -100,8 +103,11 @@ extension UserWantToGoViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        print("prepareForSegue: \(segue.identifier)")
+        // removing text from back button at next view controller
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+     
         if let identifier = segue.identifier {
             if identifier == "displayPlacePost" {
                 

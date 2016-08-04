@@ -29,6 +29,9 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        //setting text and font color for navbar
+        self.title = "Places"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
         
         let query = PFQuery(className: "Place")
         query.whereKey("belongsToCategory", equalTo: belongsToCategory!)
@@ -82,7 +85,12 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("prepareForSegue: \(segue.identifier)")
+        
+        // removing text from back button at next view controller
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        
         if let identifier = segue.identifier {
             if identifier == "displayPlacePost" {
                 

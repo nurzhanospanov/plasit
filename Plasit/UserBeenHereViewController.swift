@@ -23,6 +23,12 @@ class UserBeenHereViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //setting text and font color for navbar
+        self.title = "Been here"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
+
+        
     }
     
     
@@ -102,6 +108,11 @@ extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // removing text from back button at next view controller
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         
         if let identifier = segue.identifier {
             if identifier == "displayPlacePost" {

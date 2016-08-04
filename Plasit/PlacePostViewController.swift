@@ -89,7 +89,14 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setting text and font color for navbar
+        self.title = displayPlace?.placeTitle
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
+        
         self.descriptionTextView.textColor = UIColor.blackColor()
+        
+        
         
         let userQueryBeenHere = PFQuery(className: "BeenHere")
         
@@ -278,8 +285,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
                     let place = placeInfo?.objectId
                     
                     if place == placeId {
-                        //object.removeObjectForKey("fromUser")
-                        //object.saveInBackground()
+                      
                         object.deleteInBackground()
                     }
                     
@@ -290,7 +296,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("prepareForSegue: \(segue.identifier)")
+       
         if let identifier = segue.identifier {
             if identifier == "displayPanoramaView" {
                 

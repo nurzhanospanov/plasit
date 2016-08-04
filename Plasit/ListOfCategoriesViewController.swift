@@ -23,6 +23,10 @@ class ListOfCategoriesViewController: UIViewController {
         
         super.viewDidLoad()
         
+        //setting text and font color for navbar
+        self.title = "Explore"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        
         let query = PFQuery(className: "Category")
         
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
@@ -71,10 +75,16 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("prepareForSegue: \(segue.identifier)")
+        
+        // removing text from back button at next view controller
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        
+        //making segue 
+        
         if let identifier = segue.identifier {
             if identifier == "displayListOfPlaces" {
-                // print("Table view cell tapped")
                 
                 if let indexPath =  tableView.indexPathForSelectedRow {
                     let displayPlaces = categories[indexPath.row]
