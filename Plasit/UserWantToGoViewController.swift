@@ -23,7 +23,7 @@ class UserWantToGoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Want To Go"
+        self.title = ""
          navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
         
     }
