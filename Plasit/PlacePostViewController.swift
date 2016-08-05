@@ -30,6 +30,12 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         }
     }
     
+    
+    
+    @IBOutlet weak var iveBeenHereLabel: UILabel!
+    
+    @IBOutlet weak var iWantToGoLabel: UILabel!
+    
     @IBOutlet var placePostTableView: UITableView!
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
