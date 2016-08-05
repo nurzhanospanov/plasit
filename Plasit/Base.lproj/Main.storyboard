@@ -181,7 +181,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct1-yx-08c">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
+                                                    <rect key="frame" x="0.0" y="-6" width="600" height="188"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="123.5" id="09V-aM-6yj"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="Cju-kh-mSf"/>
@@ -189,7 +189,7 @@
                                                         <constraint firstAttribute="width" constant="600" id="X1e-2A-a7I"/>
                                                         <constraint firstAttribute="height" constant="150" id="jL0-dc-Ea2"/>
                                                     </constraints>
-                                                    <state key="normal" title="userBeenHereButton" image="userBeenHereImage.jpg"/>
+                                                    <state key="normal" title="userBeenHereButton" image="beenHerePlaceHolderImage.jpg"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="09V-aM-6yj"/>
@@ -206,11 +206,11 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ct1-yx-08c" secondAttribute="bottom" constant="66.5" id="5et-sG-gk4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ct1-yx-08c" secondAttribute="bottom" constant="10" id="5et-sG-gk4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ct1-yx-08c" secondAttribute="bottom" id="Kno-8c-s2c"/>
                                                 <constraint firstItem="Ct1-yx-08c" firstAttribute="leading" secondItem="nfk-c8-aJV" secondAttribute="leadingMargin" id="Lmb-QC-hwG"/>
                                                 <constraint firstItem="Ct1-yx-08c" firstAttribute="top" secondItem="nfk-c8-aJV" secondAttribute="topMargin" id="dsS-Sf-DgE"/>
-                                                <constraint firstItem="Ct1-yx-08c" firstAttribute="top" secondItem="nfk-c8-aJV" secondAttribute="topMargin" constant="-8" id="ibA-qs-A3g"/>
+                                                <constraint firstItem="Ct1-yx-08c" firstAttribute="top" secondItem="nfk-c8-aJV" secondAttribute="topMargin" constant="-14" id="ibA-qs-A3g"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ct1-yx-08c" secondAttribute="trailing" id="lCS-Ky-CPZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ct1-yx-08c" secondAttribute="trailing" constant="-8" id="sbI-6m-XUl"/>
                                                 <constraint firstItem="Ct1-yx-08c" firstAttribute="leading" secondItem="nfk-c8-aJV" secondAttribute="leadingMargin" constant="-8" id="xZE-br-eLa"/>
@@ -233,8 +233,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGm-Sd-Nri">
-                                                    <rect key="frame" x="0.0" y="66.5" width="600" height="125"/>
-                                                    <state key="normal" title="userWantToGoButton" image="userWantToGoImage.jpg"/>
+                                                    <rect key="frame" x="0.0" y="8" width="600" height="183.5"/>
+                                                    <state key="normal" title="userWantToGoButton" image="wantToGoPlaceholderImage.jpg"/>
                                                     <connections>
                                                         <segue destination="OSd-ZN-KmH" kind="show" id="xAE-nr-apO"/>
                                                     </connections>
@@ -243,7 +243,7 @@
                                             <constraints>
                                                 <constraint firstItem="sGm-Sd-Nri" firstAttribute="top" secondItem="YiA-Kp-R1O" secondAttribute="topMargin" constant="10" id="7YS-fY-74r"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="sGm-Sd-Nri" secondAttribute="trailing" constant="-8" id="9Yg-vU-TA8"/>
-                                                <constraint firstItem="sGm-Sd-Nri" firstAttribute="top" secondItem="YiA-Kp-R1O" secondAttribute="topMargin" constant="58.5" id="B9G-6H-fzs"/>
+                                                <constraint firstItem="sGm-Sd-Nri" firstAttribute="top" secondItem="YiA-Kp-R1O" secondAttribute="topMargin" id="B9G-6H-fzs"/>
                                                 <constraint firstItem="sGm-Sd-Nri" firstAttribute="top" secondItem="YiA-Kp-R1O" secondAttribute="topMargin" constant="10" id="LGs-wO-GAn"/>
                                                 <constraint firstItem="sGm-Sd-Nri" firstAttribute="leading" secondItem="YiA-Kp-R1O" secondAttribute="leadingMargin" constant="-8" id="Scj-pm-A0b"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="sGm-Sd-Nri" secondAttribute="bottom" id="w4c-rN-tbM"/>
@@ -784,10 +784,10 @@
         <image name="Place Tab Bar Icon" width="25" height="25"/>
         <image name="User Tab Bar Icon" width="25" height="25"/>
         <image name="beenHere.png" width="100" height="100"/>
-        <image name="userBeenHereImage.jpg" width="665" height="443"/>
+        <image name="beenHerePlaceHolderImage.jpg" width="1000" height="667"/>
         <image name="userPlaceholder.png" width="100" height="100"/>
-        <image name="userWantToGoImage.jpg" width="700" height="394"/>
         <image name="wantToGo.png" width="100" height="100"/>
+        <image name="wantToGoPlaceholderImage.jpg" width="1000" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qSe-z7-a0G"/>
