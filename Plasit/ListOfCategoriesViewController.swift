@@ -23,9 +23,9 @@ class ListOfCategoriesViewController: UIViewController {
         
         super.viewDidLoad()
         
-        //setting text and font color for navbar
+        //setting text
         self.title = "Explore"
-        // navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+      
     
         
         let query = PFQuery(className: "Category")
@@ -33,17 +33,14 @@ class ListOfCategoriesViewController: UIViewController {
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
             self.categories = result as? [DisplayCategory] ?? []
-//            print("received \(self.categories.count) categories from parse DB, now fetch individual images")
             
             for category in self.categories {
-//                print("fetch image for category: \(category.titleCategory)")
                 
                 category.imageCategoryFile?.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                     
                     let image = UIImage(data: imageData!, scale: 1.0)
                     category.imageCategory = image
                     
-//                    print("received image for category: \(category.titleCategory)")
                     self.tableView.reloadData()
                 }
             }

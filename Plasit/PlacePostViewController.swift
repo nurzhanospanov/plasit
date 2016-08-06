@@ -104,6 +104,8 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         //set color for font
         self.descriptionTextView.textColor = UIColor.blackColor()
         
+        self.titleLabel.textColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
+
         
         
         let userQueryBeenHere = PFQuery(className: "BeenHere")
