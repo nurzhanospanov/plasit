@@ -243,7 +243,7 @@
 				TargetAttributes = {
 					746B08CB1D37F2180056103F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 985ZFPSWV3;
+						DevelopmentTeam = 2CTMX86W25;
 					};
 				};
 			};
@@ -484,7 +484,7 @@
 				INFOPLIST_FILE = Plasit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
@@ -507,7 +507,7 @@
 				INFOPLIST_FILE = Plasit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.Plasit;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
