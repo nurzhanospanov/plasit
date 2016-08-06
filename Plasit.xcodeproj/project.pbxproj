@@ -11,6 +11,7 @@
 		740324FB1D399FAF00AE0280 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740324FA1D399FAF00AE0280 /* CategoriesTableViewCell.swift */; };
 		7412B6621D5557B7006A4E93 /* beenHerePlaceHolderImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7412B6601D5557B7006A4E93 /* beenHerePlaceHolderImage.jpg */; };
 		7412B6631D5557B7006A4E93 /* wantToGoPlaceholderImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7412B6611D5557B7006A4E93 /* wantToGoPlaceholderImage.jpg */; };
+		742AE9CE1D568D6800D30D8A /* iTunesArtwork@1x(256x256).png in Resources */ = {isa = PBXBuildFile; fileRef = 742AE9CD1D568D6800D30D8A /* iTunesArtwork@1x(256x256).png */; };
 		744C90B81D384104009B6922 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 744C90B71D384104009B6922 /* Podfile */; };
 		746B08D01D37F2180056103F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B08CF1D37F2180056103F /* AppDelegate.swift */; };
 		746B08D51D37F2180056103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746B08D31D37F2180056103F /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		740324FA1D399FAF00AE0280 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		7412B6601D5557B7006A4E93 /* beenHerePlaceHolderImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = beenHerePlaceHolderImage.jpg; path = Assets.xcassets/beenHerePlaceHolderImage.jpg; sourceTree = "<group>"; };
 		7412B6611D5557B7006A4E93 /* wantToGoPlaceholderImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wantToGoPlaceholderImage.jpg; path = Assets.xcassets/wantToGoPlaceholderImage.jpg; sourceTree = "<group>"; };
+		742AE9CD1D568D6800D30D8A /* iTunesArtwork@1x(256x256).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x(256x256).png"; sourceTree = "<group>"; };
 		744C90B71D384104009B6922 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		746B08CC1D37F2180056103F /* Plasit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plasit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B08CF1D37F2180056103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		746B08ED1D37F4CF0056103F /* UI icons */ = {
 			isa = PBXGroup;
 			children = (
+				742AE9CD1D568D6800D30D8A /* iTunesArtwork@1x(256x256).png */,
 				7412B6601D5557B7006A4E93 /* beenHerePlaceHolderImage.jpg */,
 				7412B6611D5557B7006A4E93 /* wantToGoPlaceholderImage.jpg */,
 				74D084761D53BDA600D44BE8 /* wantToGoPressed.png */,
@@ -284,6 +287,7 @@
 				74D0847A1D53BDA600D44BE8 /* wantToGoPressed.png in Resources */,
 				746B08D51D37F2180056103F /* Main.storyboard in Resources */,
 				74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */,
+				742AE9CE1D568D6800D30D8A /* iTunesArtwork@1x(256x256).png in Resources */,
 				7412B6631D5557B7006A4E93 /* wantToGoPlaceholderImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +481,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -487,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1d130a31-c33f-42d4-9a5b-c7a2f145acc8";
+				PROVISIONING_PROFILE = "688163df-a9f7-4dca-a190-85f05301b90c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -502,7 +506,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -512,7 +516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1d130a31-c33f-42d4-9a5b-c7a2f145acc8";
+				PROVISIONING_PROFILE = "688163df-a9f7-4dca-a190-85f05301b90c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

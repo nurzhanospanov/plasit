@@ -15,7 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork@1x(256x256).png" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-jU-KQY">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="N1G-Mw-CpD"/>
+                                    <constraint firstAttribute="width" constant="100" id="daN-0r-GI7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LRb-jU-KQY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HUr-hI-9E5"/>
+                            <constraint firstItem="LRb-jU-KQY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sqT-nc-H1k"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork@1x(256x256).png" width="256" height="256"/>
+    </resources>
 </document>
