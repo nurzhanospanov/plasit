@@ -76,6 +76,12 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
         
         cell.placeImageView.image = places[indexPath.row].imagePlace
         cell.titleLabel.text = places[indexPath.row].placeTitle
+        
+        
+        //set background color for cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.whiteColor()
+        cell.selectedBackgroundView = backgroundView
     
         return cell
     }

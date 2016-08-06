@@ -72,6 +72,11 @@ extension ListOfCategoriesViewController: UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoriesTableViewCell
         cell.categoryImageView.image = categories[indexPath.row].imageCategory
         
+        // set background color for cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.whiteColor()
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     

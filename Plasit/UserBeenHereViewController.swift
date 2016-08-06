@@ -112,6 +112,12 @@ extension UserBeenHereViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCellWithIdentifier("UserBeenHereCell") as! UserBeenHereTableViewCell
         cell.beenHereImageView.image = arrayOfPlaces[indexPath.row].imagePlace
         cell.beenHereTitle.text = arrayOfPlaces[indexPath.row].placeTitle
+        
+        // set background color for cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.whiteColor()
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     

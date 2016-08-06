@@ -79,6 +79,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         //setting blue font for nav bar title
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
+        
     }
 
 
@@ -202,18 +203,10 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             prefs.setObject(firstNameLabel.text, forKey: ProfilePageViewController.firstNameNSUserDefaults)
         } else {
             self.firstNameLabel.text = ""
-//            let removedPrefs = NSUserDefaults.standardUserDefaults()
-//            removedPrefs.setObject(nil, forKey: ProfilePageViewController.firstNameNSUserDefaults)
+
         }
         
-//        if let userLastName = PFUser.currentUser()?["lastName"] as? String  {
-//            lastNameLabel.text = userLastName
-//            let prefs = NSUserDefaults.standardUserDefaults()
-//            prefs.setObject(lastNameLabel.text, forKey: ProfilePageViewController.lastNameNSUserDefaults)
-//        } else {
-//            self.lastNameLabel.text = ""
-//            
-//        }
+
         
         if let userPicture = PFUser.currentUser()?["picture"] as? String,
             url = NSURL(string: userPicture),
@@ -239,10 +232,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         if let firstNameData = prefs.stringForKey(ProfilePageViewController.firstNameNSUserDefaults) {
             firstNameLabel.text = firstNameData
         }
-        
-//        if let lastNameData = prefs.stringForKey(ProfilePageViewController.lastNameNSUserDefaults) {
-//            lastNameLabel.text = lastNameData
-//        }
+
         
         if let imageData = prefs.objectForKey(ProfilePageViewController.profilePictureNSUserDefaults) as? NSData {
             

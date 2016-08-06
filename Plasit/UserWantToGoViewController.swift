@@ -106,6 +106,12 @@ extension UserWantToGoViewController: UITableViewDelegate, UITableViewDataSource
         
         cell.wantToGoImageView.image = arrayOfPlaces[indexPath.row].imagePlace
         cell.wantToGoTitle.text = arrayOfPlaces[indexPath.row].placeTitle
+        
+        // set background color for cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.whiteColor()
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     
