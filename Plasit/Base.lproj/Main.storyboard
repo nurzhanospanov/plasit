@@ -619,7 +619,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-gV-fcB">
-                                                    <rect key="frame" x="175" y="137" width="50" height="50"/>
+                                                    <rect key="frame" x="155" y="137" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="7ii-8A-vJ4"/>
                                                         <constraint firstAttribute="height" constant="50" id="BTn-r9-YJQ"/>
@@ -631,7 +631,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yog-CQ-VPZ">
-                                                    <rect key="frame" x="375" y="137" width="50" height="50"/>
+                                                    <rect key="frame" x="395" y="137" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="EKO-RO-gC9"/>
                                                         <constraint firstAttribute="width" constant="50" id="cC2-IV-A2O"/>
@@ -642,7 +642,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nk5-DW-HJx">
-                                                    <rect key="frame" x="233" y="139" width="45" height="45"/>
+                                                    <rect key="frame" x="213" y="139" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="Bu7-if-OaB"/>
                                                         <constraint firstAttribute="width" constant="45" id="mWf-iC-EhM"/>
@@ -659,7 +659,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mO7-Jl-Mw0">
-                                                    <rect key="frame" x="322" y="139" width="45" height="45"/>
+                                                    <rect key="frame" x="342" y="139" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="950-Pm-mGt"/>
                                                         <constraint firstAttribute="height" constant="45" id="b9r-II-mwC"/>
@@ -685,7 +685,7 @@
                                             <constraints>
                                                 <constraint firstItem="X4V-BQ-bLf" firstAttribute="top" secondItem="SI5-K8-Uha" secondAttribute="bottom" constant="15" id="02Y-Oz-dgF"/>
                                                 <constraint firstItem="SI5-K8-Uha" firstAttribute="leading" secondItem="bZB-up-jte" secondAttribute="leading" id="0Pa-9n-l9c"/>
-                                                <constraint firstItem="yTQ-gV-fcB" firstAttribute="centerX" secondItem="SI5-K8-Uha" secondAttribute="centerX" constant="-100" id="1YO-hs-O30"/>
+                                                <constraint firstItem="yTQ-gV-fcB" firstAttribute="centerX" secondItem="SI5-K8-Uha" secondAttribute="centerX" constant="-120" id="1YO-hs-O30"/>
                                                 <constraint firstItem="Yog-CQ-VPZ" firstAttribute="leading" secondItem="mO7-Jl-Mw0" secondAttribute="trailing" constant="8" id="5HR-hd-MG9"/>
                                                 <constraint firstItem="X4V-BQ-bLf" firstAttribute="top" secondItem="SI5-K8-Uha" secondAttribute="bottom" constant="200" id="5gU-o4-VaB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SI5-K8-Uha" secondAttribute="trailing" constant="29" id="7JR-Nd-b4a"/>
@@ -693,7 +693,7 @@
                                                 <constraint firstItem="yTQ-gV-fcB" firstAttribute="leading" secondItem="bZB-up-jte" secondAttribute="leading" constant="15" id="C14-E5-UF6"/>
                                                 <constraint firstItem="SI5-K8-Uha" firstAttribute="leading" secondItem="8gI-UT-NRz" secondAttribute="leading" id="Cgv-SN-fA0"/>
                                                 <constraint firstItem="SI5-K8-Uha" firstAttribute="leading" secondItem="X4V-BQ-bLf" secondAttribute="leading" id="Gc4-QU-vQI"/>
-                                                <constraint firstItem="Yog-CQ-VPZ" firstAttribute="centerX" secondItem="SI5-K8-Uha" secondAttribute="centerX" constant="100" id="Gia-11-kr7"/>
+                                                <constraint firstItem="Yog-CQ-VPZ" firstAttribute="centerX" secondItem="SI5-K8-Uha" secondAttribute="centerX" constant="120" id="Gia-11-kr7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SI5-K8-Uha" secondAttribute="trailing" constant="-10" id="GoR-ze-Eyv"/>
                                                 <constraint firstItem="Yog-CQ-VPZ" firstAttribute="top" secondItem="SI5-K8-Uha" secondAttribute="bottom" constant="-66" id="IXf-IL-MTE"/>
                                                 <constraint firstItem="SI5-K8-Uha" firstAttribute="top" secondItem="bZB-up-jte" secondAttribute="topMargin" id="Ibx-WN-WBq"/>
