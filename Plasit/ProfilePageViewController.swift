@@ -59,8 +59,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
         profilePictureImageView.clipsToBounds = true
         
-        createButton()
-
         view.addSubview(loginButton)
         loginButton.center.x = view.center.x
         loginButton.frame = CGRectMake(loginButton.frame.origin.x, 130, 160, 20)
