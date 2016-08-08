@@ -106,7 +106,7 @@ extension ListOfPlacesViewController: UITableViewDataSource, UITableViewDelegate
                 
                 let placePostViewController = segue.destinationViewController as! PlacePostViewController
                 
-                placePostViewController.displayPlace = places[0]
+                placePostViewController.displayPlace = places[tableView.indexPathForSelectedRow!.row]
             }
         }
     }

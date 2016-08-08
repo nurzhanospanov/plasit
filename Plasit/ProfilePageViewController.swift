@@ -49,6 +49,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         self.firstNameLabel.text = ""
         self.profilePictureImageView?.image
+       
         
         // rounding profile picture fetched from FB
         
@@ -129,7 +130,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             let username = "\(firstNameData)_\(lastNameData)"
             
             
-            user["firstName"] = "\(firstNameData) \(lastNameData)"
+            user["firstName"] = firstNameData
             user["lastName"] = lastNameData
             user["email"] = emailData
             user["picture"] = pictureData
@@ -155,9 +156,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         {
                             print(error)
                         }
-                        //                        dispatch_async(dispatch_get_main_queue(), {
-                        //                            self.updateUI()
-                        //                        })
+
                         self.updateUI()
                         print("profile should not be blank")
                         
@@ -203,7 +202,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             prefs.setObject(firstNameLabel.text, forKey: ProfilePageViewController.firstNameNSUserDefaults)
         } else {
             self.firstNameLabel.text = ""
-
         }
         
 
