@@ -38,6 +38,7 @@
 		74D0847C1D53BDA600D44BE8 /* beenHerePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084781D53BDA600D44BE8 /* beenHerePressed.png */; };
 		74D0847D1D53BDA600D44BE8 /* beenHere.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084791D53BDA600D44BE8 /* beenHere.png */; };
 		74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */; };
+		74F286FD1D5941A400D7632E /* PlacePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F286FC1D5941A400D7632E /* PlacePostTableViewCell.swift */; };
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
 		74F84B371D3D85890096216F /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B361D3D85890096216F /* PlacesTableViewCell.swift */; };
@@ -82,6 +83,7 @@
 		74D084781D53BDA600D44BE8 /* beenHerePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beenHerePressed.png; path = Assets.xcassets/beenHerePressed.png; sourceTree = "<group>"; };
 		74D084791D53BDA600D44BE8 /* beenHere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beenHere.png; path = Assets.xcassets/beenHere.png; sourceTree = "<group>"; };
 		74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostViewController.swift; sourceTree = "<group>"; };
+		74F286FC1D5941A400D7632E /* PlacePostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePostTableViewCell.swift; sourceTree = "<group>"; };
 		74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		74F84B341D3D81CB0096216F /* DisplayPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPlace.swift; sourceTree = "<group>"; };
 		74F84B361D3D85890096216F /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				740324FA1D399FAF00AE0280 /* CategoriesTableViewCell.swift */,
 				74F84B361D3D85890096216F /* PlacesTableViewCell.swift */,
+				74F286FC1D5941A400D7632E /* PlacePostTableViewCell.swift */,
 				74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */,
 				74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */,
 				7494372C1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift */,
@@ -352,6 +355,7 @@
 				749437251D4C108B0050D52F /* UserBeenHereViewController.swift in Sources */,
 				740324FB1D399FAF00AE0280 /* CategoriesTableViewCell.swift in Sources */,
 				746B08D01D37F2180056103F /* AppDelegate.swift in Sources */,
+				74F286FD1D5941A400D7632E /* PlacePostTableViewCell.swift in Sources */,
 				74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */,
 				74D6E6CA1D3ECBDC000B958D /* PlacePostViewController.swift in Sources */,
 				74F84B371D3D85890096216F /* PlacesTableViewCell.swift in Sources */,
@@ -480,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "688163df-a9f7-4dca-a190-85f05301b90c";
+				PROVISIONING_PROFILE = "1d130a31-c33f-42d4-9a5b-c7a2f145acc8";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -505,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "688163df-a9f7-4dca-a190-85f05301b90c";
+				PROVISIONING_PROFILE = "1d130a31-c33f-42d4-9a5b-c7a2f145acc8";
 				SWIFT_OBJC_BRIDGING_HEADER = "Plasit/Plasit-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

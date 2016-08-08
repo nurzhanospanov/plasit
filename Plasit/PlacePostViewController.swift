@@ -39,7 +39,9 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     @IBOutlet var placePostTableView: UITableView!
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    
+    @IBOutlet weak var descriptionTextLabel: UILabel!
     
     @IBOutlet weak var beenHereButton: UIButton!
     @IBOutlet weak var wantToGoButton: UIButton!
@@ -102,11 +104,9 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
         
         //set color for font
-        self.descriptionTextView.textColor = UIColor.blackColor()
-        
+        self.descriptionTextLabel.textColor = UIColor.blackColor()
+        //set color for title of view controller
         self.titleLabel.textColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
-
-        
         
         let userQueryBeenHere = PFQuery(className: "BeenHere")
         
@@ -157,7 +157,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     func updateUI() {
         print("displayPlace has been set in PlacePostViewController to: \(displayPlace?.placeTitle)")
         self.placeImageView.image = displayPlace?.imagePlace
-        self.descriptionTextView.text = displayPlace?.placeDescription
+        self.descriptionTextLabel.text = displayPlace?.placeDescription
         self.titleLabel.text = displayPlace?.placeTitle
     }
     
@@ -303,6 +303,19 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     
 }
 
+extension PlacePostViewController {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+}
     
 
 
