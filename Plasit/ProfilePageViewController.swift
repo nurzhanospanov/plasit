@@ -85,20 +85,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
     }
 
-
-    
-    func createButton () {
-        let button = UIButton();
-        button.setTitle("Log in", forState: .Normal)
-        button.backgroundColor = UIColor.greenColor()
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.center.x = view.center.x
-        button.frame = CGRectMake(button.frame.origin.x, 100, 160, 20) // X, Y, width, height
-        button.addTarget(self, action: Selector("buttonPressed:"), forControlEvents: .TouchUpInside)
-        self.view.addSubview(button)
-    }
-    
-    
     
     func fetchProfile() {
         print("func fetch profile was called")
