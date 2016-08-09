@@ -79,7 +79,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         self.firstNameLabel.text = ""
         self.profilePictureImageView?.image
-        self.logoutButtonOutlet.hidden = true 
+        self.logoutButtonOutlet.hidden = true
         
         // rounding profile picture fetched from FB
         
@@ -89,7 +89,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
         profilePictureImageView.clipsToBounds = true
         
-
         loginButton.delegate = self
         
         // rounding login with parse button
@@ -100,7 +99,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         loginButton.frame = CGRectMake(loginButton.frame.origin.x, 150, 160, 20)
         loginButton.center.x = view.center.x
         
-        // hiding logout button
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             

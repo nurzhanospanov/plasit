@@ -27,6 +27,7 @@ class ResetPasswordViewController: UIViewController {
         let finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         // Send a request to reset a password
+        
         PFUser.requestPasswordResetForEmailInBackground(finalEmail)
         
         let alert = UIAlertController (title: "Password Reset", message: "An email containing information on how to reset your password has been sent to " + finalEmail + ".", preferredStyle: UIAlertControllerStyle.Alert)
