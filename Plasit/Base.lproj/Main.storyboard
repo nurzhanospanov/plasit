@@ -173,8 +173,16 @@
                                                         <segue destination="mdy-BL-MEJ" kind="show" id="7Lc-NS-1sX"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-4U-fjq">
+                                                    <rect key="frame" x="533" y="15" width="52" height="30"/>
+                                                    <state key="normal" title="Log out"/>
+                                                    <connections>
+                                                        <action selector="logoutButton:" destination="aIh-5e-035" eventType="touchUpInside" id="9Ob-Xs-36v"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="uaD-4U-fjq" secondAttribute="trailing" constant="15" id="CQp-PM-vxh"/>
                                                 <constraint firstItem="AKt-2w-yCA" firstAttribute="top" secondItem="aoc-cS-anE" secondAttribute="topMargin" id="H59-Zh-7s4"/>
                                                 <constraint firstItem="W9S-ta-bOh" firstAttribute="top" secondItem="qbk-oR-6bt" secondAttribute="bottom" constant="5" id="LjA-du-o9c"/>
                                                 <constraint firstItem="W9S-ta-bOh" firstAttribute="centerX" secondItem="aoc-cS-anE" secondAttribute="centerX" id="QR5-Hi-TWh"/>
@@ -182,6 +190,7 @@
                                                 <constraint firstItem="W9S-ta-bOh" firstAttribute="top" secondItem="qbk-oR-6bt" secondAttribute="bottom" constant="1" id="i07-hP-fI6"/>
                                                 <constraint firstItem="qbk-oR-6bt" firstAttribute="centerX" secondItem="AKt-2w-yCA" secondAttribute="centerX" id="lNs-zN-rRx"/>
                                                 <constraint firstItem="qbk-oR-6bt" firstAttribute="top" secondItem="AKt-2w-yCA" secondAttribute="bottom" constant="5" id="owO-Oq-gNH"/>
+                                                <constraint firstItem="uaD-4U-fjq" firstAttribute="top" secondItem="aoc-cS-anE" secondAttribute="top" constant="15" id="uJQ-49-Fop"/>
                                                 <constraint firstItem="AKt-2w-yCA" firstAttribute="top" secondItem="aoc-cS-anE" secondAttribute="topMargin" constant="14" id="xm6-Du-Y3X"/>
                                             </constraints>
                                             <variation key="default">
@@ -287,6 +296,7 @@
                     <connections>
                         <outlet property="firstNameLabel" destination="qbk-oR-6bt" id="iW5-hM-Yn3"/>
                         <outlet property="loginParseButton" destination="W9S-ta-bOh" id="AAB-a6-UaZ"/>
+                        <outlet property="logoutButtonOutlet" destination="uaD-4U-fjq" id="8wQ-Xj-8Gy"/>
                         <outlet property="profilePageTableView" destination="417-vj-blw" id="DvD-t1-JhJ"/>
                         <outlet property="profilePictureImageView" destination="AKt-2w-yCA" id="R2a-nF-IFb"/>
                         <outlet property="userWantToGoButton" destination="sGm-Sd-Nri" id="GpD-Or-qoP"/>

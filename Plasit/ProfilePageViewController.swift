@@ -13,6 +13,26 @@ import Parse
 class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate {
     
     
+    @IBOutlet weak var logoutButtonOutlet: UIButton!
+    
+    
+    @IBAction func logoutButton(sender: AnyObject) {
+        
+        PFUser.logOut()
+    
+        let alert = UIAlertController(title: "Success!", message: "You are logget out", preferredStyle: .Alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        self.loginParseButton.hidden = false
+        self.loginButton.hidden = false
+        self.firstNameLabel.text = ""
+        profilePictureImageView.image = UIImage(named: "userPlaceholder.png")
+        self.logoutButtonOutlet.hidden = true
+        
+    }
+    
     @IBAction func userBeenHereButton(sender: AnyObject) {
     }
     
@@ -59,7 +79,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         self.firstNameLabel.text = ""
         self.profilePictureImageView?.image
-       
+        self.logoutButtonOutlet.hidden = true 
         
         // rounding profile picture fetched from FB
         
@@ -80,6 +100,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         loginButton.frame = CGRectMake(loginButton.frame.origin.x, 150, 160, 20)
         loginButton.center.x = view.center.x
         
+        // hiding logout button
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             
@@ -180,6 +201,10 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         self.updateUI()
                         print("profile should not be blank")
                         
+                        self.loginParseButton.hidden = true
+                        self.logoutButtonOutlet.hidden = true
+
+                        
                     }
                 }
             }
@@ -197,6 +222,11 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                     self.firstNameLabel.text = userName
                     self.loginParseButton.hidden = true
                     self.loginButton.hidden = true
+                    self.logoutButtonOutlet.hidden = false
+                    
+                }
+                else {
+                    // self.logoutButtonOutlet.hidden = true
                 }
         })
     }
@@ -213,14 +243,12 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         self.firstNameLabel.text = ""
         self.profilePictureImageView?.image = UIImage(named: "userPlaceholder.png")
+        self.loginParseButton.hidden = false
         
         let alert = UIAlertController(title: "Success!", message: "You are logget out", preferredStyle: .Alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
-
-        
-        
         
     }
     
@@ -276,7 +304,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         }
         else {
             firstNameLabel.text = ""
-//            lastNameLabel.text = ""
             profilePictureImageView.image = UIImage(named: "userPlaceholder.png")
         
             }
