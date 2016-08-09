@@ -76,6 +76,8 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
 
         loginButton.delegate = self
         
+        // rounding login with parse button
+        loginParseButton.layer.cornerRadius = 5
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             fetchProfile()

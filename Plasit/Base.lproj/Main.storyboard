@@ -159,13 +159,16 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9S-ta-bOh">
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9S-ta-bOh">
                                                     <rect key="frame" x="220" y="108" width="160" height="20"/>
+                                                    <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.29435729619028805" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="PP3-mc-Q0O"/>
                                                         <constraint firstAttribute="width" constant="160" id="h5E-5s-CSX"/>
                                                     </constraints>
-                                                    <state key="normal" title="Log In"/>
+                                                    <state key="normal" title="Log In">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <segue destination="mdy-BL-MEJ" kind="show" id="7Lc-NS-1sX"/>
                                                     </connections>
