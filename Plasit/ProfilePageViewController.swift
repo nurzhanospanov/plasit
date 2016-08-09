@@ -18,6 +18,10 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     
     @IBOutlet weak var userWantToGoButton: UIButton!
     
+
+    @IBOutlet weak var loginParseButton: UIButton!
+    
+    
     @IBOutlet var profilePageTableView: UITableView!
     
     @IBOutlet weak var firstNameLabel: UILabel!

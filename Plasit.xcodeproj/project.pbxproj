@@ -32,6 +32,9 @@
 		74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */; };
 		74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */; };
 		74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984641D481DC20051CBE2 /* Arrow Left.png */; };
+		74B41A911D5995CF00D17EF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A8E1D5995CF00D17EF6 /* LoginViewController.swift */; };
+		74B41A921D5995CF00D17EF6 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A8F1D5995CF00D17EF6 /* ResetPasswordViewController.swift */; };
+		74B41A931D5995CF00D17EF6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A901D5995CF00D17EF6 /* SignUpViewController.swift */; };
 		74D084751D53BB8400D44BE8 /* userPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084741D53BB8400D44BE8 /* userPlaceholder.png */; };
 		74D0847A1D53BDA600D44BE8 /* wantToGoPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084761D53BDA600D44BE8 /* wantToGoPressed.png */; };
 		74D0847B1D53BDA600D44BE8 /* wantToGo.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D084771D53BDA600D44BE8 /* wantToGo.png */; };
@@ -77,6 +80,9 @@
 		74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaIndicator.swift; sourceTree = "<group>"; };
 		74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
 		74A984641D481DC20051CBE2 /* Arrow Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow Left.png"; path = "Assets.xcassets/Arrow Left.png"; sourceTree = "<group>"; };
+		74B41A8E1D5995CF00D17EF6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74B41A8F1D5995CF00D17EF6 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		74B41A901D5995CF00D17EF6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		74D084741D53BB8400D44BE8 /* userPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userPlaceholder.png; path = Assets.xcassets/userPlaceholder.png; sourceTree = "<group>"; };
 		74D084761D53BDA600D44BE8 /* wantToGoPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wantToGoPressed.png; path = Assets.xcassets/wantToGoPressed.png; sourceTree = "<group>"; };
 		74D084771D53BDA600D44BE8 /* wantToGo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wantToGo.png; path = Assets.xcassets/wantToGo.png; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 		746B08F21D37F8A40056103F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				74B41A8E1D5995CF00D17EF6 /* LoginViewController.swift */,
+				74B41A901D5995CF00D17EF6 /* SignUpViewController.swift */,
+				74B41A8F1D5995CF00D17EF6 /* ResetPasswordViewController.swift */,
 				746B08EE1D37F8290056103F /* ListOfCategoriesViewController.swift */,
 				74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */,
 				74D6E6C91D3ECBDC000B958D /* PlacePostViewController.swift */,
@@ -350,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B41A911D5995CF00D17EF6 /* LoginViewController.swift in Sources */,
 				749437271D4C109F0050D52F /* UserWantToGoViewController.swift in Sources */,
 				74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */,
 				749437251D4C108B0050D52F /* UserBeenHereViewController.swift in Sources */,
@@ -362,6 +372,8 @@
 				746B08EF1D37F8290056103F /* ListOfCategoriesViewController.swift in Sources */,
 				747DE8AB1D38393300DAB531 /* ProfilePageViewController.swift in Sources */,
 				74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */,
+				74B41A921D5995CF00D17EF6 /* ResetPasswordViewController.swift in Sources */,
+				74B41A931D5995CF00D17EF6 /* SignUpViewController.swift in Sources */,
 				74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */,
 				74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */,
 				7494372D1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift in Sources */,
