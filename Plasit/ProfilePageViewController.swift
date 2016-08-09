@@ -79,7 +79,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         view.addSubview(loginButton)
         loginButton.frame = CGRectMake(loginButton.frame.origin.x, 150, 160, 20)
         loginButton.center.x = view.center.x
-
+        
         
         if let token = FBSDKAccessToken.currentAccessToken() {
             
@@ -100,9 +100,11 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         //setting blue font for nav bar title
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
         
+        fetchProfileFromParse()
+        
     }
 
-    
+
     func fetchProfile() {
         print("func fetch profile was called")
         
@@ -186,10 +188,20 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
     
     
     func fetchProfileFromParse() {
-            
-    
+        
+            PFUser.currentUser()?.fetchInBackgroundWithBlock ({ (currentUser: PFObject?, error: NSError?) -> Void in
+                
+                if let user = currentUser as? PFUser {
+                
+                    let userName = user.username
+                    self.firstNameLabel.text = userName
+                    self.loginParseButton.hidden = true
+                    self.loginButton.hidden = true
+                }
+        })
     }
     
+
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
         fetchProfile()
@@ -267,7 +279,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
 //            lastNameLabel.text = ""
             profilePictureImageView.image = UIImage(named: "userPlaceholder.png")
         
+            }
         }
     }
-}
-
