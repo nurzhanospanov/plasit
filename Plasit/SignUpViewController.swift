@@ -88,14 +88,15 @@ class SignUpViewController: UIViewController {
 
                     
                     let alertController = UIAlertController(title: "Success", message: "Signed Up", preferredStyle: .Alert)
-                    let action = UIAlertAction(title: "Ok", style: .Default) {(action) in}
+                    let action = UIAlertAction(title: "Ok", style: .Default) {(action) in
+                        
+                    // sending user to profile page vc
+                    self.navigationController?.popViewControllerAnimated(true)
+                    }
+
                     alertController.addAction(action)
                     self.presentViewController(alertController, animated: true) {}
                     
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profilePage") 
-                        self.presentViewController(viewController, animated: true, completion: nil)
-                    })
                 }
             })
         }

@@ -69,17 +69,20 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
         profilePictureImageView.clipsToBounds = true
         
-        // adding facebook login button
-        view.addSubview(loginButton)
-        loginButton.center.x = view.center.x
-        loginButton.frame = CGRectMake(loginButton.frame.origin.x, 130, 160, 20)
 
         loginButton.delegate = self
         
         // rounding login with parse button
-        loginParseButton.layer.cornerRadius = 5
+        loginParseButton.layer.cornerRadius = 3
+        
+        // adding facebook login button
+        view.addSubview(loginButton)
+        loginButton.frame = CGRectMake(loginButton.frame.origin.x, 150, 160, 20)
+        loginButton.center.x = view.center.x
+
         
         if let token = FBSDKAccessToken.currentAccessToken() {
+            
             fetchProfile()
             
         // stop loader
@@ -179,6 +182,12 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                 }
             }
         }
+    }
+    
+    
+    func fetchProfileFromParse() {
+            
+    
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {

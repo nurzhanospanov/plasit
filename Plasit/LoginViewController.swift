@@ -75,16 +75,18 @@ class LoginViewController: UIViewController {
 
                     
                     let alertController = UIAlertController(title: "Success", message: "Logged In", preferredStyle: .Alert)
-                    let loginAction = UIAlertAction(title: "Ok", style: .Default) {(action) in}
+                    let loginAction = UIAlertAction(title: "Ok", style: .Default) {(action) in
+                        // sending user to profile page vc 
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }
                     alertController.addAction(loginAction)
                     self.presentViewController(alertController, animated: true) {}
                     
-                    
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profilePage") as! ProfilePageViewController
-                        let navController = UINavigationController(rootViewController: viewController)
-                        self.presentViewController(navController, animated: true, completion: nil)
-                    })
+//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profilePage") as! ProfilePageViewController
+//                        let navController = UINavigationController(rootViewController: viewController)
+//                        self.presentViewController(navController, animated: true, completion: nil)
+//                    })
                     
                 } else {
                     

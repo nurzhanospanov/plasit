@@ -31,7 +31,10 @@ class ResetPasswordViewController: UIViewController {
         
         let alert = UIAlertController (title: "Password Reset", message: "An email containing information on how to reset your password has been sent to " + finalEmail + ".", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+       
         self.presentViewController(alert, animated: true, completion: nil)
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+
     }
 
     /*

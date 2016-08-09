@@ -139,11 +139,11 @@
                         <sections>
                             <tableViewSection id="Mct-b1-UrF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="162" id="UZt-ll-oNr">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="162"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="UZt-ll-oNr">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZt-ll-oNr" id="aoc-cS-anE">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPlaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKt-2w-yCA" userLabel="Profile Picture Image View">
@@ -192,15 +192,15 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="UfB-Ua-rch">
-                                        <rect key="frame" x="0.0" y="226" width="600" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="UfB-Ua-rch">
+                                        <rect key="frame" x="0.0" y="264" width="600" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UfB-Ua-rch" id="nfk-c8-aJV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct1-yx-08c">
-                                                    <rect key="frame" x="0.0" y="-6" width="600" height="188"/>
+                                                    <rect key="frame" x="0.0" y="-6" width="600" height="208"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="123.5" id="09V-aM-6yj"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="Cju-kh-mSf"/>
@@ -244,15 +244,15 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="Szg-uJ-suI">
-                                        <rect key="frame" x="0.0" y="426" width="600" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="Szg-uJ-suI">
+                                        <rect key="frame" x="0.0" y="484" width="600" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Szg-uJ-suI" id="YiA-Kp-R1O">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGm-Sd-Nri">
-                                                    <rect key="frame" x="0.0" y="8" width="600" height="183.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="600" height="204"/>
                                                     <state key="normal" title="userWantToGoButton" image="wantToGoPlaceholderImage.jpg"/>
                                                     <connections>
                                                         <segue destination="OSd-ZN-KmH" kind="show" id="xAE-nr-apO"/>
@@ -444,7 +444,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-zO-95U" userLabel="Been Here Image View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhs-Jc-cGF" userLabel="Been Here Title">
@@ -462,7 +462,7 @@
                                                 <constraint firstItem="zhs-Jc-cGF" firstAttribute="centerX" secondItem="b4r-MQ-Rwl" secondAttribute="centerX" id="JPM-Od-qe3"/>
                                                 <constraint firstItem="9ke-zO-95U" firstAttribute="leading" secondItem="b4r-MQ-Rwl" secondAttribute="leadingMargin" constant="-8" id="qNP-p2-k75"/>
                                                 <constraint firstItem="zhs-Jc-cGF" firstAttribute="centerY" secondItem="b4r-MQ-Rwl" secondAttribute="centerY" id="ruI-MI-0JH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9ke-zO-95U" secondAttribute="bottom" constant="-8" id="wEI-Zm-d6X"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9ke-zO-95U" secondAttribute="bottom" constant="2" id="wEI-Zm-d6X"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -518,31 +518,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You want to go to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-A0-XT4">
+                                <rect key="frame" x="233" y="64" width="134" height="20"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRW-gt-oIK" userLabel="Want To Go Metrics Label">
+                                <rect key="frame" x="285" y="99" width="29.5" height="14"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-d4-V52">
-                                <rect key="frame" x="0.0" y="121" width="600" height="429.5"/>
+                                <rect key="frame" x="0.0" y="121.5" width="600" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserWantToGoCell" rowHeight="200" id="vLx-v9-hi7" customClass="UserWantToGoTableViewCell" customModule="Plasit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLx-v9-hi7" id="FJv-Dr-6hM">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Bk-jKj" userLabel="Want To Go Title">
-                                                    <rect key="frame" x="279" y="89" width="42" height="21"/>
+                                                    <rect key="frame" x="279" y="84" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2G3-tn-nMf" secondAttribute="trailing" constant="-8" id="85d-yc-WNU"/>
                                                 <constraint firstItem="0O0-Bk-jKj" firstAttribute="centerY" secondItem="2G3-tn-nMf" secondAttribute="centerY" id="ArI-qG-0xb"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="2G3-tn-nMf" secondAttribute="bottom" constant="-8" id="cPv-n3-XNK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2G3-tn-nMf" secondAttribute="bottom" constant="2" id="cPv-n3-XNK"/>
                                                 <constraint firstItem="2G3-tn-nMf" firstAttribute="top" secondItem="FJv-Dr-6hM" secondAttribute="topMargin" constant="-8" id="eXs-Pw-kqb"/>
                                                 <constraint firstItem="2G3-tn-nMf" firstAttribute="leading" secondItem="FJv-Dr-6hM" secondAttribute="leadingMargin" constant="-8" id="ece-Na-SyR"/>
                                                 <constraint firstItem="0O0-Bk-jKj" firstAttribute="centerX" secondItem="2G3-tn-nMf" secondAttribute="centerX" id="paO-UY-Zt5"/>
@@ -560,18 +572,6 @@
                                     <outlet property="delegate" destination="OSd-ZN-KmH" id="Z45-xt-ODZ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You want to go to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-A0-XT4">
-                                <rect key="frame" x="233" y="64" width="134" height="20"/>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRW-gt-oIK" userLabel="Want To Go Metrics Label">
-                                <rect key="frame" x="285" y="99" width="29.5" height="14"/>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1029,7 +1029,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="qhO-Ef-Pv6" kind="presentation" id="oWj-HW-oEA"/>
+                                            <segue destination="qhO-Ef-Pv6" kind="show" id="oWj-HW-oEA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYA-9x-bQO">
@@ -1260,6 +1260,6 @@
         <image name="wantToGoPlaceholderImage.jpg" width="1000" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tne-Rf-UEd"/>
+        <segue reference="89b-1K-BV8"/>
     </inferredMetricsTieBreakers>
 </document>
