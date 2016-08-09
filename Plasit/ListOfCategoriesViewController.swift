@@ -13,22 +13,28 @@ import Parse
 
 class ListOfCategoriesViewController: UIViewController {
     
+
     @IBOutlet weak var tableView: UITableView!
     
     var categories: [DisplayCategory] = []
     
-    //    var selectedIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
-        
+    
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        spinner.center = self.view.center
+        spinner.startAnimating()
+    
         super.viewDidLoad()
         
         //setting text
         self.title = "Explore"
       
-    
+        
+     
         
         let query = PFQuery(className: "Category")
+
         
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
@@ -42,6 +48,7 @@ class ListOfCategoriesViewController: UIViewController {
                     category.imageCategory = image
                     
                     self.tableView.reloadData()
+                    spinner.stopAnimating()
                 }
             }
         }

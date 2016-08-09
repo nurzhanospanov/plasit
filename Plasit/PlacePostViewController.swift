@@ -96,6 +96,12 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     
     
     override func viewDidLoad() {
+        
+        //loader
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        spinner.center = self.view.center
+        spinner.startAnimating()
+        
         super.viewDidLoad()
         //setting text and font color for navbar
         self.title = displayPlace?.placeTitle
@@ -147,6 +153,9 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
                     self.wantToGoButton.setImage(UIImage(named: "wantToGo"), forState: .Normal)
                     self.wantToGoButtonPressed = false
                     print("release button called from viewDidLoad")
+                    
+                    // loader stopped
+                    spinner.stopAnimating()
                 }
             }
         }

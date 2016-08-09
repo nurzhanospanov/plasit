@@ -70,6 +70,7 @@
                                             <constraints>
                                                 <constraint firstItem="o1m-g8-dmy" firstAttribute="top" secondItem="654-MU-Dch" secondAttribute="topMargin" id="FdO-8i-gIh"/>
                                                 <constraint firstItem="o1m-g8-dmy" firstAttribute="leading" secondItem="654-MU-Dch" secondAttribute="leadingMargin" id="W9g-6Y-ef5"/>
+                                                <constraint firstItem="o1m-g8-dmy" firstAttribute="centerX" secondItem="654-MU-Dch" secondAttribute="centerX" id="Wpf-Xn-91c"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="o1m-g8-dmy" secondAttribute="bottom" constant="2.5" id="Z6N-zP-pzU"/>
                                                 <constraint firstItem="o1m-g8-dmy" firstAttribute="leading" secondItem="654-MU-Dch" secondAttribute="leadingMargin" constant="-8" id="alt-qm-LM6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="o1m-g8-dmy" secondAttribute="bottom" id="mFR-EY-PTA"/>
