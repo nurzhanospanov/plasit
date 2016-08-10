@@ -551,15 +551,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Bk-jKj" userLabel="Want To Go Title">
-                                                    <rect key="frame" x="279" y="84" width="42" height="21"/>
+                                                    <rect key="frame" x="279" y="84.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2G3-tn-nMf" secondAttribute="trailing" constant="-8" id="85d-yc-WNU"/>
@@ -1093,12 +1093,12 @@
                                         <exclude reference="HU2-R8-0b6"/>
                                         <exclude reference="jsG-eB-ClJ"/>
                                         <exclude reference="lhy-hj-Qe7"/>
+                                        <exclude reference="6Xh-LM-lJ9"/>
                                         <exclude reference="Bag-cl-t0G"/>
                                         <exclude reference="FPZ-Ws-4P5"/>
                                         <exclude reference="TEx-en-aCp"/>
                                         <exclude reference="Vk0-pX-UB3"/>
                                         <exclude reference="q86-qT-pal"/>
-                                        <exclude reference="6Xh-LM-lJ9"/>
                                         <exclude reference="oEb-ee-ZO2"/>
                                         <exclude reference="ts3-UW-nSy"/>
                                     </mask>
@@ -1206,7 +1206,7 @@
                                     <constraint firstItem="h7T-sr-NCY" firstAttribute="centerX" secondItem="8lz-5k-cEh" secondAttribute="centerX" id="wwD-oN-r3H"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-78-fxB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-78-fxB">
                                 <rect key="frame" x="554" y="28" width="30" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>

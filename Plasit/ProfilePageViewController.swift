@@ -119,7 +119,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         //setting blue font for nav bar title
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
         
-      //  fetchProfileFromParse()
+        fetchProfileFromParse()
         
     }
 
@@ -166,7 +166,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             
             
             let user = PFUser()
-            let username = "\(firstNameData) \(lastNameData)"
+            let username = "\(firstNameData)_\(lastNameData)"
             
             
             user["firstName"] = firstNameData
@@ -224,7 +224,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                     
                 }
                 else {
-                    // self.logoutButtonOutlet.hidden = true
+                    self.logoutButtonOutlet.hidden = true
                 }
         })
     }
