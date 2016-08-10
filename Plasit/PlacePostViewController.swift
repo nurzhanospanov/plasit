@@ -96,13 +96,9 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
     
     
     override func viewDidLoad() {
-        
-        //loader
-        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-        spinner.center = self.view.center
-        spinner.startAnimating()
-        
+    
         super.viewDidLoad()
+        
         //setting text and font color for navbar
         self.title = displayPlace?.placeTitle
         
@@ -111,6 +107,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         
         //set color for font
         self.descriptionTextLabel.textColor = UIColor.blackColor()
+        
         //set color for title of view controller
         self.titleLabel.textColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
         
@@ -155,7 +152,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
                     print("release button called from viewDidLoad")
                     
                     // loader stopped
-                    spinner.stopAnimating()
+                   
                 }
             }
         }

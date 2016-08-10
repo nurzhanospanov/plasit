@@ -25,9 +25,6 @@ class UserBeenHereViewController: UIViewController {
         
         //setting text and font color for navbar
         self.title = ""
-       
-        
-
         
     }
     

@@ -21,20 +21,14 @@ class ListOfPlacesViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
-    
-        
         super.viewDidLoad()
         
     }
     
     override func viewWillAppear(animated: Bool) {
-        //loader
-        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-        spinner.center = self.view.center
-        spinner.startAnimating()
-        
+  
         super.viewWillAppear(animated)
+        
         
         //setting text for navbar
         self.title = "Places"
@@ -58,8 +52,7 @@ class ListOfPlacesViewController: UIViewController {
                     place.imagePlace = image
                     self.tableView.reloadData()
                     
-                    //loader stopped
-                    spinner.stopAnimating()
+
                 }
                // counting pins to places
                 index = index + 1

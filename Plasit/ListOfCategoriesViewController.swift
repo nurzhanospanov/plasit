@@ -20,12 +20,14 @@ class ListOfCategoriesViewController: UIViewController {
     
     
     override func viewDidLoad() {
-    
+
+        super.viewDidLoad()
+        
+        // loader
         let spinner: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
         spinner.center = self.view.center
         spinner.startAnimating()
-    
-        super.viewDidLoad()
+        view.addSubview(spinner)
         
         //setting text
         self.title = "Explore"
