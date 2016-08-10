@@ -42,10 +42,10 @@ class LoginViewController: UIViewController {
         let password = self.passwordField.text
         
         // Validate the text fields
-        if username!.characters.count < 5 {
+        if username!.characters.count < 2 {
 
             
-            let alertController = UIAlertController(title: "Invalid", message: "Username must be greater than 5 characters", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Invalid", message: "Username must be greater than 2 characters", preferredStyle: .Alert)
             let usernameAction = UIAlertAction(title: "Ok", style: .Default) {(action) in}
             alertController.addAction(usernameAction)
             self.presentViewController(alertController, animated: true) {}
