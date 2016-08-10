@@ -24,9 +24,9 @@ class UserWantToGoViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = ""
-        
-        
     }
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
