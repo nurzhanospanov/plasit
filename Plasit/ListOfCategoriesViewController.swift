@@ -33,8 +33,6 @@ class ListOfCategoriesViewController: UIViewController {
         self.title = "Explore"
       
         
-     
-        
         let query = PFQuery(className: "Category")
 
         
