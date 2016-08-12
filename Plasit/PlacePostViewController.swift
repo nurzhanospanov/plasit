@@ -203,7 +203,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         let addedBeenHere = PFObject(className: "BeenHere")
         if let currentUser = PFUser.currentUser(),
             currentPlace = displayPlace
-            where FBSDKAccessToken.currentAccessToken() != nil {
+            where FBSDKAccessToken.currentAccessToken() != nil || PFUser.currentUser() != nil {
             
             addedBeenHere.setObject(currentUser, forKey: "fromUser")
             addedBeenHere.setObject(currentPlace, forKey: "toPlace")
@@ -254,7 +254,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         let addedWantToGo = PFObject(className: "WantToGo")
         if let currentUser = PFUser.currentUser(),
             currentPlace = displayPlace
-            where FBSDKAccessToken.currentAccessToken() != nil {
+            where FBSDKAccessToken.currentAccessToken() != nil || PFUser.currentUser() != nil {
             
             addedWantToGo.setObject(currentUser, forKey: "fromUser")
             addedWantToGo.setObject(currentPlace, forKey: "toPlace")

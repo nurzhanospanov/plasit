@@ -20,7 +20,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         
         PFUser.logOut()
     
-        let alert = UIAlertController(title: "Success!", message: "You are logget out", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Success!", message: "You are logged out", preferredStyle: .Alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
@@ -200,8 +200,8 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         print("profile should not be blank")
                         
                         self.loginParseButton.hidden = true
-                        self.logoutButtonOutlet.hidden = true
-
+                        self.logoutButtonOutlet.hidden = false
+                        
                         
                     }
                 }
@@ -217,7 +217,11 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                 if let user = currentUser as? PFUser {
                 
                     let userName = user.username
-                    self.firstNameLabel.text = userName
+
+                    let underscoreIndex = userName
+                    let userNameWithSpaces = underscoreIndex?.stringByReplacingOccurrencesOfString("_", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                    
+                    self.firstNameLabel.text = userNameWithSpaces
                     self.loginParseButton.hidden = true
                     self.loginButton.hidden = true
                     self.logoutButtonOutlet.hidden = false
@@ -265,8 +269,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         } else {
             self.firstNameLabel.text = ""
         }
-        
-
         
         if let userPicture = PFUser.currentUser()?["picture"] as? String,
             url = NSURL(string: userPicture),
