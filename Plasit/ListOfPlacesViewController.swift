@@ -29,7 +29,6 @@ class ListOfPlacesViewController: UIViewController {
   
         super.viewWillAppear(animated)
         
-        
         //setting text for navbar
         self.title = "Places"
         //setting blue font for nav bar title

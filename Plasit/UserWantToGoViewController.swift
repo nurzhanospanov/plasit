@@ -71,7 +71,7 @@ class UserWantToGoViewController: UIViewController {
                 }
             }
         } else {
-            let alert = UIAlertController(title: "No places to display", message: "As you are not logged in, there are no places to display", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "No places to display", message: "You are either not logged in or haven't yet added any places", preferredStyle: .Alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
