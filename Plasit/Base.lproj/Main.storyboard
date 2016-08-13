@@ -551,7 +551,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-tn-nMf" userLabel="Want To Go Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Bk-jKj" userLabel="Want To Go Title">

@@ -103,6 +103,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         if let token = FBSDKAccessToken.currentAccessToken() {
             
             fetchProfile()
+            loginParseButton.hidden = true
             
         // stop loader
         spinner.stopAnimating()
@@ -119,7 +120,14 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
         //setting blue font for nav bar title
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)]
         
-        fetchProfileFromParse()
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            
+             updateUI()
+            
+        } else {
+            
+            fetchProfileFromParse()
+        }
         
     }
 
@@ -177,8 +185,6 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
             user["password"] = emailData
             
             
-            
-            
             let currentUser = PFUser.currentUser()?.username
             
             if  currentUser == nil {
@@ -200,8 +206,7 @@ class ProfilePageViewController: UITableViewController, FBSDKLoginButtonDelegate
                         print("profile should not be blank")
                         
                         self.loginParseButton.hidden = true
-                        self.logoutButtonOutlet.hidden = false
-                        
+                        self.logoutButtonOutlet.hidden = true
                         
                     }
                 }
