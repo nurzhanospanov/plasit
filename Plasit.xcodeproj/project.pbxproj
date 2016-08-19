@@ -26,12 +26,16 @@
 		749437271D4C109F0050D52F /* UserWantToGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749437261D4C109F0050D52F /* UserWantToGoViewController.swift */; };
 		7494372D1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494372C1D4FCFF30050D52F /* UserBeenHereTableViewCell.swift */; };
 		749437311D50102A0050D52F /* UserWantToGoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749437301D50102A0050D52F /* UserWantToGoTableViewCell.swift */; };
-		74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */; };
-		74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */; };
 		74A9845D1D47CB5C0051CBE2 /* PanoramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845C1D47CB5C0051CBE2 /* PanoramaView.swift */; };
 		74A9845F1D47CBEE0051CBE2 /* PanoramaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */; };
 		74A984611D47CC7B0051CBE2 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */; };
 		74A984651D481DC20051CBE2 /* Arrow Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A984641D481DC20051CBE2 /* Arrow Left.png */; };
+		74B411411D6514F900BF3373 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B4112E1D65134D00BF3373 /* Bolts.framework */; };
+		74B411421D6514F900BF3373 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B4112F1D65134D00BF3373 /* Parse.framework */; };
+		74B411431D6514F900BF3373 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B411301D65134E00BF3373 /* ParseUI.framework */; };
+		74B411441D6514F900BF3373 /* Pods_Plasit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */; };
+		74B411451D65152D00BF3373 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */; };
+		74B411461D65152D00BF3373 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */; };
 		74B41A911D5995CF00D17EF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A8E1D5995CF00D17EF6 /* LoginViewController.swift */; };
 		74B41A921D5995CF00D17EF6 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A8F1D5995CF00D17EF6 /* ResetPasswordViewController.swift */; };
 		74B41A931D5995CF00D17EF6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B41A901D5995CF00D17EF6 /* SignUpViewController.swift */; };
@@ -45,7 +49,6 @@
 		74F84B331D3D76140096216F /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B321D3D76140096216F /* ListOfPlacesViewController.swift */; };
 		74F84B351D3D81CB0096216F /* DisplayPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B341D3D81CB0096216F /* DisplayPlace.swift */; };
 		74F84B371D3D85890096216F /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F84B361D3D85890096216F /* PlacesTableViewCell.swift */; };
-		AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		74A9845E1D47CBEE0051CBE2 /* PanoramaIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaIndicator.swift; sourceTree = "<group>"; };
 		74A984601D47CC7B0051CBE2 /* PanoramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
 		74A984641D481DC20051CBE2 /* Arrow Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow Left.png"; path = "Assets.xcassets/Arrow Left.png"; sourceTree = "<group>"; };
+		74B4112E1D65134D00BF3373 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Library/Developer/Xcode/DerivedData/Plasit-ctllsijucoqktdcmblhmqtckzgkc/Build/Products/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		74B4112F1D65134D00BF3373 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Library/Developer/Xcode/DerivedData/Plasit-ctllsijucoqktdcmblhmqtckzgkc/Build/Products/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		74B411301D65134E00BF3373 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../Library/Developer/Xcode/DerivedData/Plasit-ctllsijucoqktdcmblhmqtckzgkc/Build/Products/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = "<group>"; };
 		74B41A8E1D5995CF00D17EF6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		74B41A8F1D5995CF00D17EF6 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		74B41A901D5995CF00D17EF6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +106,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC07AD2E1719E15E988B9E35 /* Pods_Plasit.framework in Frameworks */,
-				74A984541D4197B50051CBE2 /* FBSDKCoreKit.framework in Frameworks */,
-				74A984551D4197B50051CBE2 /* FBSDKLoginKit.framework in Frameworks */,
+				74B411411D6514F900BF3373 /* Bolts.framework in Frameworks */,
+				74B411421D6514F900BF3373 /* Parse.framework in Frameworks */,
+				74B411451D65152D00BF3373 /* FBSDKCoreKit.framework in Frameworks */,
+				74B411461D65152D00BF3373 /* FBSDKLoginKit.framework in Frameworks */,
+				74B411431D6514F900BF3373 /* ParseUI.framework in Frameworks */,
+				74B411441D6514F900BF3373 /* Pods_Plasit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +225,9 @@
 		D41E13D272C26749D856E66A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74B4112E1D65134D00BF3373 /* Bolts.framework */,
+				74B4112F1D65134D00BF3373 /* Parse.framework */,
+				74B411301D65134E00BF3373 /* ParseUI.framework */,
 				74A984521D4197B50051CBE2 /* FBSDKCoreKit.framework */,
 				74A984531D4197B50051CBE2 /* FBSDKLoginKit.framework */,
 				72F95D8490FCAFDEE5FB5B5F /* Pods_Plasit.framework */,
@@ -503,7 +515,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Plasit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +540,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = Plasit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.nurzhan.MyPlasitApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

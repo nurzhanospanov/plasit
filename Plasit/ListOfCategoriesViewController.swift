@@ -32,13 +32,14 @@ class ListOfCategoriesViewController: UIViewController {
         //setting text
         self.title = "Explore"
       
-        
         let query = PFQuery(className: "Category")
 
         
         query.findObjectsInBackgroundWithBlock { (result: [PFObject]?, error: NSError?) -> Void in
             
             self.categories = result as? [DisplayCategory] ?? []
+            spinner.stopAnimating()
+
             
             for category in self.categories {
                 
@@ -48,7 +49,7 @@ class ListOfCategoriesViewController: UIViewController {
                     category.imageCategory = image
                     
                     self.tableView.reloadData()
-                    spinner.stopAnimating()
+//                    spinner.stopAnimating()
                 }
             }
         }

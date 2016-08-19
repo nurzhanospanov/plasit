@@ -27,8 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        configureParse()
+        
         return true
         
+    }
+    
+    func configureParse() {
+        DisplayCategory.registerSubclass()
+        DisplayPlace.registerSubclass()
+    
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

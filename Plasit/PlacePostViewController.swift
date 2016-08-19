@@ -93,8 +93,7 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         
     }
     
-    
-    
+        
     override func viewDidLoad() {
     
         super.viewDidLoad()
@@ -110,6 +109,8 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
         
         //set color for title of view controller
         self.titleLabel.textColor = UIColor(red: 52.0/255, green: 152.0/255, blue: 219.0/255, alpha: 1.0)
+        
+        
         
         let userQueryBeenHere = PFQuery(className: "BeenHere")
         
@@ -151,8 +152,6 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
                     self.wantToGoButtonPressed = false
                     print("release button called from viewDidLoad")
                     
-                    // loader stopped
-                   
                 }
             }
         }
@@ -217,7 +216,6 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             self.presentViewController(alert, animated: true, completion: nil)
 
             }
-    
     }
 
     
@@ -268,7 +266,6 @@ class PlacePostViewController: UITableViewController, UINavigationControllerDele
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
-    
     
     func deleteWantToGoPlace(placeId: String) {
         
