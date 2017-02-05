@@ -90,9 +90,6 @@ class UserWantToGoViewController: UIViewController {
 }
 
 
-
-
-
 extension UserWantToGoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
